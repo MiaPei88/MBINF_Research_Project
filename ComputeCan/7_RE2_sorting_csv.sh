@@ -1,3 +1,7 @@
+### This script is to sort all the CLUSTER_TABLE.csv based on the second column
+### Author: Mia Pei
+### Last modified: July 10, 2024
+
 cd /home/miapei/projects/def-gagnoned/miapei/BINF6999_ComputeCan/RE2_output_20240619
 
 # Sort CLUSTER_TABLE.csv based on column B (the number of the supercluster)

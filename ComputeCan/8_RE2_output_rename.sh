@@ -1,6 +1,7 @@
-# This script is for renaming RepeatExplorer2 output files for manually checking annotion
-# and extract the sampleID and number of analyzed reads into a txt file
-# Mia Pei 06/19/2024
+### This script is for renaming RepeatExplorer2 output files for manually checking annotion
+### and extract the sampleID and number of analyzed reads into a txt file
+### Author: Mia Pei
+### Last modified: July 10, 2024
 
 # Rename CLUSTER_TABLE.csv to the following format: SampleID_CLUSTER_TABLE.csv, etc.
 cd /home/miapei/projects/def-gagnoned/miapei/BINF6999/RE2_output_20240619

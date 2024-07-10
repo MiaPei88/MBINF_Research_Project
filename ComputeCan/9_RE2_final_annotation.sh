@@ -1,8 +1,8 @@
 ### This script is to copy the content of the 5th column "Automatic_annotation" to 7th column "Final_annotation" in all CLUSTER_TABLE.csv files
 ### In order to save time copy paste right automated annotation manually.
-### After this step, we can manually change the specific row on column "Final_annotation" when the automatic annotation is wrong.
-### Wrote by Mia Pei
-### 2024/06/24
+### After this step, manually change the specific row on column "Final_annotation" when the automatic annotation is wrong.
+### Author: Mia Pei
+### Last modified: July 10, 2024
 
 cd /home/miapei/projects/def-gagnoned/miapei/BINF6999/RE2_output_20240619/RE2_manual_annotation
 
