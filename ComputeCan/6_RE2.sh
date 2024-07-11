@@ -8,6 +8,11 @@
 #SBATCH --output=RE2_%a.out
 #SBATCH --array=0-14
 
+
+### This script is designed to analyze the repeat profile of all samples using RepeatExplore2
+### Author: Mia Pei
+### Last modified: July 10, 2024
+
 cd /home/miapei/projects/def-gagnoned/miapei/BINF6999/MergedSequence_20240619
 FILES=(*.fasta)
 filename=${FILES[$SLURM_ARRAY_TASK_ID]}

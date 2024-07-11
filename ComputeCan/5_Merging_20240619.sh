@@ -7,8 +7,9 @@
 #SBATCH --mail-user=qpei@uoguelph.ca
 #SBATCH --mail-type=ALL
 
-# Modified on June 19, 2024
-# This script is to merge all the cleaned fastq files into a paired file
+### This script is to merge all the cleaned fastq files into a paired file
+### Author: Mia Pei
+### Last modified: July 10, 2024
 
 # Load required modules
 module load StdEnv/2023 nixpkgs/16.09  gcc/7.3.0

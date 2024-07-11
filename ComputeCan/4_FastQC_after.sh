@@ -5,6 +5,10 @@
 #SBATCH --mem=16G
 #SBATCH --output=FastQC_after.out
 
+### This script is designed to check the quality of reads after trimming
+### Author: Mia Pei
+### Last modified: July 10, 2024
+
 # Load required module
 module load StdEnv/2023
 module load fastqc/0.12.1

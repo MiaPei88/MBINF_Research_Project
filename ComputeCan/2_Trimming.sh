@@ -5,6 +5,10 @@
 #SBATCH --mem=16G
 #SBATCH --output=Trimming.out
 
+### This script is designed to trim the low quality reads and adaptors
+### Author: Mia Pei
+### Last modified: July 10, 2024
+
 # Load modules
 module load StdEnv/2023
 module load trimmomatic/0.39

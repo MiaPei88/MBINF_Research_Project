@@ -4,6 +4,10 @@
 #SBATCH --mem=8G
 #SBATCH --output=seqkit_stats.out
 
+### This script is designed to check general statistics information of the trimmed sequence
+### Author: Mia Pei
+### Last modified: July 10, 2024
+
 # Load module
 module load StdEnv/2023
 module load seqkit/2.5.1
