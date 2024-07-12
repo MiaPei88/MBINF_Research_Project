@@ -8,3 +8,5 @@ for f in annotated_*.csv;
 do (tail -n +7 $f > ${f%_CLUSTER_TABLE.csv}_MiaPei.csv);
 done
 
+# Then remove all the notes that have been added in the first two columns 
+# (these notes are to show which clusters' annotations are changed)
