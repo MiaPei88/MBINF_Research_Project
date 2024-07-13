@@ -1,338 +1,338 @@
-"Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"	"N_Reads"	"Genome_Size"
-10	1	2635	2635	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-17	1	2251	2251	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-18	1	2246	2246	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-23	1	2036	2036	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-27	1	1839	1839	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-20	2	2209	2209	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-21	2	2178	2178	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-5	2	4131	4131	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-57	2	983	983	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-2	3	5169	5169	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-4	3	4273	4273	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-1	4	5546	5546	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-15	4	2464	2464	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-3	5	4343	4343	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-6	6	3764	3764	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-22	7	2085	2085	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-37	7	1473	1473	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-33	8	1685	1685	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-39	8	1444	1444	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-7	9	3100	3100	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-8	10	2899	2899	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-9	11	2835	2835	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-11	12	2586	2586	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-12	13	2585	2585	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-13	14	2581	2581	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-14	15	2489	2489	"All/repeat/satellite"	"Putative satellites (low confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"	590308	2.44
-16	16	2322	2322	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-19	17	2218	2218	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-24	18	1969	1969	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_cerasiferum"	590308	2.44
-25	19	1961	1961	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-26	20	1856	1856	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-28	21	1811	1811	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-29	22	1778	1778	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-30	23	1737	1737	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-31	24	1707	1707	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-32	25	1699	1699	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-34	26	1594	1594	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-35	27	1570	1570	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-36	28	1505	1505	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-38	29	1470	1470	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-40	30	1394	1394	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-41	31	1391	1391	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-42	32	1326	1326	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-43	33	1273	1273	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-44	34	1245	1245	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-45	35	1239	1239	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-46	36	1215	1215	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-47	37	1180	1180	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-48	38	1143	1143	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-49	39	1131	1131	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_cerasiferum"	590308	2.44
-50	40	1117	1117	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-51	41	1104	1104	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-52	42	1084	1084	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-53	43	1080	1080	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-54	44	1075	1075	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-55	45	1067	1067	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-56	46	1040	1040	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-58	47	951	951	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Solanum_cerasiferum"	590308	2.44
-59	48	951	951	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_cerasiferum"	590308	2.44
-60	49	934	934	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-61	50	934	934	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-62	51	922	922	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-63	52	903	903	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-64	53	863	863	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-65	54	836	836	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-66	55	835	835	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-67	56	829	829	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-68	57	805	805	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_cerasiferum"	590308	2.44
-69	58	800	800	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-70	59	800	800	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-71	60	784	784	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-72	61	776	776	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-73	62	759	759	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-74	63	756	756	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-75	64	749	749	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-76	65	734	734	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-77	66	709	709	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-78	67	684	684	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-79	68	650	650	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-80	69	639	639	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-81	70	629	629	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-82	71	611	611	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-83	72	605	605	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-84	73	603	603	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-85	74	601	601	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Solanum_cerasiferum"	590308	2.44
-86	75	599	599	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-87	76	593	593	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-88	77	583	583	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"	590308	2.44
-89	78	577	577	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-90	79	562	562	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-91	80	549	549	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Solanum_cerasiferum"	590308	2.44
-92	81	536	536	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-93	82	521	521	"All/repeat/satellite"	"Putative satellites (low confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"	590308	2.44
-94	83	521	521	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-95	84	513	513	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-96	85	495	495	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-97	86	483	483	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-98	87	468	468	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_cerasiferum"	590308	2.44
-99	88	464	464	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-100	89	464	464	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-101	90	461	461	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-102	91	456	456	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-103	92	452	452	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Solanum_cerasiferum"	590308	2.44
-104	93	451	451	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-105	94	442	442	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-106	95	439	439	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-107	96	436	436	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-108	97	422	422	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"	590308	2.44
-109	98	421	421	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-110	99	411	411	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_cerasiferum"	590308	2.44
-111	100	411	411	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-112	101	406	406	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-113	102	398	398	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-114	103	392	392	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-115	104	386	386	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-116	105	371	371	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-117	106	370	370	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-118	107	370	370	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-119	108	351	351	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-120	109	347	347	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-121	110	333	333	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-122	111	331	331	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-123	112	330	330	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-124	113	329	329	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-125	114	326	326	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus"	"Solanum_cerasiferum"	590308	2.44
-126	115	326	326	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-127	116	314	314	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-128	117	307	307	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-129	118	303	303	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-130	119	302	302	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-131	120	295	295	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-132	121	284	284	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-133	122	281	281	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-134	123	281	281	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-135	124	268	268	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-136	125	267	267	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-137	126	257	257	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-138	127	253	253	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-139	128	251	251	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Solanum_cerasiferum"	590308	2.44
-140	129	248	248	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-141	130	246	246	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-142	131	242	242	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-143	132	237	237	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-144	133	236	236	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-145	134	235	235	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-146	135	233	233	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-147	136	227	227	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-148	137	225	225	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-149	138	224	224	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-150	139	223	223	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-151	140	220	220	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-152	141	220	220	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-153	142	214	214	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-154	143	214	214	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_cerasiferum"	590308	2.44
-155	144	214	214	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-156	145	212	212	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"	590308	2.44
-157	146	210	210	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-158	147	209	209	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-159	148	203	203	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-160	149	203	203	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-161	150	201	201	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-162	151	195	195	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-163	152	194	194	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-164	153	194	194	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-165	154	193	193	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-166	155	193	193	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-167	156	192	192	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-168	157	192	192	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-169	158	190	190	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"	590308	2.44
-170	159	189	189	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-171	160	188	188	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-172	161	188	188	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"	590308	2.44
-173	162	186	186	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-174	163	184	184	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-175	164	183	183	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-176	165	180	180	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-177	166	179	179	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-178	167	176	176	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-179	168	173	173	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-180	169	167	167	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-181	170	165	165	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-182	171	164	164	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-183	172	157	157	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"	590308	2.44
-184	173	157	157	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-185	174	157	157	"All/repeat/rDNA/5S_rDNA"	"rDNA"	"All/repeat/rDNA/5S_rDNA"	"Solanum_cerasiferum"	590308	2.44
-186	175	156	156	"All/repeat/satellite"	"Putative satellites (low confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"	590308	2.44
-187	176	155	155	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-188	177	154	154	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-189	178	153	153	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-190	179	153	153	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-191	180	152	152	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-192	181	146	146	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-193	182	145	145	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-194	183	140	140	"All/repeat/satellite"	"Putative satellites (high confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"	590308	2.44
-195	184	137	137	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-196	185	137	137	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-197	186	137	137	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-198	187	136	136	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-199	188	134	134	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-200	189	134	134	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-201	190	133	133	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-202	191	132	132	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-203	192	132	132	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"	590308	2.44
-204	193	131	131	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-205	194	130	130	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-206	195	130	130	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"	590308	2.44
-207	196	129	129	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"	590308	2.44
-208	197	128	128	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-209	198	128	128	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-210	199	128	128	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-211	200	127	127	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-212	201	127	127	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-213	202	127	127	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-214	203	126	126	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-215	204	125	125	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-216	205	124	124	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-217	206	124	124	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-218	207	122	122	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-219	208	122	122	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-220	209	117	117	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-221	210	117	117	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-222	211	117	117	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-223	212	114	114	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-224	213	114	114	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-225	214	114	114	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-226	215	112	112	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-227	216	111	111	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-228	217	111	111	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-229	218	110	110	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-230	219	110	110	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"	590308	2.44
-231	220	108	108	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-232	221	106	106	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-233	222	104	104	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-234	223	104	104	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"	590308	2.44
-235	224	103	103	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-236	225	102	102	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-237	226	101	101	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-238	227	100	100	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-239	228	99	99	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-240	229	99	99	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-241	230	98	98	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-242	231	96	96	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-243	232	96	96	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-244	233	94	94	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-245	234	92	92	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-246	235	92	92	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-247	236	91	91	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-248	237	90	90	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-249	238	88	88	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-250	239	88	88	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-251	240	87	87	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-252	241	87	87	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-253	242	86	86	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-254	243	85	85	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-255	244	85	85	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-256	245	85	85	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-257	246	84	84	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-258	247	84	84	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-259	248	84	84	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-260	249	83	83	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-261	250	82	82	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-262	251	81	81	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-263	252	80	80	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-264	253	79	79	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-265	254	79	79	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-266	255	79	79	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-267	256	78	78	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-268	257	78	78	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-269	258	78	78	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-270	259	77	77	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-271	260	77	77	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-272	261	77	77	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-273	262	77	77	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-274	263	76	76	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-275	264	75	75	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-276	265	74	74	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-277	266	74	74	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-278	267	73	73	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-279	268	73	73	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"	590308	2.44
-280	269	73	73	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-281	270	73	73	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-282	271	73	73	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-283	272	72	72	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"	590308	2.44
-284	273	72	72	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-285	274	72	72	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-286	275	71	71	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-287	276	71	71	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-288	277	71	71	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-289	278	71	71	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-290	279	69	69	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-291	280	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-292	281	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-293	282	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-294	283	68	68	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-295	284	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-296	285	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-297	286	67	67	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-298	287	67	67	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-299	288	67	67	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-300	289	67	67	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-301	290	67	67	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-302	291	67	67	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-303	292	66	66	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-304	293	66	66	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-305	294	66	66	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-306	295	66	66	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-307	296	65	65	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-308	297	65	65	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-309	298	64	64	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-310	299	64	64	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"	590308	2.44
-311	300	64	64	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-312	301	63	63	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-313	302	63	63	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-314	303	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-315	304	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-316	305	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-317	306	62	62	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"	590308	2.44
-318	307	62	62	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-319	308	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-320	309	62	62	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-321	310	62	62	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-322	311	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-323	312	61	61	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
-324	313	61	61	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-325	314	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-326	315	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-327	316	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-328	317	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-329	318	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-330	319	60	60	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"	590308	2.44
-331	320	60	60	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"	590308	2.44
-332	321	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-333	322	59	59	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-334	323	59	59	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-335	324	59	59	"All"	"Other"	"All"	"Solanum_cerasiferum"	590308	2.44
-336	325	59	59	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"	590308	2.44
-337	326	59	59	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"	590308	2.44
+"Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"
+10	1	2635	2635	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+17	1	2251	2251	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+18	1	2246	2246	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+23	1	2036	2036	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+27	1	1839	1839	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+20	2	2209	2209	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+21	2	2178	2178	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+5	2	4131	4131	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+57	2	983	983	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+2	3	5169	5169	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+4	3	4273	4273	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+1	4	5546	5546	"All"	"Other"	"All"	"Solanum_cerasiferum"
+15	4	2464	2464	"All"	"Other"	"All"	"Solanum_cerasiferum"
+3	5	4343	4343	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+6	6	3764	3764	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+22	7	2085	2085	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+37	7	1473	1473	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+33	8	1685	1685	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+39	8	1444	1444	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+7	9	3100	3100	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+8	10	2899	2899	"All"	"Other"	"All"	"Solanum_cerasiferum"
+9	11	2835	2835	"All"	"Other"	"All"	"Solanum_cerasiferum"
+11	12	2586	2586	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+12	13	2585	2585	"All"	"Other"	"All"	"Solanum_cerasiferum"
+13	14	2581	2581	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+14	15	2489	2489	"All/repeat/satellite"	"Putative satellites (low confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"
+16	16	2322	2322	"All"	"Other"	"All"	"Solanum_cerasiferum"
+19	17	2218	2218	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+24	18	1969	1969	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_cerasiferum"
+25	19	1961	1961	"All"	"Other"	"All"	"Solanum_cerasiferum"
+26	20	1856	1856	"All"	"Other"	"All"	"Solanum_cerasiferum"
+28	21	1811	1811	"All"	"Other"	"All"	"Solanum_cerasiferum"
+29	22	1778	1778	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+30	23	1737	1737	"All"	"Other"	"All"	"Solanum_cerasiferum"
+31	24	1707	1707	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+32	25	1699	1699	"All"	"Other"	"All"	"Solanum_cerasiferum"
+34	26	1594	1594	"All"	"Other"	"All"	"Solanum_cerasiferum"
+35	27	1570	1570	"All"	"Other"	"All"	"Solanum_cerasiferum"
+36	28	1505	1505	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+38	29	1470	1470	"All"	"Other"	"All"	"Solanum_cerasiferum"
+40	30	1394	1394	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+41	31	1391	1391	"All"	"Other"	"All"	"Solanum_cerasiferum"
+42	32	1326	1326	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+43	33	1273	1273	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+44	34	1245	1245	"All"	"Other"	"All"	"Solanum_cerasiferum"
+45	35	1239	1239	"All"	"Other"	"All"	"Solanum_cerasiferum"
+46	36	1215	1215	"All"	"Other"	"All"	"Solanum_cerasiferum"
+47	37	1180	1180	"All"	"Other"	"All"	"Solanum_cerasiferum"
+48	38	1143	1143	"All"	"Other"	"All"	"Solanum_cerasiferum"
+49	39	1131	1131	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_cerasiferum"
+50	40	1117	1117	"All"	"Other"	"All"	"Solanum_cerasiferum"
+51	41	1104	1104	"All"	"Other"	"All"	"Solanum_cerasiferum"
+52	42	1084	1084	"All"	"Other"	"All"	"Solanum_cerasiferum"
+53	43	1080	1080	"All"	"Other"	"All"	"Solanum_cerasiferum"
+54	44	1075	1075	"All"	"Other"	"All"	"Solanum_cerasiferum"
+55	45	1067	1067	"All"	"Other"	"All"	"Solanum_cerasiferum"
+56	46	1040	1040	"All"	"Other"	"All"	"Solanum_cerasiferum"
+58	47	951	951	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Solanum_cerasiferum"
+59	48	951	951	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_cerasiferum"
+60	49	934	934	"All"	"Other"	"All"	"Solanum_cerasiferum"
+61	50	934	934	"All"	"Other"	"All"	"Solanum_cerasiferum"
+62	51	922	922	"All"	"Other"	"All"	"Solanum_cerasiferum"
+63	52	903	903	"All"	"Other"	"All"	"Solanum_cerasiferum"
+64	53	863	863	"All"	"Other"	"All"	"Solanum_cerasiferum"
+65	54	836	836	"All"	"Other"	"All"	"Solanum_cerasiferum"
+66	55	835	835	"All"	"Other"	"All"	"Solanum_cerasiferum"
+67	56	829	829	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+68	57	805	805	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_cerasiferum"
+69	58	800	800	"All"	"Other"	"All"	"Solanum_cerasiferum"
+70	59	800	800	"All"	"Other"	"All"	"Solanum_cerasiferum"
+71	60	784	784	"All"	"Other"	"All"	"Solanum_cerasiferum"
+72	61	776	776	"All"	"Other"	"All"	"Solanum_cerasiferum"
+73	62	759	759	"All"	"Other"	"All"	"Solanum_cerasiferum"
+74	63	756	756	"All"	"Other"	"All"	"Solanum_cerasiferum"
+75	64	749	749	"All"	"Other"	"All"	"Solanum_cerasiferum"
+76	65	734	734	"All"	"Other"	"All"	"Solanum_cerasiferum"
+77	66	709	709	"All"	"Other"	"All"	"Solanum_cerasiferum"
+78	67	684	684	"All"	"Other"	"All"	"Solanum_cerasiferum"
+79	68	650	650	"All"	"Other"	"All"	"Solanum_cerasiferum"
+80	69	639	639	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+81	70	629	629	"All"	"Other"	"All"	"Solanum_cerasiferum"
+82	71	611	611	"All"	"Other"	"All"	"Solanum_cerasiferum"
+83	72	605	605	"All"	"Other"	"All"	"Solanum_cerasiferum"
+84	73	603	603	"All"	"Other"	"All"	"Solanum_cerasiferum"
+85	74	601	601	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Solanum_cerasiferum"
+86	75	599	599	"All"	"Other"	"All"	"Solanum_cerasiferum"
+87	76	593	593	"All"	"Other"	"All"	"Solanum_cerasiferum"
+88	77	583	583	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"
+89	78	577	577	"All"	"Other"	"All"	"Solanum_cerasiferum"
+90	79	562	562	"All"	"Other"	"All"	"Solanum_cerasiferum"
+91	80	549	549	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/25S_rDNA"	"Solanum_cerasiferum"
+92	81	536	536	"All"	"Other"	"All"	"Solanum_cerasiferum"
+93	82	521	521	"All/repeat/satellite"	"Putative satellites (low confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"
+94	83	521	521	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+95	84	513	513	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+96	85	495	495	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+97	86	483	483	"All"	"Other"	"All"	"Solanum_cerasiferum"
+98	87	468	468	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_cerasiferum"
+99	88	464	464	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+100	89	464	464	"All"	"Other"	"All"	"Solanum_cerasiferum"
+101	90	461	461	"All"	"Other"	"All"	"Solanum_cerasiferum"
+102	91	456	456	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+103	92	452	452	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA/18S_rDNA"	"Solanum_cerasiferum"
+104	93	451	451	"All"	"Other"	"All"	"Solanum_cerasiferum"
+105	94	442	442	"All"	"Other"	"All"	"Solanum_cerasiferum"
+106	95	439	439	"All"	"Other"	"All"	"Solanum_cerasiferum"
+107	96	436	436	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+108	97	422	422	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"
+109	98	421	421	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+110	99	411	411	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_cerasiferum"
+111	100	411	411	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+112	101	406	406	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+113	102	398	398	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+114	103	392	392	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+115	104	386	386	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+116	105	371	371	"All"	"Other"	"All"	"Solanum_cerasiferum"
+117	106	370	370	"All"	"Other"	"All"	"Solanum_cerasiferum"
+118	107	370	370	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+119	108	351	351	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+120	109	347	347	"All"	"Other"	"All"	"Solanum_cerasiferum"
+121	110	333	333	"All"	"Other"	"All"	"Solanum_cerasiferum"
+122	111	331	331	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+123	112	330	330	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+124	113	329	329	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+125	114	326	326	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus"	"Solanum_cerasiferum"
+126	115	326	326	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+127	116	314	314	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+128	117	307	307	"All"	"Other"	"All"	"Solanum_cerasiferum"
+129	118	303	303	"All"	"Other"	"All"	"Solanum_cerasiferum"
+130	119	302	302	"All"	"Other"	"All"	"Solanum_cerasiferum"
+131	120	295	295	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+132	121	284	284	"All"	"Other"	"All"	"Solanum_cerasiferum"
+133	122	281	281	"All"	"Other"	"All"	"Solanum_cerasiferum"
+134	123	281	281	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+135	124	268	268	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+136	125	267	267	"All"	"Other"	"All"	"Solanum_cerasiferum"
+137	126	257	257	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+138	127	253	253	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+139	128	251	251	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Solanum_cerasiferum"
+140	129	248	248	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+141	130	246	246	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+142	131	242	242	"All"	"Other"	"All"	"Solanum_cerasiferum"
+143	132	237	237	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+144	133	236	236	"All"	"Other"	"All"	"Solanum_cerasiferum"
+145	134	235	235	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+146	135	233	233	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+147	136	227	227	"All"	"Other"	"All"	"Solanum_cerasiferum"
+148	137	225	225	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+149	138	224	224	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+150	139	223	223	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+151	140	220	220	"All"	"Other"	"All"	"Solanum_cerasiferum"
+152	141	220	220	"All"	"Other"	"All"	"Solanum_cerasiferum"
+153	142	214	214	"All"	"Other"	"All"	"Solanum_cerasiferum"
+154	143	214	214	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_cerasiferum"
+155	144	214	214	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+156	145	212	212	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"
+157	146	210	210	"All"	"Other"	"All"	"Solanum_cerasiferum"
+158	147	209	209	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+159	148	203	203	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+160	149	203	203	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+161	150	201	201	"All"	"Other"	"All"	"Solanum_cerasiferum"
+162	151	195	195	"All"	"Other"	"All"	"Solanum_cerasiferum"
+163	152	194	194	"All"	"Other"	"All"	"Solanum_cerasiferum"
+164	153	194	194	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+165	154	193	193	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+166	155	193	193	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+167	156	192	192	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+168	157	192	192	"All"	"Other"	"All"	"Solanum_cerasiferum"
+169	158	190	190	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"
+170	159	189	189	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+171	160	188	188	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+172	161	188	188	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"
+173	162	186	186	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+174	163	184	184	"All"	"Other"	"All"	"Solanum_cerasiferum"
+175	164	183	183	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+176	165	180	180	"All"	"Other"	"All"	"Solanum_cerasiferum"
+177	166	179	179	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+178	167	176	176	"All"	"Other"	"All"	"Solanum_cerasiferum"
+179	168	173	173	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+180	169	167	167	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+181	170	165	165	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+182	171	164	164	"All"	"Other"	"All"	"Solanum_cerasiferum"
+183	172	157	157	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"
+184	173	157	157	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+185	174	157	157	"All/repeat/rDNA/5S_rDNA"	"rDNA"	"All/repeat/rDNA/5S_rDNA"	"Solanum_cerasiferum"
+186	175	156	156	"All/repeat/satellite"	"Putative satellites (low confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"
+187	176	155	155	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+188	177	154	154	"All"	"Other"	"All"	"Solanum_cerasiferum"
+189	178	153	153	"All"	"Other"	"All"	"Solanum_cerasiferum"
+190	179	153	153	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+191	180	152	152	"All"	"Other"	"All"	"Solanum_cerasiferum"
+192	181	146	146	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+193	182	145	145	"All"	"Other"	"All"	"Solanum_cerasiferum"
+194	183	140	140	"All/repeat/satellite"	"Putative satellites (high confidence)"	"All/repeat/satellite"	"Solanum_cerasiferum"
+195	184	137	137	"All"	"Other"	"All"	"Solanum_cerasiferum"
+196	185	137	137	"All"	"Other"	"All"	"Solanum_cerasiferum"
+197	186	137	137	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+198	187	136	136	"All"	"Other"	"All"	"Solanum_cerasiferum"
+199	188	134	134	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+200	189	134	134	"All"	"Other"	"All"	"Solanum_cerasiferum"
+201	190	133	133	"All"	"Other"	"All"	"Solanum_cerasiferum"
+202	191	132	132	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+203	192	132	132	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_cerasiferum"
+204	193	131	131	"All"	"Other"	"All"	"Solanum_cerasiferum"
+205	194	130	130	"All"	"Other"	"All"	"Solanum_cerasiferum"
+206	195	130	130	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"
+207	196	129	129	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"
+208	197	128	128	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+209	198	128	128	"All"	"Other"	"All"	"Solanum_cerasiferum"
+210	199	128	128	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+211	200	127	127	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+212	201	127	127	"All"	"Other"	"All"	"Solanum_cerasiferum"
+213	202	127	127	"All"	"Other"	"All"	"Solanum_cerasiferum"
+214	203	126	126	"All"	"Other"	"All"	"Solanum_cerasiferum"
+215	204	125	125	"All"	"Other"	"All"	"Solanum_cerasiferum"
+216	205	124	124	"All"	"Other"	"All"	"Solanum_cerasiferum"
+217	206	124	124	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+218	207	122	122	"All"	"Other"	"All"	"Solanum_cerasiferum"
+219	208	122	122	"All"	"Other"	"All"	"Solanum_cerasiferum"
+220	209	117	117	"All"	"Other"	"All"	"Solanum_cerasiferum"
+221	210	117	117	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+222	211	117	117	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+223	212	114	114	"All"	"Other"	"All"	"Solanum_cerasiferum"
+224	213	114	114	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+225	214	114	114	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+226	215	112	112	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+227	216	111	111	"All"	"Other"	"All"	"Solanum_cerasiferum"
+228	217	111	111	"All"	"Other"	"All"	"Solanum_cerasiferum"
+229	218	110	110	"All"	"Other"	"All"	"Solanum_cerasiferum"
+230	219	110	110	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"
+231	220	108	108	"All"	"Other"	"All"	"Solanum_cerasiferum"
+232	221	106	106	"All"	"Other"	"All"	"Solanum_cerasiferum"
+233	222	104	104	"All"	"Other"	"All"	"Solanum_cerasiferum"
+234	223	104	104	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"
+235	224	103	103	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+236	225	102	102	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+237	226	101	101	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+238	227	100	100	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+239	228	99	99	"All"	"Other"	"All"	"Solanum_cerasiferum"
+240	229	99	99	"All"	"Other"	"All"	"Solanum_cerasiferum"
+241	230	98	98	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+242	231	96	96	"All"	"Other"	"All"	"Solanum_cerasiferum"
+243	232	96	96	"All"	"Other"	"All"	"Solanum_cerasiferum"
+244	233	94	94	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+245	234	92	92	"All"	"Other"	"All"	"Solanum_cerasiferum"
+246	235	92	92	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+247	236	91	91	"All"	"Other"	"All"	"Solanum_cerasiferum"
+248	237	90	90	"All"	"Other"	"All"	"Solanum_cerasiferum"
+249	238	88	88	"All"	"Other"	"All"	"Solanum_cerasiferum"
+250	239	88	88	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+251	240	87	87	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+252	241	87	87	"All"	"Other"	"All"	"Solanum_cerasiferum"
+253	242	86	86	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+254	243	85	85	"All"	"Other"	"All"	"Solanum_cerasiferum"
+255	244	85	85	"All"	"Other"	"All"	"Solanum_cerasiferum"
+256	245	85	85	"All"	"Other"	"All"	"Solanum_cerasiferum"
+257	246	84	84	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+258	247	84	84	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+259	248	84	84	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+260	249	83	83	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+261	250	82	82	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+262	251	81	81	"All"	"Other"	"All"	"Solanum_cerasiferum"
+263	252	80	80	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+264	253	79	79	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+265	254	79	79	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+266	255	79	79	"All"	"Other"	"All"	"Solanum_cerasiferum"
+267	256	78	78	"All"	"Other"	"All"	"Solanum_cerasiferum"
+268	257	78	78	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+269	258	78	78	"All"	"Other"	"All"	"Solanum_cerasiferum"
+270	259	77	77	"All"	"Other"	"All"	"Solanum_cerasiferum"
+271	260	77	77	"All"	"Other"	"All"	"Solanum_cerasiferum"
+272	261	77	77	"All"	"Other"	"All"	"Solanum_cerasiferum"
+273	262	77	77	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+274	263	76	76	"All"	"Other"	"All"	"Solanum_cerasiferum"
+275	264	75	75	"All"	"Other"	"All"	"Solanum_cerasiferum"
+276	265	74	74	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+277	266	74	74	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+278	267	73	73	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+279	268	73	73	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_cerasiferum"
+280	269	73	73	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+281	270	73	73	"All"	"Other"	"All"	"Solanum_cerasiferum"
+282	271	73	73	"All"	"Other"	"All"	"Solanum_cerasiferum"
+283	272	72	72	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"
+284	273	72	72	"All"	"Other"	"All"	"Solanum_cerasiferum"
+285	274	72	72	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+286	275	71	71	"All"	"Other"	"All"	"Solanum_cerasiferum"
+287	276	71	71	"All"	"Other"	"All"	"Solanum_cerasiferum"
+288	277	71	71	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+289	278	71	71	"All"	"Other"	"All"	"Solanum_cerasiferum"
+290	279	69	69	"All"	"Other"	"All"	"Solanum_cerasiferum"
+291	280	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"
+292	281	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"
+293	282	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"
+294	283	68	68	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+295	284	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"
+296	285	68	68	"All"	"Other"	"All"	"Solanum_cerasiferum"
+297	286	67	67	"All"	"Other"	"All"	"Solanum_cerasiferum"
+298	287	67	67	"All"	"Other"	"All"	"Solanum_cerasiferum"
+299	288	67	67	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+300	289	67	67	"All"	"Other"	"All"	"Solanum_cerasiferum"
+301	290	67	67	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+302	291	67	67	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+303	292	66	66	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+304	293	66	66	"All"	"Other"	"All"	"Solanum_cerasiferum"
+305	294	66	66	"All"	"Other"	"All"	"Solanum_cerasiferum"
+306	295	66	66	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+307	296	65	65	"All"	"Other"	"All"	"Solanum_cerasiferum"
+308	297	65	65	"All"	"Other"	"All"	"Solanum_cerasiferum"
+309	298	64	64	"All"	"Other"	"All"	"Solanum_cerasiferum"
+310	299	64	64	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_cerasiferum"
+311	300	64	64	"All"	"Other"	"All"	"Solanum_cerasiferum"
+312	301	63	63	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+313	302	63	63	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+314	303	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"
+315	304	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"
+316	305	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"
+317	306	62	62	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_cerasiferum"
+318	307	62	62	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+319	308	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"
+320	309	62	62	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+321	310	62	62	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+322	311	62	62	"All"	"Other"	"All"	"Solanum_cerasiferum"
+323	312	61	61	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"
+324	313	61	61	"All"	"Other"	"All"	"Solanum_cerasiferum"
+325	314	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"
+326	315	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"
+327	316	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"
+328	317	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"
+329	318	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"
+330	319	60	60	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_cerasiferum"
+331	320	60	60	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_cerasiferum"
+332	321	60	60	"All"	"Other"	"All"	"Solanum_cerasiferum"
+333	322	59	59	"All"	"Other"	"All"	"Solanum_cerasiferum"
+334	323	59	59	"All"	"Other"	"All"	"Solanum_cerasiferum"
+335	324	59	59	"All"	"Other"	"All"	"Solanum_cerasiferum"
+336	325	59	59	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_cerasiferum"
+337	326	59	59	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_cerasiferum"

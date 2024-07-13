@@ -1,196 +1,196 @@
-"Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"	"N_Reads"	"Genome_Size"
-10	1	16943	16943	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-11	1	15036	15036	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-12	1	14834	14834	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-13	1	13567	13567	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-15	1	12846	12846	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-16	1	12143	12143	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-19	1	10782	10782	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-20	1	9998	9998	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-21	1	9445	9445	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-22	1	9277	9277	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-26	1	8711	8711	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-27	1	8554	8554	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-3	1	23670	23670	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-32	1	7840	7840	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-33	1	7612	7612	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-35	1	7588	7588	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-38	1	7398	7398	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-42	1	6478	6478	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-43	1	6457	6457	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-44	1	6163	6163	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-50	1	5263	5263	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-53	1	4861	4861	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-54	1	4828	4828	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-55	1	4776	4776	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-6	1	21176	21176	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-67	1	3232	3232	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-71	1	2923	2923	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-7	1	21171	21171	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-73	1	2869	2869	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-17	2	11404	11404	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-2	2	25830	25830	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-37	2	7507	7507	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-51	2	5022	5022	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-56	2	4751	4751	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-62	2	3977	3977	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-1	3	34520	34520	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-4	3	21904	21904	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-25	4	8910	8910	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-29	4	7984	7984	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-36	4	7562	7562	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-45	4	6039	6039	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-49	4	5450	5450	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-52	4	4864	4864	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-57	4	4711	4711	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-90	4	1647	1647	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-8	5	19877	19877	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-9	5	19845	19845	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-5	6	21620	21620	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-101	7	1218	1218	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-111	7	872	872	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-65	7	3879	3879	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-76	7	2672	2672	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-79	7	2579	2579	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-83	7	2213	2213	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-14	8	13155	13155	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-31	9	7907	7907	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-63	9	3947	3947	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-18	10	10994	10994	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_melongena"	1703734	2.81
-23	11	9053	9053	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-24	12	8987	8987	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"	1703734	2.81
-28	13	8291	8291	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-30	14	7926	7926	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-34	15	7594	7594	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-72	16	2909	2909	"All/repeat"	"Other"	"All/repeat/45S_rDNA"	"Solanum_melongena"	1703734	2.81
-75	16	2815	2815	"All/repeat"	"Other"	"All/repeat/45S_rDNA"	"Solanum_melongena"	1703734	2.81
-92	16	1528	1528	"All/repeat"	"Other"	"All/repeat//mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"	1703734	2.81
-39	17	7182	7182	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Solanum_melongena"	1703734	2.81
-40	18	7126	7126	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-41	19	6590	6590	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"	1703734	2.81
-46	20	5820	5820	"All/repeat/mobile_element/Class_I"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I"	"Solanum_melongena"	1703734	2.81
-47	21	5747	5747	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-48	22	5548	5548	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-58	23	4482	4482	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-59	24	4453	4453	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_melongena"	1703734	2.81
-77	25	2639	2639	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-88	25	1709	1709	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-80	26	2476	2476	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-87	26	1823	1823	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-60	27	4016	4016	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-61	28	3980	3980	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-64	29	3918	3918	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_melongena"	1703734	2.81
-66	30	3503	3503	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_melongena"	1703734	2.81
-89	31	1667	1667	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-91	31	1591	1591	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-68	32	3124	3124	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-69	33	3054	3054	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-70	34	2972	2972	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-74	35	2858	2858	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-78	36	2587	2587	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-81	37	2248	2248	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-82	38	2215	2215	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-84	39	2212	2212	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_melongena"	1703734	2.81
-85	40	2204	2204	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-86	41	2158	2158	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"	1703734	2.81
-93	42	1528	1528	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-94	43	1494	1494	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-95	44	1410	1410	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-96	45	1404	1404	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_melongena"	1703734	2.81
-97	46	1381	1381	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-98	47	1366	1366	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-99	48	1364	1364	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-100	49	1294	1294	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-103	50	1033	1033	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-102	51	1113	1113	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-104	52	1027	1027	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-105	53	1023	1023	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_melongena"	1703734	2.81
-106	54	933	933	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-107	55	928	928	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-108	56	921	921	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-109	57	892	892	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_melongena"	1703734	2.81
-110	58	874	874	"All/repeat"	"Other"	"All/repeat"	"Solanum_melongena"	1703734	2.81
-112	59	837	837	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-113	60	831	831	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-114	61	822	822	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"	1703734	2.81
-115	62	768	768	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-116	63	694	694	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Solanum_melongena"	1703734	2.81
-117	64	686	686	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_melongena"	1703734	2.81
-118	65	686	686	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-119	66	660	660	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_melongena"	1703734	2.81
-120	67	653	653	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Solanum_melongena"	1703734	2.81
-121	68	625	625	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-122	69	621	621	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/EnSpm_CACTA"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/EnSpm_CACTA"	"Solanum_melongena"	1703734	2.81
-123	70	616	616	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_melongena"	1703734	2.81
-124	71	613	613	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/PIF_Harbinger"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/PIF_Harbinger"	"Solanum_melongena"	1703734	2.81
-125	72	597	597	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Solanum_melongena"	1703734	2.81
-126	73	592	592	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-127	74	582	582	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-128	75	581	581	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-129	76	579	579	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"	1703734	2.81
-130	77	574	574	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-131	78	537	537	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"	1703734	2.81
-132	79	521	521	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-133	80	511	511	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-134	81	506	506	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-135	82	502	502	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-136	83	486	486	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-137	84	460	460	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-138	85	445	445	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-139	86	434	434	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-140	87	424	424	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-141	88	423	423	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_melongena"	1703734	2.81
-142	89	417	417	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-143	90	405	405	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-144	91	395	395	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"	1703734	2.81
-145	92	386	386	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-146	93	383	383	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Solanum_melongena"	1703734	2.81
-147	94	381	381	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-148	95	377	377	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_melongena"	1703734	2.81
-149	96	356	356	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-150	97	354	354	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"	1703734	2.81
-151	98	347	347	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-152	99	346	346	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-153	100	341	341	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"	1703734	2.81
-154	101	336	336	"All/repeat"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"	1703734	2.81
-155	102	336	336	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-156	103	329	329	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-157	104	324	324	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_melongena"	1703734	2.81
-158	105	310	310	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-159	106	305	305	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-160	107	296	296	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-161	108	293	293	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-162	109	288	288	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Solanum_melongena"	1703734	2.81
-163	110	287	287	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"	1703734	2.81
-164	111	276	276	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-165	112	260	260	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-166	113	258	258	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-167	114	241	241	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-168	115	240	240	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_melongena"	1703734	2.81
-169	116	239	239	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-170	117	236	236	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-171	118	236	236	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-172	119	231	231	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Solanum_melongena"	1703734	2.81
-173	120	227	227	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-174	121	226	226	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-175	122	214	214	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-176	123	213	213	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-177	124	207	207	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_melongena"	1703734	2.81
-178	125	206	206	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-179	126	203	203	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-180	127	203	203	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-181	128	203	203	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-182	129	196	196	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-183	130	193	193	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-184	131	191	191	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-185	132	189	189	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_melongena"	1703734	2.81
-186	133	186	186	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-187	134	180	180	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-188	135	179	179	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-189	136	178	178	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-190	137	178	178	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"	1703734	2.81
-191	138	175	175	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-192	139	174	174	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
-193	140	173	173	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"	1703734	2.81
-194	141	173	173	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_melongena"	1703734	2.81
-195	142	172	172	"All"	"Other"	"All"	"Solanum_melongena"	1703734	2.81
+"Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"
+10	1	16943	16943	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+11	1	15036	15036	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+12	1	14834	14834	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+13	1	13567	13567	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+15	1	12846	12846	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+16	1	12143	12143	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+19	1	10782	10782	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+20	1	9998	9998	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+21	1	9445	9445	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+22	1	9277	9277	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+26	1	8711	8711	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+27	1	8554	8554	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+3	1	23670	23670	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+32	1	7840	7840	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+33	1	7612	7612	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+35	1	7588	7588	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+38	1	7398	7398	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+42	1	6478	6478	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+43	1	6457	6457	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+44	1	6163	6163	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+50	1	5263	5263	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+53	1	4861	4861	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+54	1	4828	4828	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+55	1	4776	4776	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+6	1	21176	21176	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+67	1	3232	3232	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+71	1	2923	2923	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+7	1	21171	21171	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+73	1	2869	2869	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+17	2	11404	11404	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+2	2	25830	25830	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+37	2	7507	7507	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+51	2	5022	5022	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+56	2	4751	4751	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+62	2	3977	3977	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+1	3	34520	34520	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+4	3	21904	21904	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+25	4	8910	8910	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+29	4	7984	7984	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+36	4	7562	7562	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+45	4	6039	6039	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+49	4	5450	5450	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+52	4	4864	4864	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+57	4	4711	4711	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+90	4	1647	1647	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+8	5	19877	19877	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+9	5	19845	19845	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+5	6	21620	21620	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+101	7	1218	1218	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+111	7	872	872	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+65	7	3879	3879	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+76	7	2672	2672	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+79	7	2579	2579	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+83	7	2213	2213	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+14	8	13155	13155	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+31	9	7907	7907	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+63	9	3947	3947	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+18	10	10994	10994	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_melongena"
+23	11	9053	9053	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+24	12	8987	8987	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"
+28	13	8291	8291	"All"	"Other"	"All"	"Solanum_melongena"
+30	14	7926	7926	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+34	15	7594	7594	"All"	"Other"	"All"	"Solanum_melongena"
+72	16	2909	2909	"All/repeat"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_melongena"
+75	16	2815	2815	"All/repeat"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_melongena"
+92	16	1528	1528	"All/repeat"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"
+39	17	7182	7182	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Solanum_melongena"
+40	18	7126	7126	"All"	"Other"	"All"	"Solanum_melongena"
+41	19	6590	6590	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_melongena"
+46	20	5820	5820	"All/repeat/mobile_element/Class_I"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I"	"Solanum_melongena"
+47	21	5747	5747	"All"	"Other"	"All"	"Solanum_melongena"
+48	22	5548	5548	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+58	23	4482	4482	"All"	"Other"	"All"	"Solanum_melongena"
+59	24	4453	4453	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_melongena"
+77	25	2639	2639	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+88	25	1709	1709	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+80	26	2476	2476	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+87	26	1823	1823	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+60	27	4016	4016	"All"	"Other"	"All"	"Solanum_melongena"
+61	28	3980	3980	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+64	29	3918	3918	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_melongena"
+66	30	3503	3503	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_melongena"
+89	31	1667	1667	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+91	31	1591	1591	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+68	32	3124	3124	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+69	33	3054	3054	"All"	"Other"	"All"	"Solanum_melongena"
+70	34	2972	2972	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+74	35	2858	2858	"All"	"Other"	"All"	"Solanum_melongena"
+78	36	2587	2587	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+81	37	2248	2248	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+82	38	2215	2215	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+84	39	2212	2212	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_melongena"
+85	40	2204	2204	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+86	41	2158	2158	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_melongena"
+93	42	1528	1528	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+94	43	1494	1494	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+95	44	1410	1410	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+96	45	1404	1404	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_melongena"
+97	46	1381	1381	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+98	47	1366	1366	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+99	48	1364	1364	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+100	49	1294	1294	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+103	50	1033	1033	"All"	"Other"	"All"	"Solanum_melongena"
+102	51	1113	1113	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+104	52	1027	1027	"All"	"Other"	"All"	"Solanum_melongena"
+105	53	1023	1023	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_melongena"
+106	54	933	933	"All"	"Other"	"All"	"Solanum_melongena"
+107	55	928	928	"All"	"Other"	"All"	"Solanum_melongena"
+108	56	921	921	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+109	57	892	892	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_melongena"
+110	58	874	874	"All/repeat"	"Other"	"All/repeat"	"Solanum_melongena"
+112	59	837	837	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+113	60	831	831	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+114	61	822	822	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"
+115	62	768	768	"All"	"Other"	"All"	"Solanum_melongena"
+116	63	694	694	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila"	"Solanum_melongena"
+117	64	686	686	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_melongena"
+118	65	686	686	"All"	"Other"	"All"	"Solanum_melongena"
+119	66	660	660	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_melongena"
+120	67	653	653	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Solanum_melongena"
+121	68	625	625	"All"	"Other"	"All"	"Solanum_melongena"
+122	69	621	621	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/EnSpm_CACTA"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/EnSpm_CACTA"	"Solanum_melongena"
+123	70	616	616	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_melongena"
+124	71	613	613	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/PIF_Harbinger"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/PIF_Harbinger"	"Solanum_melongena"
+125	72	597	597	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Solanum_melongena"
+126	73	592	592	"All"	"Other"	"All"	"Solanum_melongena"
+127	74	582	582	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+128	75	581	581	"All"	"Other"	"All"	"Solanum_melongena"
+129	76	579	579	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"
+130	77	574	574	"All"	"Other"	"All"	"Solanum_melongena"
+131	78	537	537	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"
+132	79	521	521	"All"	"Other"	"All"	"Solanum_melongena"
+133	80	511	511	"All"	"Other"	"All"	"Solanum_melongena"
+134	81	506	506	"All"	"Other"	"All"	"Solanum_melongena"
+135	82	502	502	"All"	"Other"	"All"	"Solanum_melongena"
+136	83	486	486	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+137	84	460	460	"All"	"Other"	"All"	"Solanum_melongena"
+138	85	445	445	"All"	"Other"	"All"	"Solanum_melongena"
+139	86	434	434	"All"	"Other"	"All"	"Solanum_melongena"
+140	87	424	424	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+141	88	423	423	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_melongena"
+142	89	417	417	"All"	"Other"	"All"	"Solanum_melongena"
+143	90	405	405	"All"	"Other"	"All"	"Solanum_melongena"
+144	91	395	395	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_melongena"
+145	92	386	386	"All"	"Other"	"All"	"Solanum_melongena"
+146	93	383	383	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Solanum_melongena"
+147	94	381	381	"All"	"Other"	"All"	"Solanum_melongena"
+148	95	377	377	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_melongena"
+149	96	356	356	"All"	"Other"	"All"	"Solanum_melongena"
+150	97	354	354	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"
+151	98	347	347	"All"	"Other"	"All"	"Solanum_melongena"
+152	99	346	346	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+153	100	341	341	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_melongena"
+154	101	336	336	"All/repeat"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"
+155	102	336	336	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+156	103	329	329	"All"	"Other"	"All"	"Solanum_melongena"
+157	104	324	324	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_melongena"
+158	105	310	310	"All"	"Other"	"All"	"Solanum_melongena"
+159	106	305	305	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+160	107	296	296	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+161	108	293	293	"All"	"Other"	"All"	"Solanum_melongena"
+162	109	288	288	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Solanum_melongena"
+163	110	287	287	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_melongena"
+164	111	276	276	"All"	"Other"	"All"	"Solanum_melongena"
+165	112	260	260	"All"	"Other"	"All"	"Solanum_melongena"
+166	113	258	258	"All"	"Other"	"All"	"Solanum_melongena"
+167	114	241	241	"All"	"Other"	"All"	"Solanum_melongena"
+168	115	240	240	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_melongena"
+169	116	239	239	"All"	"Other"	"All"	"Solanum_melongena"
+170	117	236	236	"All"	"Other"	"All"	"Solanum_melongena"
+171	118	236	236	"All"	"Other"	"All"	"Solanum_melongena"
+172	119	231	231	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ivana"	"Solanum_melongena"
+173	120	227	227	"All"	"Other"	"All"	"Solanum_melongena"
+174	121	226	226	"All"	"Other"	"All"	"Solanum_melongena"
+175	122	214	214	"All"	"Other"	"All"	"Solanum_melongena"
+176	123	213	213	"All"	"Other"	"All"	"Solanum_melongena"
+177	124	207	207	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_melongena"
+178	125	206	206	"All"	"Other"	"All"	"Solanum_melongena"
+179	126	203	203	"All"	"Other"	"All"	"Solanum_melongena"
+180	127	203	203	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+181	128	203	203	"All"	"Other"	"All"	"Solanum_melongena"
+182	129	196	196	"All"	"Other"	"All"	"Solanum_melongena"
+183	130	193	193	"All"	"Other"	"All"	"Solanum_melongena"
+184	131	191	191	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+185	132	189	189	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_melongena"
+186	133	186	186	"All"	"Other"	"All"	"Solanum_melongena"
+187	134	180	180	"All"	"Other"	"All"	"Solanum_melongena"
+188	135	179	179	"All"	"Other"	"All"	"Solanum_melongena"
+189	136	178	178	"All"	"Other"	"All"	"Solanum_melongena"
+190	137	178	178	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_melongena"
+191	138	175	175	"All"	"Other"	"All"	"Solanum_melongena"
+192	139	174	174	"All"	"Other"	"All"	"Solanum_melongena"
+193	140	173	173	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_melongena"
+194	141	173	173	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_melongena"
+195	142	172	172	"All"	"Other"	"All"	"Solanum_melongena"

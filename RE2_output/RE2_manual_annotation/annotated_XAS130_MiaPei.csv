@@ -1,231 +1,231 @@
-"Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"	"N_Reads"	"Genome_Size"
-1	1	22287	22287	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-12	1	11480	11480	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-13	1	10183	10183	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-16	1	9188	9188	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-19	1	8161	8161	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-2	1	21998	21998	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-22	1	7530	7530	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-3	1	20565	20565	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-38	1	5219	5219	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-4	1	17805	17805	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-49	1	4171	4171	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-5	1	16321	16321	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-54	1	3414	3414	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-6	1	14318	14318	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-66	1	2868	2868	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-8	1	12516	12516	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-9	1	12313	12313	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-10	2	12310	12310	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-17	2	8646	8646	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-18	2	8623	8623	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-23	2	7401	7401	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-28	2	6224	6224	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-33	2	5868	5868	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-37	2	5310	5310	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-42	2	4766	4766	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-56	2	3298	3298	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-60	2	3093	3093	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-70	2	2251	2251	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-90	2	1405	1405	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-11	3	12065	12065	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-15	3	9694	9694	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-20	3	7826	7826	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-21	3	7713	7713	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-24	3	7179	7179	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-36	3	5345	5345	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-39	3	5108	5108	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-43	3	4634	4634	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-82	3	1803	1803	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-25	4	7056	7056	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-29	4	6152	6152	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-35	4	5676	5676	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-40	4	5072	5072	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-41	4	5032	5032	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-44	4	4560	4560	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-50	4	3853	3853	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-52	4	3496	3496	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-65	4	2873	2873	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-95	4	1214	1214	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-7	5	13449	13449	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-103	6	1021	1021	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-31	6	6075	6075	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-34	6	5741	5741	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-48	7	4432	4432	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-64	7	2896	2896	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-69	7	2296	2296	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-81	7	1821	1821	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-26	8	6868	6868	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-46	8	4514	4514	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-14	9	10007	10007	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_trilobatum"	1210116	2.98
-27	10	6446	6446	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-30	11	6083	6083	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-32	12	5961	5961	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_trilobatum"	1210116	2.98
-45	13	4540	4540	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"	1210116	2.98
-47	14	4493	4493	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-51	15	3670	3670	"All/repeat"	"Other"	"All/repeat/*"	"Solanum_trilobatum"	1210116	2.98
-53	16	3451	3451	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_trilobatum"	1210116	2.98
-55	17	3343	3343	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-57	18	3260	3260	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-58	19	3134	3134	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-59	20	3117	3117	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-61	21	3001	3001	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"	1210116	2.98
-62	22	2996	2996	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"	1210116	2.98
-63	23	2931	2931	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-67	24	2609	2609	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-68	25	2329	2329	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-71	26	2239	2239	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"	1210116	2.98
-72	27	2208	2208	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"	1210116	2.98
-73	28	2181	2181	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-74	29	2094	2094	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"	1210116	2.98
-75	30	2059	2059	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_trilobatum"	1210116	2.98
-76	31	2055	2055	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-77	32	2045	2045	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-120	33	609	609	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-89	33	1412	1412	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-78	34	1951	1951	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_trilobatum"	1210116	2.98
-79	35	1876	1876	"All/repeat/rDNA/5S_rDNA"	"rDNA"	"All/repeat/rDNA/5S_rDNA"	"Solanum_trilobatum"	1210116	2.98
-80	36	1843	1843	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-83	37	1799	1799	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-84	38	1786	1786	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-85	39	1732	1732	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_trilobatum"	1210116	2.98
-86	40	1606	1606	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-87	41	1422	1422	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_trilobatum"	1210116	2.98
-88	42	1412	1412	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-91	43	1367	1367	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-92	44	1336	1336	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-93	45	1310	1310	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-94	46	1292	1292	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-96	47	1186	1186	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-97	48	1169	1169	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-98	49	1117	1117	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_trilobatum"	1210116	2.98
-99	50	1106	1106	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-100	51	1096	1096	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-101	52	1092	1092	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-102	53	1028	1028	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-104	54	1004	1004	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-105	55	969	969	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-106	56	963	963	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_trilobatum"	1210116	2.98
-107	57	875	875	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-108	58	869	869	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-109	59	856	856	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-110	60	848	848	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-111	61	840	840	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-112	62	833	833	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-113	63	784	784	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-114	64	742	742	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-115	65	722	722	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-116	66	659	659	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-117	67	643	643	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-118	68	642	642	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-119	69	641	641	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-121	70	549	549	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-122	71	522	522	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-123	72	506	506	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-124	73	499	499	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-125	74	498	498	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-126	75	492	492	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-127	76	468	468	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-128	77	453	453	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-129	78	449	449	"All"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-130	79	444	444	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-131	80	432	432	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-132	81	424	424	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-133	82	406	406	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-134	83	398	398	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-135	84	392	392	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-136	85	391	391	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-137	86	390	390	"All"	"Putative LTR elements"	"All"	"Solanum_trilobatum"	1210116	2.98
-138	87	384	384	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-139	88	384	384	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-140	89	379	379	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-141	90	375	375	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-142	91	371	371	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-143	92	358	358	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-144	93	347	347	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-145	94	343	343	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-146	95	341	341	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-147	96	336	336	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-148	97	333	333	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-149	98	323	323	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-150	99	318	318	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-151	100	314	314	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-152	101	313	313	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-153	102	310	310	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-154	103	300	300	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_trilobatum"	1210116	2.98
-155	104	288	288	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-156	105	288	288	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_trilobatum"	1210116	2.98
-157	106	286	286	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-158	107	285	285	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-159	108	284	284	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Solanum_trilobatum"	1210116	2.98
-160	109	283	283	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"	1210116	2.98
-161	110	280	280	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-162	111	267	267	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"	1210116	2.98
-163	112	264	264	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-164	113	262	262	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-165	114	243	243	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-166	115	233	233	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-167	116	232	232	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-168	117	232	232	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-169	118	229	229	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-170	119	229	229	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-171	120	226	226	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-172	121	223	223	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-173	122	222	222	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-174	123	221	221	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-175	124	221	221	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-176	125	216	216	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-177	126	216	216	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-178	127	213	213	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-179	128	210	210	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-180	129	205	205	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-181	130	205	205	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-182	131	202	202	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-183	132	195	195	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_trilobatum"	1210116	2.98
-184	133	193	193	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-185	134	188	188	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-186	135	188	188	"All"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-187	136	187	187	"All/organelle"	"Other"	"All/organelle"	"Solanum_trilobatum"	1210116	2.98
-188	137	186	186	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_trilobatum"	1210116	2.98
-189	138	186	186	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-190	139	185	185	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-191	140	180	180	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-192	141	177	177	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-193	142	177	177	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-194	143	170	170	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-195	144	170	170	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-196	145	169	169	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-197	146	168	168	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-198	147	168	168	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-199	148	167	167	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-200	149	166	166	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-201	150	162	162	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-202	151	161	161	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-203	152	160	160	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-204	153	160	160	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-205	154	160	160	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-206	155	159	159	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-207	156	156	156	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_trilobatum"	1210116	2.98
-208	157	155	155	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"	1210116	2.98
-209	158	154	154	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-210	159	151	151	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-211	160	150	150	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-212	161	150	150	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_trilobatum"	1210116	2.98
-213	162	147	147	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-214	163	147	147	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-215	164	139	139	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_trilobatum"	1210116	2.98
-216	165	139	139	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"	1210116	2.98
-217	166	139	139	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-218	167	138	138	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-219	168	137	137	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-220	169	136	136	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-221	170	136	136	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-222	171	135	135	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-223	172	132	132	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-224	173	132	132	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-225	174	132	132	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-226	175	130	130	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"	1210116	2.98
-227	176	130	130	"All"	"Other"	"All"	"Solanum_trilobatum"	1210116	2.98
-228	177	124	124	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
-229	178	122	122	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"	1210116	2.98
-230	179	122	122	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"	1210116	2.98
+"Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"
+1	1	22287	22287	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+12	1	11480	11480	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+13	1	10183	10183	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+16	1	9188	9188	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+19	1	8161	8161	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+2	1	21998	21998	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+22	1	7530	7530	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+3	1	20565	20565	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+38	1	5219	5219	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+4	1	17805	17805	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+49	1	4171	4171	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+5	1	16321	16321	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+54	1	3414	3414	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+6	1	14318	14318	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+66	1	2868	2868	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+8	1	12516	12516	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+9	1	12313	12313	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+10	2	12310	12310	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+17	2	8646	8646	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+18	2	8623	8623	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+23	2	7401	7401	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+28	2	6224	6224	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+33	2	5868	5868	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+37	2	5310	5310	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+42	2	4766	4766	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+56	2	3298	3298	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+60	2	3093	3093	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+70	2	2251	2251	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+90	2	1405	1405	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+11	3	12065	12065	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+15	3	9694	9694	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+20	3	7826	7826	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+21	3	7713	7713	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+24	3	7179	7179	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+36	3	5345	5345	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+39	3	5108	5108	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+43	3	4634	4634	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+82	3	1803	1803	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+25	4	7056	7056	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+29	4	6152	6152	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+35	4	5676	5676	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+40	4	5072	5072	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+41	4	5032	5032	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+44	4	4560	4560	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+50	4	3853	3853	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+52	4	3496	3496	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+65	4	2873	2873	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+95	4	1214	1214	"All/repeat/rDNA/45S_rDNA"	"Other"	"All/repeat/rDNA/45S_rDNA"	"Solanum_trilobatum"
+7	5	13449	13449	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+103	6	1021	1021	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+31	6	6075	6075	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+34	6	5741	5741	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+48	7	4432	4432	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+64	7	2896	2896	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+69	7	2296	2296	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+81	7	1821	1821	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+26	8	6868	6868	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+46	8	4514	4514	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+14	9	10007	10007	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_trilobatum"
+27	10	6446	6446	"All"	"Other"	"All"	"Solanum_trilobatum"
+30	11	6083	6083	"All"	"Other"	"All"	"Solanum_trilobatum"
+32	12	5961	5961	"All/repeat/mobile_element/Class_I/LTR"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_trilobatum"
+45	13	4540	4540	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"
+47	14	4493	4493	"All"	"Other"	"All"	"Solanum_trilobatum"
+51	15	3670	3670	"All/repeat"	"Other"	"All/repeat"	"Solanum_trilobatum"
+53	16	3451	3451	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_trilobatum"
+55	17	3343	3343	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+57	18	3260	3260	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+58	19	3134	3134	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+59	20	3117	3117	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+61	21	3001	3001	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"
+62	22	2996	2996	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"
+63	23	2931	2931	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+67	24	2609	2609	"All"	"Other"	"All"	"Solanum_trilobatum"
+68	25	2329	2329	"All"	"Other"	"All"	"Solanum_trilobatum"
+71	26	2239	2239	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"
+72	27	2208	2208	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"
+73	28	2181	2181	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+74	29	2094	2094	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"
+75	30	2059	2059	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_trilobatum"
+76	31	2055	2055	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+77	32	2045	2045	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+120	33	609	609	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+89	33	1412	1412	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+78	34	1951	1951	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_trilobatum"
+79	35	1876	1876	"All/repeat/rDNA/5S_rDNA"	"rDNA"	"All/repeat/rDNA/5S_rDNA"	"Solanum_trilobatum"
+80	36	1843	1843	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+83	37	1799	1799	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+84	38	1786	1786	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+85	39	1732	1732	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_trilobatum"
+86	40	1606	1606	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+87	41	1422	1422	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_trilobatum"
+88	42	1412	1412	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative LTR elements"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+91	43	1367	1367	"All"	"Other"	"All"	"Solanum_trilobatum"
+92	44	1336	1336	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+93	45	1310	1310	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+94	46	1292	1292	"All"	"Other"	"All"	"Solanum_trilobatum"
+96	47	1186	1186	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+97	48	1169	1169	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+98	49	1117	1117	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Other"	"All/repeat/mobile_element/Class_I/pararetrovirus"	"Solanum_trilobatum"
+99	50	1106	1106	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+100	51	1096	1096	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+101	52	1092	1092	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+102	53	1028	1028	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+104	54	1004	1004	"All"	"Other"	"All"	"Solanum_trilobatum"
+105	55	969	969	"All"	"Other"	"All"	"Solanum_trilobatum"
+106	56	963	963	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia"	"Solanum_trilobatum"
+107	57	875	875	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+108	58	869	869	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+109	59	856	856	"All"	"Other"	"All"	"Solanum_trilobatum"
+110	60	848	848	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+111	61	840	840	"All"	"Other"	"All"	"Solanum_trilobatum"
+112	62	833	833	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+113	63	784	784	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+114	64	742	742	"All"	"Other"	"All"	"Solanum_trilobatum"
+115	65	722	722	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+116	66	659	659	"All"	"Other"	"All"	"Solanum_trilobatum"
+117	67	643	643	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+118	68	642	642	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+119	69	641	641	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Putative satellites (low confidence)"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+121	70	549	549	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+122	71	522	522	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+123	72	506	506	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+124	73	499	499	"All"	"Other"	"All"	"Solanum_trilobatum"
+125	74	498	498	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+126	75	492	492	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+127	76	468	468	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+128	77	453	453	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+129	78	449	449	"All"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+130	79	444	444	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+131	80	432	432	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+132	81	424	424	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+133	82	406	406	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+134	83	398	398	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+135	84	392	392	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+136	85	391	391	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+137	86	390	390	"All"	"Putative LTR elements"	"All"	"Solanum_trilobatum"
+138	87	384	384	"All"	"Other"	"All"	"Solanum_trilobatum"
+139	88	384	384	"All"	"Other"	"All"	"Solanum_trilobatum"
+140	89	379	379	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+141	90	375	375	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+142	91	371	371	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+143	92	358	358	"All"	"Other"	"All"	"Solanum_trilobatum"
+144	93	347	347	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+145	94	343	343	"All"	"Other"	"All"	"Solanum_trilobatum"
+146	95	341	341	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+147	96	336	336	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+148	97	333	333	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+149	98	323	323	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+150	99	318	318	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+151	100	314	314	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+152	101	313	313	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+153	102	310	310	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+154	103	300	300	"All/repeat/mobile_element/Class_I"	"Other"	"All/repeat/mobile_element/Class_I"	"Solanum_trilobatum"
+155	104	288	288	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+156	105	288	288	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_trilobatum"
+157	106	286	286	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+158	107	285	285	"All"	"Other"	"All"	"Solanum_trilobatum"
+159	108	284	284	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Other"	"All/repeat/mobile_element/Class_II/Subclass_1/TIR/hAT"	"Solanum_trilobatum"
+160	109	283	283	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre"	"Solanum_trilobatum"
+161	110	280	280	"All"	"Other"	"All"	"Solanum_trilobatum"
+162	111	267	267	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel"	"Solanum_trilobatum"
+163	112	264	264	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+164	113	262	262	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+165	114	243	243	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+166	115	233	233	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+167	116	232	232	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+168	117	232	232	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+169	118	229	229	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+170	119	229	229	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+171	120	226	226	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+172	121	223	223	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+173	122	222	222	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+174	123	221	221	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+175	124	221	221	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+176	125	216	216	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+177	126	216	216	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+178	127	213	213	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+179	128	210	210	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+180	129	205	205	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+181	130	205	205	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+182	131	202	202	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+183	132	195	195	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca"	"Solanum_trilobatum"
+184	133	193	193	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+185	134	188	188	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+186	135	188	188	"All"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+187	136	187	187	"All/organelle"	"Other"	"All/organelle"	"Solanum_trilobatum"
+188	137	186	186	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR"	"Solanum_trilobatum"
+189	138	186	186	"All"	"Other"	"All"	"Solanum_trilobatum"
+190	139	185	185	"All"	"Other"	"All"	"Solanum_trilobatum"
+191	140	180	180	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+192	141	177	177	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+193	142	177	177	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+194	143	170	170	"All"	"Other"	"All"	"Solanum_trilobatum"
+195	144	170	170	"All"	"Other"	"All"	"Solanum_trilobatum"
+196	145	169	169	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+197	146	168	168	"All"	"Other"	"All"	"Solanum_trilobatum"
+198	147	168	168	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+199	148	167	167	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+200	149	166	166	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+201	150	162	162	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+202	151	161	161	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+203	152	160	160	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+204	153	160	160	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+205	154	160	160	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+206	155	159	159	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+207	156	156	156	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_trilobatum"
+208	157	155	155	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_trilobatum"
+209	158	154	154	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+210	159	151	151	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+211	160	150	150	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+212	161	150	150	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM"	"Solanum_trilobatum"
+213	162	147	147	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+214	163	147	147	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+215	164	139	139	"All/repeat/mobile_element/Class_I/LINE"	"Other"	"All/repeat/mobile_element/Class_I/LINE"	"Solanum_trilobatum"
+216	165	139	139	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale"	"Solanum_trilobatum"
+217	166	139	139	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+218	167	138	138	"All"	"Other"	"All"	"Solanum_trilobatum"
+219	168	137	137	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+220	169	136	136	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+221	170	136	136	"All"	"Other"	"All"	"Solanum_trilobatum"
+222	171	135	135	"All"	"Other"	"All"	"Solanum_trilobatum"
+223	172	132	132	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+224	173	132	132	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+225	174	132	132	"All"	"Other"	"All"	"Solanum_trilobatum"
+226	175	130	130	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork"	"Solanum_trilobatum"
+227	176	130	130	"All"	"Other"	"All"	"Solanum_trilobatum"
+228	177	124	124	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
+229	178	122	122	"All/organelle/plastid"	"Other"	"All/organelle/plastid"	"Solanum_trilobatum"
+230	179	122	122	"All/organelle/mitochondria"	"Other"	"All/organelle/mitochondria"	"Solanum_trilobatum"
