@@ -12,6 +12,8 @@
 ### This script is designed to analyze the repeat profile of all samples using RepeatExplore2
 ### Author: Mia Pei
 ### Last modified: July 10, 2024
+### RepeatExplorer2 version: repex_tarean_0.3.8
+### Reference Tutorial: https://github.com/repeatexplorer/workshop/blob/master/2023/practical_training_day_1.org
 
 cd /home/miapei/projects/def-gagnoned/miapei/BINF6999/MergedSequence_20240619
 FILES=(*.fasta)

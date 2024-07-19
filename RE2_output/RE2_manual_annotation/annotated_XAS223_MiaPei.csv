@@ -1,6 +1,6 @@
 "Cluster"	"Supercluster"	"Size"	"Size_adjusted"	"Automatic_annotation"	"TAREAN_annotation"	"Final_annotation"	"Species_Name"
 12	1	23701	23701	"All"	"Other"	"All"	"Solanum_dasyphyllum"
-2	1	36126	36126	"All"	"Other"	"All/repeat/mobile_element/Class_I/LTR/TRIM"	"Solanum_dasyphyllum"
+2	1	36126	36126	"All"	"Other"	"All/repeat/mobile_element/Class_I/LTR"	"Solanum_dasyphyllum"
 4	1	32049	32049	"All"	"Other"	"All"	"Solanum_dasyphyllum"
 45	1	11004	11004	"All"	"Other"	"All"	"Solanum_dasyphyllum"
 61	1	5647	5647	"All"	"Other"	"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay"	"Solanum_dasyphyllum"
