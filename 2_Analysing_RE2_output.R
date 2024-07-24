@@ -5,12 +5,26 @@
 # Load required packages
 if (!require(vegan)) install.packages("vegan")
 if (!require(reshape2)) install.packages("reshape2")
-library(dplyr)
-library(tidyverse)
-library(vegan)
-library(ggplot2)
-library(reshape2)
-library(stringr)
+if (!require(car)) install.packages("car")
+if (!require(caper)) install.packages("caper")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ggtree")
+if (!require(phangorn)) install.packages("phangorn")
+library(dplyr) #version 1.1.4
+library(tidyverse) #version 2.0.0
+library(vegan) #version 2.6.6.1
+library(ggplot2) #version 3.5.1
+library(reshape2) #version 1.4.4
+library(stringr) #version 1.5.1
+library(car) #version 3.1.2
+library(caper) #version 1.0.3
+library(ape) #version 5.8
+library(muscle) #version 3.46.0
+library(BiocManager) #version 1.30.23
+library(ggtree) #version 3.12.0
+library(phytools) #version 2.3.0
+library(phangorn) #version 2.11.1
 
 ############# Repeat Quantification #############
 #################################################
@@ -52,6 +66,9 @@ unique(All_Eggplant_Repeat$Final_annotation)
 # Aggregate counts of each repeat classification in the annotation for each species 
 All_Eggplant_Repeat_ag <- aggregate(Size_adjusted~Species_Name+Final_annotation, data=All_Eggplant_Repeat, FUN=sum) 
 
+sub_N_reads_analyzed_GS <- N_reads_analyzed_GS %>%
+  select(Species_Name, `Genome_Size.mean2C.`, Number_of_reads_nuclear)
+
 # Calculate the genomic proportion of individual clusters by dividing the size 
 # (number of reads, column called Size_adjusted) of the clusters by Number_of_reads_nuclear
 All_Eggplant_Repeat_ag <- left_join(All_Eggplant_Repeat_ag, N_reads_analyzed_GS %>%
@@ -64,6 +81,7 @@ All_Eggplant_Repeat_ag <- left_join(All_Eggplant_Repeat_ag, N_reads_analyzed_GS 
     Final_annotation == "All/repeat/mobile_element/Class_I/LTR" ~ "All/repeat/mobile_element/Class_I/LTR/nonspecific",
     Final_annotation == "All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy" ~ "All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/nonspecific",
     Final_annotation == "All/repeat/rDNA/45S_rDNA" ~ "All/repeat/rDNA/45S_rDNA/nonspecific",
+    Final_annotation == "All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus" ~ "All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/nonspecific",
     TRUE ~ Final_annotation
   ))
 
@@ -75,14 +93,12 @@ unique(All_Eggplant_Repeat_ag$Final_annotation)
 ############### Data Exploration ################
 #################################################
 
-# Make a new table for input to vegan, with column names as repeat annotation, row names as species names
-# values as reads
+# Make a new table for input to vegan, with column names as repeat annotation, row names as species names, values as reads
 All_Eggplant_Repeat_ag_reads <- dcast(All_Eggplant_Repeat_ag, Species_Name ~ Final_annotation, value.var = "Size_adjusted", fun.aggregate = sum)
 row.names(All_Eggplant_Repeat_ag_reads) <- All_Eggplant_Repeat_ag_reads$Species_Name
 All_Eggplant_Repeat_ag_reads <- All_Eggplant_Repeat_ag_reads[,-1]
 
-# Make a new table for input to vegan, with column names as repeat annotation, row names as species names
-# values as genomic proportion
+# Make a new table for input to vegan, with column names as repeat annotation, row names as species names, values as genomic proportion
 All_Eggplant_Repeat_ag_pct <- dcast(All_Eggplant_Repeat_ag, Species_Name ~ Final_annotation, value.var = "Genomic_proportion", fun.aggregate = sum)
 row.names(All_Eggplant_Repeat_ag_pct) <- All_Eggplant_Repeat_ag_pct$Species_Name
 All_Eggplant_Repeat_ag_pct <- All_Eggplant_Repeat_ag_pct[,-1]
@@ -92,57 +108,76 @@ All_Eggplant_Repeat_ag_pct <- All_Eggplant_Repeat_ag_pct[,-1]
 All_Eggplant_Repeat_ag_reads[is.na(All_Eggplant_Repeat_ag_reads)] <- 0
 All_Eggplant_Repeat_ag_pct[is.na(All_Eggplant_Repeat_ag_pct)] <- 0
 
+# Calculate the total percentage of the genome occupied by repeats in each species
+Genome_occupancy <- aggregate(Genomic_proportion~Species_Name, data=All_Eggplant_Repeat_ag, FUN=sum)
+Genome_occupancy <- Genome_occupancy %>%
+  rename(Genomic_proportion = "Total_Genomic_Proportion")
 
-# 
+# Subset the genome size information
+GS_df <- subset(N_reads_analyzed_GS[,c(2,4)])
+colnames(GS_df)[2] <- "Genome_Size_gbp"
+# Convert pg to Gbp
+GS_df$Genome_Size_gbp <- GS_df$Genome_Size_gbp*0.978
+
+# Add the total genomic proportion and genome size columns
+sum_All_Eggplant_Repeat_ag <- All_Eggplant_Repeat_ag %>%
+  left_join(Genome_occupancy, by = "Species_Name") %>%
+  left_join(GS_df, by = "Species_Name") %>%
+  mutate(Species_Name = reorder(Species_Name, Total_Genomic_Proportion))
+
+# Heatmap of genomic proportion for different repeat type
 All_Eggplant_Repeat_ag_pct %>%
   as.data.frame() %>%
   rownames_to_column("Species_Name") %>%
   pivot_longer(-c(Species_Name), names_to = "Repeat_type", values_to = "Genomic_proportion") %>%
-  ggplot(aes(x=Repeat_type, y=Species_Name, fill=Genomic_proportion)) + 
+  ggplot(aes(x=Species_Name, y=Repeat_type, fill=Genomic_proportion)) + 
   geom_tile() + 
   theme(axis.text.x = element_text(angle = 60, hjust = 1)) + 
+  xlab("Species Name") +
+  ylab("Repeat Type") +
   scale_fill_viridis_c()
 
-
-# Let's try plotting a stacked bar chart for each species and the abundances of different repeats
+# A stacked bar chart for each species and the abundances of different repeats
 # Repeat % of all repeat types
-ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Size_adjusted, x=Species_Name)) + 
-  theme(axis.text.x = element_text(angle = 60, size= 10, hjust = 1)) + 
+ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Species_Name, x=Size_adjusted)) + 
+  theme(axis.text.x = element_text(size= 10, hjust = 1)) + 
   theme(legend.text = element_text(size=6)) + 
-  xlab("Species") +
-  ylab("Percent of all repeats") + 
+  xlab("Percentage of all repeats") + 
+  ylab("Species Name") +
   geom_bar(position="fill", stat="identity")
 
 
 # Absolute repeat number
-ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Size_adjusted, x=Species_Name)) + 
-  theme(axis.text.x = element_text(angle = 90, size= 10)) + 
+ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Species_Name, x=Size_adjusted)) + 
+  theme(axis.text.x = element_text(size= 10)) + 
   theme(legend.text = element_text(size=6)) + 
-  ylab("Number of repeat reads") + 
+  xlab("Number of repeat reads") + 
+  ylab("Species Name") +
   geom_bar(stat="identity")
 
 
-# Repeat % of whole genome
-ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Genomic_proportion, x=Species_Name)) + 
-  theme(axis.text.x = element_text(angle = 90, size= 10)) + 
-  theme(legend.text = element_text(size=6)) + 
-  ylab("Percentage occupied within the genome") + 
-  ylim(0,50) + 
-  geom_bar(position="stack", stat="identity")
+# Repeat % of whole genome with Genome Size data as a line (proportion goes from low to high)
+ggplot(sum_All_Eggplant_Repeat_ag, aes(x = Species_Name)) +
+  geom_bar(aes(y = Genomic_proportion, fill = Final_annotation), stat="identity", position="stack") +
+  geom_line(aes(y = Genome_Size_gbp * 10), group=1, color="blue4") +  # Adjust the scaling factor (* 10) as needed
+  scale_y_continuous(sec.axis = sec_axis(~ (. / 10), name = "Average Genome Size (Gbp)")) +
+  labs(x = "Species Name", y = "Percentage of each repeat occupied within the genome") +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1), legend.text = element_text(size=6))
+Notes
 
 
-##### Total genome proportion and diversity #####
+##### Total Genome Proportion and Diversity #####
 #################################################
-### Calculate the total percentage of the genome occupied by repeats in each species
-Genome_occupancy <- aggregate(Genomic_proportion~Species_Name, data=All_Eggplant_Repeat_ag, FUN=sum) 
 
 ### Calculate the Shannon's diversity index
-Shannon_Eggplant_Repeat <- diversity(All_Eggplant_Repeat_ag_reads, index = "shannon")
+Shannon_Eggplant_Repeat <- vegan::diversity(All_Eggplant_Repeat_ag_reads, index = "shannon")
 # Compare Shannon indices
 Shannon_df <- Shannon_Eggplant_Repeat %>%
   as.data.frame() %>%
-  rownames_to_column("Species_Name")%>%
-  rename(Shannon_Index = names(.)[2]) # Change the 2nd column name to what we want
+  rownames_to_column("Species_Name")
+
+Shannon_df <- Shannon_df %>%
+  rename(`.`="Shannon_Index") # Change the 2nd column name to what we want
 
 ### Richness (Mehinick's Index) - Closer to 1 = higher richness
 n <- apply(All_Eggplant_Repeat_ag_reads > 0, 1, sum) # number of repeat types for each species
@@ -151,14 +186,10 @@ N <- apply(All_Eggplant_Repeat_ag_reads, 1, sum) # total number of reads for eac
 MI_df <- n/sqrt(N)
 MI_df <- MI_df %>%
   as.data.frame() %>%
-  rownames_to_column("Species_Name")%>%
-  rename(Mehinicks_index = names(.)[2]) # Change the 2nd column name to what we want
+  rownames_to_column("Species_Name")
 
-#### Subset the genome size information
-GS_df <- subset(N_reads_analyzed_GS[,c(2,4)])
-colnames(GS_df)[2] <- "Genome_Size_gbp"
-# convert pg to Gbp
-GS_df$Genome_Size_gbp <- GS_df$Genome_Size_gbp*0.978
+MI_df <- MI_df %>%
+  rename(`.`= "Mehinicks_index") # Change the 2nd column name to what we want
 
 ### Combine the data frames of GS, richness, diversity together with the aggregated repeat profile percentage
 Cmbd_All_Eggplant_Repeat_ag_pct <- All_Eggplant_Repeat_ag_pct %>%
@@ -170,32 +201,114 @@ Cmbd_All_Eggplant_Repeat_ag_pct <- All_Eggplant_Repeat_ag_pct %>%
 row.names(Cmbd_All_Eggplant_Repeat_ag_pct) <- Cmbd_All_Eggplant_Repeat_ag_pct$Species_Name 
 Cmbd_All_Eggplant_Repeat_ag_pct <- subset(Cmbd_All_Eggplant_Repeat_ag_pct, select = -Species_Name)
 
+# Remove the polyploid Solanum_campylacanthum
+Diploid_Eggplant_Repeat_ag_pct <- Cmbd_All_Eggplant_Repeat_ag_pct[-3,]
+
 ##~~~~~~~~~~Exploratory plotting~~~~~~~~~~## 
 
 # Richness and genome size
-plot(Cmbd_All_Eggplant_Repeat_ag_pct$Mehinicks_index ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat type richness (Mehinicks Index)", xlab = "Genome size (Gbp)")
+plot(Cmbd_All_Eggplant_Repeat_ag_pct$Mehinicks_index ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat type richness (Mehinicks Index)", xlab = "Genome size (Gbp/2C)")
 
+# All samples
 ggplot(Cmbd_All_Eggplant_Repeat_ag_pct, aes(x=as.numeric(Genome_Size_gbp), y= Mehinicks_index)) + 
   geom_point() +
   geom_smooth(method="loess", span = 1) +
-  labs(y="Repeat type richness (Mehinicks Index)", x = "Genome size (Gbp)") + 
+  labs(y="Repeat type richness (Mehinicks Index)", x = "Genome size (Gbp/2C)") + 
+  theme(text=element_text(size = 14),axis.text = element_text(size = 12))
+
+# Only diploid samples
+ggplot(Diploid_Eggplant_Repeat_ag_pct, aes(x=as.numeric(Genome_Size_gbp), y= Mehinicks_index)) + 
+  geom_point() +
+  geom_smooth(method="loess", span = 1) +
+  labs(y="Repeat type richness (Mehinicks Index)", x = "Genome size (Gbp/2C)") + 
   theme(text=element_text(size = 14),axis.text = element_text(size = 12))
 
 
 # Genomic proportion of repeats and genome size
-plot(Cmbd_All_Eggplant_Repeat_ag_pct$Genomic_proportion ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Genomic proportion of repeats (%)", xlab="Genome size (Gbp)")
+plot(Cmbd_All_Eggplant_Repeat_ag_pct$Genomic_proportion ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Genomic proportion of repeats (%)", xlab="Genome size (Gbp/2C)")
 
+# All samples
+ggplot(Cmbd_All_Eggplant_Repeat_ag_pct, aes(x=as.numeric(Genome_Size_gbp), y= Genomic_proportion)) + 
+  geom_point() +
+  geom_smooth(method = "loess", span = 1) +
+  labs(y = "Genomic proportion of repeats (%)", x = "Genome size (Gbp/2C)") + 
+  theme(text=element_text(size = 14),axis.text = element_text(size = 12))
+
+# Only diploid samples
 ggplot(Diploid_Eggplant_Repeat_ag_pct, aes(x=as.numeric(Genome_Size_gbp), y= Genomic_proportion)) + 
   geom_point() +
-  geom_smooth(method = "loess", span = 1.5) +
-  labs(y = "Genomic proportion of repeats (%)", x = "Genome size (Gbp)") + 
+  geom_smooth(method = "loess", span = 1) +
+  labs(y = "Genomic proportion of repeats (%)", x = "Genome size (Gbp/2C)") + 
   theme(text=element_text(size = 14),axis.text = element_text(size = 12))
 
 # Diversity and genome size
-plot(Diploid_Eggplant_Repeat_ag_pct$Shannon_Index~Diploid_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat diversity (Shannon Index)", xlab="Genome size (Gbp)")
+plot(Cmbd_All_Eggplant_Repeat_ag_pct$Shannon_Index ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat diversity (Shannon Index)", xlab = "Genome size (Gbp/2C)")
 
-ggplot(Diploid_Eggplant_Repeat_ag_pct, aes(x=as.numeric(Genome_Size_gbp), y= Shannon_Index)) + 
+# All samples
+ggplot(Cmbd_All_Eggplant_Repeat_ag_pct, aes(x = as.numeric(Genome_Size_gbp), y = Shannon_Index)) + 
   geom_point() +
-  geom_smooth(method="loess", span = 1.5) +
-  labs(y="Repeat type diversity (Shannon Index)", x = "Genome size (Gbp)") + 
+  geom_smooth(method = "loess", span = 1) +
+  labs(y = "Repeat type diversity (Shannon Index)", x = "Genome size (Gbp/2C)") + 
   theme(text=element_text(size = 14),axis.text = element_text(size = 12))
+
+# Only diploid samples
+ggplot(Diploid_Eggplant_Repeat_ag_pct, aes(x = as.numeric(Genome_Size_gbp), y = Shannon_Index)) + 
+  geom_point() +
+  geom_smooth(method = "loess", span = 1) +
+  labs(y = "Repeat type diversity (Shannon Index)", x = "Genome size (Gbp/2C)") + 
+  theme(text=element_text(size = 14),axis.text = element_text(size = 12))
+
+
+
+############### Phylogenetic Tree ###############
+#################################################
+
+# Read the alignment data
+Alignment_Xavier <- read.dna("/Users/miapei/Desktop/MBinf/Research_Project/Data/Xavier_phylo/file3alignedsequencedataplastome.fas", format = "fasta")
+
+# Convert it to the format for extracting species we need
+PhyDat_Xavier <- as.phyDat(Alignment_Xavier)
+# Extract the species names in the alignment
+Xavier_Species <- names(PhyDat_Xavier)
+# Normalize the second part of species names in PhyDat_Xavier: extract second part
+Xavier_Species_normalized <- sapply(strsplit(Xavier_Species, " "), function(x) x[2])
+
+# Extract species names in this project
+Mia_Species <- N_reads_analyzed_GS$Species_Name 
+# Normalize species names: extract second part
+Mia_Species_normalized <- sapply(strsplit(Mia_Species, "_"), function(x) x[2])
+
+# Find the intersect
+Common_Species <- intersect(Xavier_Species_normalized, Mia_Species_normalized)
+# Extract only the elements intersect with the species in this project 
+PhyDat_Mia <- PhyDat_Xavier[Xavier_Species_normalized %in% Common_Species,]
+
+# Check the names
+names(PhyDat_Mia)
+# Remove Solanum melongena 2, specimen from Finland, it is not in the genome skimming data we have
+PhyDat_Mia <- PhyDat_Mia[-13,]
+
+# Change the names of the two Solanum incanum samples and Solanum melongena 1
+names(PhyDat_Mia)[6] <- "Solanum incanum Kenya"
+names(PhyDat_Mia)[7] <- "Solanum incanum BFaso"
+names(PhyDat_Mia)[12] <- "Solanum melongena"
+names(PhyDat_Mia)
+
+
+# Compute a distance matrix
+dist_matrix <- dist.dna(as.DNAbin(PhyDat_Mia), model = "raw")
+
+# Perform neighbor joining as an initial tree
+treeNJ <- NJ(dist_matrix) 
+
+# Fit a GTR+I+G model
+fitGTR <- pml(treeNJ, PhyDat_Mia, model = "GTR", inv = 0.2, k = 4) # k = 4 for gamma shape parameter
+fitGTRIG <- optim.pml(fitGTR, model="GTR", optInv = TRUE, optGamma = TRUE)
+
+# Check the fitted model
+fitGTRIG
+
+rm(Alignment_Xavier)
+
+######### Repeat Types and Genome Size ##########
+#################################################
