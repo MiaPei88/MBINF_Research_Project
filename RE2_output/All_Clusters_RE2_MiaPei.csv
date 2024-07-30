@@ -3394,7 +3394,7 @@ Cluster,Supercluster,Size,Size_adjusted,Automatic_annotation,TAREAN_annotation,F
 96,17,2011,2011,All/repeat/rDNA/45S_rDNA,Other,All/repeat/rDNA/45S_rDNA,Solanum_macrocarpon
 41,18,10809,10809,All/repeat/mobile_element/Class_I/LTR,Other,All/repeat/mobile_element/Class_I/LTR,Solanum_macrocarpon
 43,19,10255,10255,All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay,Other,All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay,Solanum_macrocarpon
-44,20,9752,9752,All,Other,All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/Athila,Solanum_macrocarpon
+44,20,9752,9752,All,Other,All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila,Solanum_macrocarpon
 49,21,8556,8556,All,Other,All,Solanum_macrocarpon
 53,22,8086,8086,All/repeat/mobile_element/Class_I,Other,All/repeat/mobile_element/Class_I,Solanum_macrocarpon
 60,23,6594,6594,All/repeat/mobile_element/Class_I,Other,All/repeat/mobile_element/Class_I,Solanum_macrocarpon
