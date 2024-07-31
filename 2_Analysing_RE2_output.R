@@ -71,19 +71,19 @@ unique(All_Eggplant_Repeat$Final_annotation)
 All_Eggplant_Repeat_ag <- aggregate(Size_adjusted~Species_Name+Final_annotation, data=All_Eggplant_Repeat, FUN=sum) 
 
 sub_N_reads_analyzed_GS <- N_reads_analyzed_GS %>%
-  select(Species_Name, `Genome_Size.mean2C.`, Number_of_reads_nuclear)
+  dplyr::select(Species_Name, `Genome_Size.mean2C.`,
+                Number_of_reads_nuclear)
 
 # Calculate the genomic proportion of individual clusters by dividing the size 
 # (number of reads, column called Size_adjusted) of the clusters by Number_of_reads_nuclear
 All_Eggplant_Repeat_ag <- left_join(All_Eggplant_Repeat_ag, N_reads_analyzed_GS %>%
-                                   select(Species_Name, Genome_Size.mean2C.,
-                                          Number_of_reads_nuclear), 
-                                 by = "Species_Name") %>%
+                                      dplyr::select(Species_Name, Genome_Size.mean2C.,
+                                                    Number_of_reads_nuclear), 
+                                    by = "Species_Name") %>%
   mutate(Genomic_proportion = (Size_adjusted/Number_of_reads_nuclear) * 100) %>%
   mutate(Final_annotation = case_when(
     Final_annotation == "All"  ~ "Other",
-    TRUE ~ Final_annotation
-  ))
+    TRUE ~ Final_annotation))
 
 
 # Check the repeat classification after further annotation
@@ -156,19 +156,6 @@ ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Species_Name, x=Size
 
 
 ### Repeat % of whole genome with Genome Size data as a line (proportion goes from low to high)
-## Plot without custom colors
-RptProp_GS_bySpecies <- ggplot(sum_All_Eggplant_Repeat_ag, aes(x = Species_Name)) +
-  geom_bar(aes(y = Genomic_proportion, fill = Final_annotation), stat = "identity", position="stack") +
-  geom_line(aes(y = Genome_Size_gbp * 10), group=1, color="blue4") +  # Adjust the scaling factor (* 10) as needed
-  scale_y_continuous(sec.axis = sec_axis(~ (. / 10), name = "Average Genome Size (Gbp/2C)")) +
-  labs(x = "Species Name", y = "Percentage of each repeat occupied within the genome") +
-  theme(axis.text.x = element_text(angle = 60, hjust = 1), 
-        legend.text = element_text(size = 7),
-        legend.location = "plot") +
-  guides(fill = guide_legend(title = "Repeat Annotation", ncol = 1))
-
-print(RptProp_GS_bySpecies)
-
 ## Plot with custom colors
 # Custom the colors of the repeat types
 custom_palette <- c(
@@ -180,12 +167,10 @@ custom_palette <- c(
   "#486078FF"
 )
 
-RptProp_GS_bySpecies_custm <- ggplot(sum_All_Eggplant_Repeat_ag, aes(x = Species_Name)) +
-  geom_bar(aes(y = Genomic_proportion, fill = Final_annotation), stat = "identity", position="stack") +
-  geom_line(aes(y = Genome_Size_gbp * 10), group=1, color="blue4") +  # Adjust the scaling factor (* 10) as needed
-  scale_y_continuous(sec.axis = sec_axis(~ (. / 10), name = "Average Genome Size (Gbp/2C)")) +
-  labs(title = "Genomic Repeat Type Proportions and Genome Size Across Different Species", 
-       x = "Species Name", y = "Percentage of each repeat occupied within the genome") +
+RptProp_GS_bySpecies_custm <- ggplot(sum_All_Eggplant_Repeat_ag, aes(x = reorder(Species_Name, Genome_Size_gbp))) +
+  geom_bar(aes(y = Genomic_proportion, fill = Final_annotation), stat = "identity", 
+           position = "stack") +
+    labs(x = "Species name", y = "Total genomic proportion of repeats(%)") +
   scale_fill_manual(values = custom_palette) +
   theme(axis.title.x = element_text(size = 20), 
         axis.title.y = element_text(size = 20, 
@@ -194,8 +179,8 @@ RptProp_GS_bySpecies_custm <- ggplot(sum_All_Eggplant_Repeat_ag, aes(x = Species
         axis.text.y = element_text(hjust = 1, size = 15), 
         legend.text = element_text(size = 13),
         legend.location = "plot",
-        plot.margin = margin(t = 15, r = 15, b = 10, l = 60, unit = "pt"),
-        plot.title = element_text(size = 25, face = "bold")) +
+        legend.margin = margin(6, 6, 6, 10),
+        plot.margin = margin(t = 15, r = 15, b = 10, l = 60, unit = "pt")) +
   guides(fill = guide_legend(title = "Repeat Annotation", ncol = 1,
                              theme(legend.title = element_text(size = 18))))
 
@@ -203,6 +188,26 @@ print(RptProp_GS_bySpecies_custm)
 
 # Save the figure as a pdf file
 ggsave("../R_Plots/RptProp_GS_bySpecies.pdf", RptProp_GS_bySpecies_custm, width = 20, height = 10)
+
+RptProp_GS_bySpecies_horizontal <- ggplot(sum_All_Eggplant_Repeat_ag, aes(y = Species_Name)) +
+  geom_bar(aes(x = Genomic_proportion, fill = Final_annotation), stat = "identity", 
+           position = "stack") +
+  labs(title = "Figure. 1", 
+       x = "Genomic proportion of total repeat", y = "Species Name") +
+  scale_fill_manual(values = custom_palette) +
+  theme(axis.title.y = element_text(size = 20), 
+        axis.title.x = element_text(size = 20, 
+                                    margin = margin(r = 15, unit = "pt")), 
+        axis.text.y = element_text(hjust = 1, size = 15), 
+        axis.text.x = element_text(hjust = 1, size = 15), 
+        legend.text = element_text(size = 13),
+        legend.location = "plot",
+        plot.title = element_text(size = 25, face = "bold")) +
+  guides(fill = guide_legend(title = "Repeat Annotation", ncol = 1,
+                             theme(legend.title = element_text(size = 18))))
+
+print(RptProp_GS_bySpecies_horizontal)
+ggsave("../R_Plots/RptProp_GS_bySpecies_horizontal.pdf", RptProp_GS_bySpecies_horizontal, width = 20, height = 10)
 
 ##### Total Genome Proportion and Diversity #####
 #################################################
@@ -354,7 +359,33 @@ print(Diploid_Diversity_GS)
 ggsave("../R_Plots/Diploid_Diversity_GS.pdf", Diploid_Diversity_GS, width = 10, height = 8)
 
 
+lm_GS_TGP <- lm(Genome_Size_gbp ~ Total_Genomic_Proportion, 
+               data = Diploid_Eggplant_Repeat_ag_pct)
 
+summary(lm_GS_TGP)
+
+# Extract coefficients
+intercept <- coef(lm_GS_TGP)[1]
+slope <- coef(lm_GS_TGP)[2]
+
+# Create equation text
+equation <- paste("y = ", round(intercept, 4), " + ", round(slope, 4), "x", sep = "")
+
+# Create the plot with the linear model line
+lm_GS_TGP_Plot <- ggplot(Diploid_Eggplant_Repeat_ag_pct, aes(x = Total_Genomic_Proportion, 
+                                           y = Genome_Size_gbp)) +
+  labs(y = "Total genomic proportion of repeats (%)", x = "Genome size (Gbp/2C)") + 
+  geom_point(cex = 2) +
+  geom_smooth(method = lm, formula = y ~ x) +
+  theme(text = element_text(size = 14), axis.text = element_text(size = 15),
+        axis.title.x = element_text(size = 20), 
+        axis.title.y = element_text(size = 20, margin = margin(r = 10, unit = "pt"))) +
+  # Add the equation to the plot
+  annotate("text", x = 44, y = 2.71, label = equation, hjust = 0, size = 7, color = "blue")
+
+print(lm_GS_TGP_Plot)
+
+ggsave("../R_Plots/lm_GS_TGP_Plot.pdf", lm_GS_TGP_Plot, width = 12, height = 8)
 
 ############### Phylogenetic Tree ###############
 #################################################
