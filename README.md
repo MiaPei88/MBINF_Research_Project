@@ -4,5 +4,8 @@ Project Title: EXPLORING EVOLUTION OF REPETITIVE ELEMENTS IN RELATION TO THE ECO
 
 This repository includes all the related files for my research project for MBINF (Master of Bioinformatics) program at the University of Guelph
 
-Code files in ComputeCan directory are the pipeline for generating repeat profiles, which should be run by the number in the title in order. 
+Code files in "ComputeCan" subdirectory are the pipeline for generating repeat profiles, which should be run by the number in the title in order from 1 to 9.
 
+1_AddingColumns_CombineAll.py and 2_Analysing_RE2_output.R should be run using the final repeat annotations files in the "RE2_manual_annotaion" subdirectory. Detailed information about running these two files are inside the files themselves
+
+Figures in "R_Plots" subdirectory are the output figures from 2_Analysing_RE2_output.R
