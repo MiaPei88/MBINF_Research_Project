@@ -896,7 +896,7 @@ AMI_values1 <- as.data.frame(AMI_values)
 colnames(AMI_values1)
 
 Mia_Env_allctry$mi<-AMI_values1$X04_AnnualMI_world
-table(is.na(Mia_Env_allctry$mi))#2 occurrence records don't have GDD values
+table(is.na(Mia_Env_allctry$mi))# 8 occurrence records don't have GDD values
 
 ## One country
 # extract raw values which you'll need for running SDMs (12 equals long, 11 equal lat)
@@ -905,6 +905,6 @@ AMI_values2 <- as.data.frame(AMI_values_1)
 colnames(AMI_values2)
 
 Mia_Env_onectry$mi<-AMI_values2$X04_AnnualMI_world
-table(is.na(Mia_Env_onectry$mi))#2 occurrence records don't have GDD values
+table(is.na(Mia_Env_onectry$mi))# 2 occurrence records don't have GDD values
 
 
