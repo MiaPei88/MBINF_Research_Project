@@ -39,6 +39,9 @@ library(ggmap)
 library(raster)
 library(sf)
 library(sp)
+library(factoextra)
+library("FactoMineR")
+library(corrplot)
 
 ############# Repeat Quantification #############
 #################################################
@@ -897,6 +900,7 @@ colnames(AMI_values1)
 
 Mia_Env_allctry$mi<-AMI_values1$X04_AnnualMI_world
 table(is.na(Mia_Env_allctry$mi))# 8 occurrence records don't have GDD values
+Mia_Env_allctry[which(is.na(Mia_Env_allctry$mi)),] # Check the rows when mi have NA value
 
 ## One country
 # extract raw values which you'll need for running SDMs (12 equals long, 11 equal lat)
@@ -905,6 +909,145 @@ AMI_values2 <- as.data.frame(AMI_values_1)
 colnames(AMI_values2)
 
 Mia_Env_onectry$mi<-AMI_values2$X04_AnnualMI_world
-table(is.na(Mia_Env_onectry$mi))# 2 occurrence records don't have GDD values
+table(is.na(Mia_Env_onectry$mi)) # 2 occurrence records don't have GDD values
+Mia_Env_onectry[which(is.na(Mia_Env_onectry$mi)),] # Check the rows when mi have NA value
 
+
+####### Climate Variable Correlation and PCA
+#### Histograms on distribution of all traits
+# data from all country have distribution of the species
+env_hist_allctry <- Mia_Env_allctry[,c(6:25)]%>%
+  keep(is.numeric) %>% 
+  gather() %>% 
+  ggplot(aes(value)) +
+  facet_wrap(~ key, scales = "free") +
+  geom_histogram() + ggtitle("Histograms of all environmental data solanum from all country")
+
+env_hist_allctry
+
+# data from the original countries of our species samples
+env_hist_onectry <- Mia_Env_onectry[,c(6:25)]%>%
+  keep(is.numeric) %>% 
+  gather() %>% 
+  ggplot(aes(value)) +
+  facet_wrap(~ key, scales = "free") +
+  geom_histogram() + ggtitle("Histograms of all environmental data solanum from original country")
+
+env_hist_onectry
+
+#### Clean the data
+Mia_Env_allctry_cl <- na.omit(Mia_Env_allctry)
+Mia_Env_onectry_cl <- na.omit(Mia_Env_onectry)
+
+
+#### Check the mean of each variable by each species
+
+
+
+#### Perform PCA
+pca_allctry <- PCA(Mia_Env_allctry_cl[,c(6:25)], graph = FALSE)
+pca_onectry <- PCA(Mia_Env_onectry_cl[,c(6:25)], graph = FALSE)
+
+
+## Summary of PCA results
+summary(pca_allctry)
+summary(pca_onectry)
+
+
+## Scree plot
+fviz_eig(pca_allctry, addlabels = TRUE) + 
+  ggtitle("Scree plot for environmental variables of Solanum from all countries")
+fviz_eig(pca_onectry, addlabels = TRUE) + 
+  ggtitle("Scree plot for environmental variables of Solanum from sample's original countries")
+
+## cos2 plot
+fviz_cos2(pca_allctry, choice = "var", axes = 1:2)
+fviz_cos2(pca_allctry, choice = "var", axes = 2:3)
+
+## Biplot combined with cos2
+# All countries
+fviz_pca_var(pca_allctry, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Environmental variables of Solanum from all countries - 1:2")
+
+fviz_pca_var(pca_allctry, axes = c(2, 3), col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Environmental variables of Solanum from all countries - 2:3")
+
+# Original countries
+fviz_pca_var(pca_onectry, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Environmental variables of Solanum from original countries - 1:2")
+
+fviz_pca_var(pca_onectry, axes = c(2, 3), col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Environmental variables of Solanum from original countries - 2:3")
+
+## Contributions of variables
+# PC1 - all country
+fviz_contrib(pca_allctry, choice = "var", axes = 1, top = 15) +
+  ggtitle("Contribution of variables to Dim1 - All country")
+
+# PC2 - all country
+fviz_contrib(pca_allctry, choice = "var", axes = 2, top = 15) +
+  ggtitle("Contribution of variables to Dim2 - All country")
+
+# PC1 - one country
+fviz_contrib(pca_onectry, choice = "var", axes = 1, top = 15) +
+  ggtitle("Contribution of variables to Dim1 - Original country")
+# PC2 - one country
+fviz_contrib(pca_onectry, choice = "var", axes = 2, top = 15) +
+  ggtitle("Contribution of variables to Dim2 - Original country")
+
+#### Correlation Plot
+### Species from all country
+# Calculate the correlation matrix
+cor_matrix_allctry <- cor(Mia_Env_allctry_cl[,c(6:25)])
+
+# Plot the correlation matrix
+corrplot(cor_matrix_allctry, method = "circle", type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, 
+         title = "Correlation Plot of Climate Variables", 
+         cl.cex = 0.75, addCoef.col = "black")
+
+# Save the correlation matrix to select representative variables in excel
+write.table(cor_matrix_allctry, "./cor_matrix_allctry.csv", sep = ",")
+
+# Select variables to keep
+Mia_Env_allctry_slct <- Mia_Env_allctry_cl %>%
+  dplyr::select(bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
+
+#### Perform PCA with selected variables
+pca_allctry_slct <- PCA(Mia_Env_allctry_slct, graph = FALSE)
+
+## Summary of PCA results
+summary(pca_allctry_slct)
+
+## Scree plot
+fviz_eig(pca_allctry_slct, addlabels = TRUE) + 
+  ggtitle("Scree plot for selected environmental variables of Solanum from all countries")
+
+## cos2 plot
+fviz_cos2(pca_allctry_slct, choice = "var", axes = 1:2)
+
+## Biplot combined with cos2
+# All countries
+fviz_pca_var(pca_allctry_slct, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Selected Environmental variables of Solanum from all countries - 1:2")
+
+
+## Contributions of variables
+# PC1 - all country
+fviz_contrib(pca_allctry_slct, choice = "var", axes = 1, top = 15) +
+  ggtitle("Contribution of variables to Dim1 - All country")
+
+# PC2 - all country
+fviz_contrib(pca_allctry_slct, choice = "var", axes = 2, top = 15) +
+  ggtitle("Contribution of variables to Dim2 - All country")
 
