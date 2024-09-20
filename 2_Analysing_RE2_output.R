@@ -42,6 +42,7 @@ library(sp)
 library(factoextra)
 library("FactoMineR")
 library(corrplot)
+library(phytools)
 
 ############# Repeat Quantification #############
 #################################################
@@ -276,7 +277,7 @@ Cmbd_All_Eggplant_Repeat_ag_pct <- subset(Cmbd_All_Eggplant_Repeat_ag_pct, selec
 # Remove the polyploid Solanum_campylacanthum
 Diploid_Eggplant_Repeat_ag_pct <- Cmbd_All_Eggplant_Repeat_ag_pct[-3,]
 
-##~~~~~~~~~~Exploratory plotting~~~~~~~~~~## 
+##### Exploratory plotting
 
 # Richness and genome size
 plot(Cmbd_All_Eggplant_Repeat_ag_pct$Mehinicks_index ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat type richness (Mehinicks Index)", xlab = "Genome size (Gbp/2C)")
@@ -434,25 +435,6 @@ print(lm_GS_TGP_Plot)
 ggsave("../R_Plots/lm_GS_TGP_Plot.pdf", lm_GS_TGP_Plot, width = 12, height = 8)
 
 
-############### Phylogenetic Tree ###############
-#################################################
-# Read in phylo tree from Xavier
-Xavier_Tree <- read.nexus("/Users/miapei/Desktop/MBinf/Research_Project/Data/Xavier_phylo/FINALConsensus_MAFFT.tre")
-plot(Xavier_Tree)
-
-# Names of tips to be dropped
-tips_to_drop <- setdiff(Xavier_Tree$tip.label, N_reads_analyzed_GS$Sample_ID) 
-# Drop the tips
-Mia_tree <- drop.tip(Xavier_Tree, tips_to_drop)
-plot(Mia_tree)
-
-# Make a name map to correspond the species name to each sample id
-name_map <- setNames(N_reads_analyzed_GS$Species_Name, N_reads_analyzed_GS$Sample_ID)
-
-# Change the tip labels using the name map
-Mia_tree$tip.label <- name_map[Mia_tree$tip.label]
-plot(Mia_tree)
-
 ################# Occurrence Data ###############
 #################################################
 ### Read in the Occurrence data from Edeline's previous study
@@ -579,6 +561,8 @@ S_incanum_BFaso_indices_keep
 # Now extract those rows from the original DataFrame
 S_incanum_BFaso_filtered <- S_incanum_BFaso_cl[S_incanum_BFaso_indices_keep, ]
 
+# Change the country code back to country name
+S_incanum_BFaso_filtered$COUNTRY <- countrycode(S_incanum_BFaso_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
 
 ### Mapping the coordinates of S.incanum in Burkina Faso from GBIF
 # Get map data of Burkina Faso
@@ -652,6 +636,9 @@ S_incanum_Kenya_indices_keep <- filterByProximity(S_incanum_Kenya_coordmatrix, d
 S_incanum_Kenya_filtered <- S_incanum_Kenya_cl[S_incanum_Kenya_indices_keep, ]
 nrow(S_incanum_Kenya_filtered)
 
+# Change the country code back to country name
+S_incanum_Kenya_filtered$COUNTRY <- countrycode(S_incanum_Kenya_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
+unique(S_incanum_Kenya_filtered$COUNTRY)
 
 ### Mapping the coordinates of S.incanum in Kenya from GBIF
 # Get map data of Kenya
@@ -692,13 +679,9 @@ Cultiv_Species_Occ_cl_allctry <- Cultiv_Species_Occ %>%
   filter(!grepl("cultivated|Planted", HABITATTXT))# keep only the non-cultivated specimens
 
 # Change the countryCode into the format CoordinateCleaner accepts
-Cultiv_Species_Occ_cl_onectry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_onectry$COUNTRY,
-                                                    origin =  'country.name',
-                                                    destination = 'iso3c')
+Cultiv_Species_Occ_cl_onectry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_onectry$COUNTRY, origin =  'country.name', destination = 'iso3c')
 
-Cultiv_Species_Occ_cl_allctry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_allctry$COUNTRY,
-                                                      origin =  'country.name',
-                                                      destination = 'iso3c')
+Cultiv_Species_Occ_cl_allctry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_allctry$COUNTRY, origin =  'country.name', destination = 'iso3c')
 
 # Flag the problematic coordinates using CoordinateCleaner
 Cultiv_Species_flags_onectry <- clean_coordinates(x = Cultiv_Species_Occ_cl_onectry, 
@@ -759,8 +742,13 @@ Cultiv_Species_allctry_indices_keep <- filterByProximity(Cultiv_Species_allctry_
 # Now extract those rows from the original DataFrame
 Cultiv_Species_onectry_filtered <- Cultiv_Species_cl_onectry[Cultiv_Species_onectry_indices_keep, ]
 nrow(Cultiv_Species_onectry_filtered)
+# change the country code back to country name
+Cultiv_Species_onectry_filtered$COUNTRY <- countrycode(Cultiv_Species_onectry_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
+
 Cultiv_Species_allctry_filtered <- Cultiv_Species_cl_allctry[Cultiv_Species_allctry_indices_keep, ]
 nrow(Cultiv_Species_allctry_filtered)
+# change the country code back to country name
+Cultiv_Species_allctry_filtered$COUNTRY <- countrycode(Cultiv_Species_allctry_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
 
 # Check if the columns are the same between Cultivated species data frame and the data frame for the rest of the species
 ncol(Cultiv_Species_onectry_filtered)
@@ -772,7 +760,7 @@ ncol(Mia_Occ_allctry)
 setdiff(colnames(Mia_Occ_allctry), colnames(Cultiv_Species_allctry_filtered))
 
 
-#### Combine the occurrence data of S.incanum from GBIF to the major occurrence df (one country)
+#### Combine the occurrence data of S.incanum from GBIF and cultivated species to the major occurrence df (one country)
 # Exclude S.cerasferum (only one occurrence) and S.incanum (already moved to the two data frames of this species from two different countries)
 Mia_Occ_onectry <- Mia_Occ_onectry %>%
   filter(genus.sp %in% Species_Country$genus.sp) %>%
@@ -781,7 +769,7 @@ Mia_Occ_onectry <- Mia_Occ_onectry %>%
 Mia_Occ_onectry_cmbd <- rbind(Mia_Occ_onectry, S_incanum_BFaso_filtered, S_incanum_Kenya_filtered, Cultiv_Species_onectry_filtered)
 
 # Check the number of occurrence data points of each species after combination
-table(Mia_Occ_onectry_cmbd$SP1)
+table(Mia_Occ_onectry_cmbd$genus.sp)
 
 ####### Species from all country in this project
 # Filter the species we have for this project
@@ -940,68 +928,55 @@ Mia_Env_allctry_cl <- na.omit(Mia_Env_allctry)
 Mia_Env_onectry_cl <- na.omit(Mia_Env_onectry)
 
 
-#### Check the mean of each variable by each species
+#### Change the species name of Solanum_incanum with the two countries
+Mia_Env_allctry_cl1 <- Mia_Env_allctry_cl %>%
+  mutate(genus.sp = case_when(
+    genus.sp == "Solanum_incanum" & COUNTRY == "Burkina Faso" ~ paste(genus.sp, "BFaso", sep = "_"),
+    genus.sp == "Solanum_incanum" & COUNTRY == "Kenya"        ~ paste(genus.sp, "Kenya", sep = "_"),
+    TRUE                      ~ genus.sp
+    ))
 
+unique(Mia_Env_allctry_cl1$genus.sp)
+  
 
+Mia_Env_onectry_cl1 <- Mia_Env_onectry_cl %>%
+  mutate(genus.sp = case_when(
+    genus.sp == "Solanum_incanum" & COUNTRY == "Burkina Faso" ~ paste(genus.sp, "BFaso", sep = "_"),
+    genus.sp == "Solanum_incanum" & COUNTRY == "Kenya"        ~ paste(genus.sp, "Kenya", sep = "_"),
+    TRUE                      ~ genus.sp
+  ))
+
+unique(Mia_Env_onectry_cl1$genus.sp)
 
 #### Perform PCA
 pca_allctry <- PCA(Mia_Env_allctry_cl[,c(6:25)], graph = FALSE)
-pca_onectry <- PCA(Mia_Env_onectry_cl[,c(6:25)], graph = FALSE)
-
 
 ## Summary of PCA results
 summary(pca_allctry)
-summary(pca_onectry)
-
 
 ## Scree plot
 fviz_eig(pca_allctry, addlabels = TRUE) + 
   ggtitle("Scree plot for environmental variables of Solanum from all countries")
-fviz_eig(pca_onectry, addlabels = TRUE) + 
-  ggtitle("Scree plot for environmental variables of Solanum from sample's original countries")
 
 ## cos2 plot
 fviz_cos2(pca_allctry, choice = "var", axes = 1:2)
-fviz_cos2(pca_allctry, choice = "var", axes = 2:3)
 
 ## Biplot combined with cos2
-# All countries
 fviz_pca_var(pca_allctry, col.var = "cos2",
              gradient.cols = c("black", "orange", "green"),
              repel = TRUE) +
   ggtitle("PCA - Environmental variables of Solanum from all countries - 1:2")
 
-fviz_pca_var(pca_allctry, axes = c(2, 3), col.var = "cos2",
-             gradient.cols = c("black", "orange", "green"),
-             repel = TRUE) +
-  ggtitle("PCA - Environmental variables of Solanum from all countries - 2:3")
-
-# Original countries
-fviz_pca_var(pca_onectry, col.var = "cos2",
-             gradient.cols = c("black", "orange", "green"),
-             repel = TRUE) +
-  ggtitle("PCA - Environmental variables of Solanum from original countries - 1:2")
-
-fviz_pca_var(pca_onectry, axes = c(2, 3), col.var = "cos2",
-             gradient.cols = c("black", "orange", "green"),
-             repel = TRUE) +
-  ggtitle("PCA - Environmental variables of Solanum from original countries - 2:3")
 
 ## Contributions of variables
-# PC1 - all country
+# PC1
 fviz_contrib(pca_allctry, choice = "var", axes = 1, top = 15) +
   ggtitle("Contribution of variables to Dim1 - All country")
 
-# PC2 - all country
+# PC2
 fviz_contrib(pca_allctry, choice = "var", axes = 2, top = 15) +
   ggtitle("Contribution of variables to Dim2 - All country")
 
-# PC1 - one country
-fviz_contrib(pca_onectry, choice = "var", axes = 1, top = 15) +
-  ggtitle("Contribution of variables to Dim1 - Original country")
-# PC2 - one country
-fviz_contrib(pca_onectry, choice = "var", axes = 2, top = 15) +
-  ggtitle("Contribution of variables to Dim2 - Original country")
 
 #### Correlation Plot
 ### Species from all country
@@ -1018,8 +993,11 @@ corrplot(cor_matrix_allctry, method = "circle", type = "upper", order = "hclust"
 write.table(cor_matrix_allctry, "./cor_matrix_allctry.csv", sep = ",")
 
 # Select variables to keep
-Mia_Env_allctry_slct <- Mia_Env_allctry_cl %>%
-  dplyr::select(bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
+Mia_Env_allctry_slct <- Mia_Env_allctry_cl1 %>%
+  dplyr::select(genus.sp, bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
+
+Mia_Env_onectry_slct <- Mia_Env_onectry_cl1 %>%
+  dplyr::select(genus.sp, bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
 
 #### Perform PCA with selected variables
 pca_allctry_slct <- PCA(Mia_Env_allctry_slct, graph = FALSE)
@@ -1051,3 +1029,151 @@ fviz_contrib(pca_allctry_slct, choice = "var", axes = 1, top = 15) +
 fviz_contrib(pca_allctry_slct, choice = "var", axes = 2, top = 15) +
   ggtitle("Contribution of variables to Dim2 - All country")
 
+
+### Calculate the correlation matrix after selecting some variables
+cor_matrix_slct <- cor(Mia_Env_allctry_slct[,-1])
+
+# Plot the correlation matrix
+corrplot(cor_matrix_slct, method = "circle", type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, 
+         title = "Correlation Plot of Climate Variables", 
+         cl.cex = 0.75, addCoef.col = "black")
+
+
+### Create boxplots to show the variation of each variable among all species
+data_long <- pivot_longer(Mia_Env_allctry_slct, cols = -genus.sp, names_to = "Environmental_Variable", values_to = "Value")
+
+boxplot_palette <- paletteer::paletteer_d("ggthemes::Tableau_20")
+
+ggplot(data_long, aes(x = genus.sp, y = Value, fill = genus.sp)) +
+  geom_boxplot() +
+  scale_x_discrete(breaks = NULL) + 
+  facet_wrap(~ Environmental_Variable, scales = "free") + # Separate plots for each environmental variable
+  scale_fill_manual(values = boxplot_palette) +
+  labs(title = "Boxplot of Each Environmental Variable Across Species", x = NULL, y = "Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_blank(),  # This ensures no text is shown on the x-axis
+        axis.ticks.x = element_blank())
+
+
+# Histogram of each environemntal variables after PCA for samples from all countryes
+Mia_Env_allctry_slct[,-1]%>%
+  keep(is.numeric) %>% 
+  gather() %>% 
+  ggplot(aes(value)) +
+  facet_wrap(~ key, scales = "free") +
+  geom_histogram() + ggtitle("Histograms of selected environmental data solanum afte PCA from all country")
+
+Mia_Env_allctry_median <- Mia_Env_allctry_slct %>%
+  group_by(genus.sp) %>%
+  summarise(across(everything(), median, na.rm = TRUE))
+
+Mia_Env_onectry_median <- Mia_Env_onectry_slct %>%
+  group_by(genus.sp) %>%
+  summarise(across(everything(), median, na.rm = TRUE))
+
+############### Phylogenetic Tree ###############
+#################################################
+# Read in phylo tree from Xavier
+Xavier_Tree <- read.nexus("/Users/miapei/Desktop/MBinf/Research_Project/Data/Xavier_phylo/FINALConsensus_MAFFT.tre")
+plot(Xavier_Tree)
+
+# Names of tips to be dropped
+tips_to_drop <- setdiff(Xavier_Tree$tip.label, N_reads_analyzed_GS$Sample_ID) 
+# Drop the tips
+Mia_tree <- drop.tip(Xavier_Tree, tips_to_drop)
+plot(Mia_tree)
+
+# Make a name map to correspond the species name to each sample id
+name_map <- setNames(N_reads_analyzed_GS$Species_Name, N_reads_analyzed_GS$Sample_ID)
+
+# Change the tip labels using the name map
+Mia_tree$tip.label <- name_map[Mia_tree$tip.label]
+plot(Mia_tree)
+
+Mia_tree_GS <- drop.tip(Mia_tree, c("Solanum_cerasiferum", "Solanum_campylacanthum"))
+plot(Mia_tree_GS)
+
+Mia_tree_RP <- drop.tip(Mia_tree, c("Solanum_cerasiferum"))
+plot(Mia_tree_RP)
+
+##### PGLS - Environmental Variables and GS #####
+#################################################
+
+##### Combine the median of environmental data with the genome size df
+Cmbd_GS_Env <- GS_df %>%
+  filter(Species_Name != "Solanum_cerasiferum") %>%
+  filter(Species_Name != "Solanum_campylacanthum") %>%
+  dplyr::rename(genus.sp = Species_Name) %>%
+  left_join(Mia_Env_allctry_median, by = "genus.sp")
+  
+# Change the column genus.sp into row names
+row.names(Cmbd_GS_Env) <- Cmbd_GS_Env$genus.sp 
+Cmbd_GS_Env <- subset(Cmbd_GS_Env, select = -genus.sp)
+
+# Check the distribution of genome size
+hist(as.numeric(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after log transformation
+hist(log(as.numeric(Cmbd_GS_Env$Genome_Size_gbp)))
+# Check the distribution after square root transformation
+hist(sqrt(as.numeric(Cmbd_GS_Env$Genome_Size_gbp)))
+
+# Check the multicollinearity of all environmental variables using simple linear regression model
+lm_GS_env<-lm(sqrt(as.numeric(Genome_Size_gbp))~., data=Cmbd_GS_Env)
+summary(lm_GS_env)
+vif(lm_GS_env)
+
+# Let's remove bio6 (mean daily minimum air temperature of the coldest month)
+# to see if the multicollinearity will change
+lm_GS_env_1<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio6, data=Cmbd_GS_Env)
+summary(lm_GS_env_1)
+vif(lm_GS_env_1)
+
+# Remove bio7 (annual range of air temperature)
+lm_GS_env_2<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio7, data=Cmbd_GS_Env)
+summary(lm_GS_env_2)
+vif(lm_GS_env_2)
+
+# Remove both bio6 and bio7
+lm_GS_env_3<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio6 -bio7, data=Cmbd_GS_Env)
+summary(lm_GS_env_3)
+vif(lm_GS_env_3) # Now only bio14 and bio15 are higher than 10
+
+# Remove bio6, bio7 and bio14
+lm_GS_env_4<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio6 -bio7 -bio14, data=Cmbd_GS_Env)
+summary(lm_GS_env_4)
+vif(lm_GS_env_4) # Now all variables are under 10
+
+Cmbd_GS_Env <- Cmbd_GS_Env %>%
+  dplyr::select(-c("bio6", "bio7","bio14"))
+
+## Now the rest of the environmental varibles are 
+#bio3 - ratio of diurnal variation to annual variation in temperatures
+#bio5 - mean daily maximum air temperature of the warmest month
+#bio15 - precipitation seasonality
+#bio18 - mean monthly precipitation amount of the warmest quarter
+#bio19 - mean monthly precipitation amount of the coldest quarter
+#mi - the ratio of annual precipitation to annual potential evapotranspiration
+
+### Genome Size data and Phylo tree
+# Create a named vector from the dataframe of genome size
+plotTree.barplot(Mia_tree_GS, x = setNames(Cmbd_GS_Env$Genome_Size_gbp,
+                                        rownames(Cmbd_GS_Env)), 
+                 tip.labels = TRUE, 
+                 args.barplot = list(col = "salmon", xlab="Genome Size (gbp)"))
+par(mfrow=c(1,1))
+
+## Phylogenetic signal test
+# To see if genome size variation is related to phylogenetic relationship
+phylo_signal <- phylosig(Mia_tree_GS, x = setNames(Cmbd_GS_Env$Genome_Size_gbp, 
+                                                rownames(Cmbd_GS_Env)), 
+                         method="lambda", test = TRUE)
+phylo_signal
+plot(phylo_signal)
+
+# Just a phylo signal test using random numbers of gs 
+phylo_signal_randmGS <- phylosig(Mia_tree_GS, x = setNames(runif(13, min = 2, max = 10), 
+                                                           rownames(Cmbd_GS_Env)), 
+                                 method="lambda", test = TRUE)
+phylo_signal_randmGS
+plot(phylo_signal_randmGS)
