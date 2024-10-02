@@ -43,6 +43,8 @@ library(factoextra)
 library("FactoMineR")
 library(corrplot)
 library(phytools)
+library(glmnet)
+library(MuMIn)
 
 ############# Repeat Quantification #############
 #################################################
@@ -459,19 +461,26 @@ Species_Country[13,1] <- "Solanum_incanum"
 ####### Species from one country in this project
 # Filter only the species and its original country we have for this project
 Mia_Occ_onectry <- inner_join(Edeline_Occ, Species_Country, by = c("genus.sp", "COUNTRY"))
+Mia_Occ_allctry <- Edeline_Occ %>%
+  filter(genus.sp == Species_Country$genus.sp)
 
 # Check the number of occurrence data points of each species
 table(Mia_Occ_onectry$genus.sp)
 unique(Mia_Occ_onectry$genus.sp)
 unique(Species_Country$genus.sp)
 
+table(Mia_Occ_allctry$genus.sp)
+unique(Mia_Occ_allctry$genus.sp)
+unique(Species_Country$genus.sp)
+
 # Check which species do not have occurence data
 setdiff(Species_Country$genus.sp, Mia_Occ_onectry$genus.sp) 
+setdiff(Species_Country$genus.sp, Mia_Occ_allctry$genus.sp) 
 ## The three species without occurence data are cultivated crops and hard to observe their natural distribution
 
 # Check the number of occurrence data points of Solanum incanum from the two different countries
-nrow(Mia_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Burkina Faso",])
-nrow(Mia_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Kenya",])
+nrow(Edeline_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Burkina Faso",])
+nrow(Edeline_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Kenya",])
 
 #### Add occurrence data points of Solanum incanum in Burkina Faso from GBIF
 S_incanum_BFaso <- read.csv("/Users/miapei/Desktop/MBinf/Research_Project/Data/Solanum_incanum_BFaso.csv", sep = "\t")
@@ -716,11 +725,13 @@ plot(Cultiv_Species_flags_allctry, lon = "LONGDEC", lat = "LATDEC")
 
 # Clean the occurrence data to exclude the coordinates with flags and select columns we need
 Cultiv_Species_cl_onectry <- Cultiv_Species_Occ_cl_onectry[Cultiv_Species_flags_onectry$.summary,] %>%
-  mutate(genus.sp = str_c(word(SPECIES, 1), word(SPECIES, 2), sep = "_")) %>%
+  mutate(genus.sp = str_c(word(SPECIES, 1), word(SPECIES, 2), sep = "_"))
+Cultiv_Species_cl_onectry <- Cultiv_Species_cl_onectry %>%
   dplyr::select(intersect(colnames(Cultiv_Species_cl_onectry),colnames(Mia_Occ_onectry)))
 
 Cultiv_Species_cl_allctry <- Cultiv_Species_Occ_cl_allctry[Cultiv_Species_flags_allctry$.summary,] %>%
-  mutate(genus.sp = str_c(word(SPECIES, 1), word(SPECIES, 2), sep = "_")) %>%
+  mutate(genus.sp = str_c(word(SPECIES, 1), word(SPECIES, 2), sep = "_")) 
+Cultiv_Species_cl_allctry <- Cultiv_Species_cl_allctry %>%
   dplyr::select(intersect(colnames(Cultiv_Species_cl_allctry),colnames(Mia_Occ_allctry)))
 
 
@@ -736,7 +747,7 @@ Cultiv_Species_allctry_coordmatrix <- cbind(Cultiv_Species_cl_allctry$LONGDEC,
                                             Cultiv_Species_cl_allctry$LATDEC)
 
 # Get indices of the data points to keep
-Cultiv_Species_allctry_indices_keep <- filterByProximity(Cultiv_Species_allctry_coordmatrix, distance_threshold, mapUnits = FALSE)
+Cultiv_Species_onectry_indices_keep <- filterByProximity(Cultiv_Species_onectry_coordmatrix, distance_threshold, mapUnits = FALSE)
 Cultiv_Species_allctry_indices_keep <- filterByProximity(Cultiv_Species_allctry_coordmatrix, distance_threshold, mapUnits = FALSE)
 
 # Now extract those rows from the original DataFrame
@@ -1000,7 +1011,7 @@ Mia_Env_onectry_slct <- Mia_Env_onectry_cl1 %>%
   dplyr::select(genus.sp, bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
 
 #### Perform PCA with selected variables
-pca_allctry_slct <- PCA(Mia_Env_allctry_slct, graph = FALSE)
+pca_allctry_slct <- PCA(Mia_Env_allctry_slct[,-1], graph = FALSE)
 
 ## Summary of PCA results
 summary(pca_allctry_slct)
@@ -1089,6 +1100,7 @@ name_map <- setNames(N_reads_analyzed_GS$Species_Name, N_reads_analyzed_GS$Sampl
 
 # Change the tip labels using the name map
 Mia_tree$tip.label <- name_map[Mia_tree$tip.label]
+Mia_tree
 plot(Mia_tree)
 
 Mia_tree_GS <- drop.tip(Mia_tree, c("Solanum_cerasiferum", "Solanum_campylacanthum"))
@@ -1111,38 +1123,62 @@ Cmbd_GS_Env <- GS_df %>%
 row.names(Cmbd_GS_Env) <- Cmbd_GS_Env$genus.sp 
 Cmbd_GS_Env <- subset(Cmbd_GS_Env, select = -genus.sp)
 
+### Transformation of Genome Size data
 # Check the distribution of genome size
-hist(as.numeric(Cmbd_GS_Env$Genome_Size_gbp))
+hist(Cmbd_GS_Env$Genome_Size_gbp)
+qqPlot(Cmbd_GS_Env$Genome_Size_gbp)
 # Check the distribution after log transformation
-hist(log(as.numeric(Cmbd_GS_Env$Genome_Size_gbp)))
+hist(log(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(log(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after log2 transformation
+hist(log2(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(log2(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after log10 transformation
+hist(log10(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(log10(Cmbd_GS_Env$Genome_Size_gbp))
 # Check the distribution after square root transformation
-hist(sqrt(as.numeric(Cmbd_GS_Env$Genome_Size_gbp)))
+hist(sqrt(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(sqrt(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after square transformation
+hist((Cmbd_GS_Env$Genome_Size_gbp)^2)
+qqPlot((Cmbd_GS_Env$Genome_Size_gbp)^2)
 
-# Check the multicollinearity of all environmental variables using simple linear regression model
-lm_GS_env<-lm(sqrt(as.numeric(Genome_Size_gbp))~., data=Cmbd_GS_Env)
+## Normality test for the data transformation of GS
+shapiro.test(log(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test(log2(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test(log10(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test(sqrt(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test((Cmbd_GS_Env$Genome_Size_gbp)^2)
+
+
+### Check the multicollinearity of all environmental variables using simple linear regression model
+lm_GS_env<-lm(log(Genome_Size_gbp) ~., data=Cmbd_GS_Env)
 summary(lm_GS_env)
 vif(lm_GS_env)
 
 # Let's remove bio6 (mean daily minimum air temperature of the coldest month)
 # to see if the multicollinearity will change
-lm_GS_env_1<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio6, data=Cmbd_GS_Env)
+lm_GS_env_1<-lm(log(Genome_Size_gbp) ~. -bio6, data=Cmbd_GS_Env)
 summary(lm_GS_env_1)
 vif(lm_GS_env_1)
 
 # Remove bio7 (annual range of air temperature)
-lm_GS_env_2<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio7, data=Cmbd_GS_Env)
+lm_GS_env_2<-lm(log(Genome_Size_gbp) ~. -bio7, data=Cmbd_GS_Env)
 summary(lm_GS_env_2)
 vif(lm_GS_env_2)
 
 # Remove both bio6 and bio7
-lm_GS_env_3<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio6 -bio7, data=Cmbd_GS_Env)
+lm_GS_env_3<-lm(log(Genome_Size_gbp) ~. -bio6 -bio7, data=Cmbd_GS_Env)
 summary(lm_GS_env_3)
 vif(lm_GS_env_3) # Now only bio14 and bio15 are higher than 10
 
 # Remove bio6, bio7 and bio14
-lm_GS_env_4<-lm(sqrt(as.numeric(Genome_Size_gbp))~. -bio6 -bio7 -bio14, data=Cmbd_GS_Env)
+lm_GS_env_4<-lm(log(Genome_Size_gbp) ~. -bio6 -bio7 -bio14, data=Cmbd_GS_Env)
 summary(lm_GS_env_4)
 vif(lm_GS_env_4) # Now all variables are under 10
+
+lm_GS_env_5 <- step(lm_GS_env_4)
+summary(lm_GS_env_5)
 
 Cmbd_GS_Env <- Cmbd_GS_Env %>%
   dplyr::select(-c("bio6", "bio7","bio14"))
@@ -1157,23 +1193,214 @@ Cmbd_GS_Env <- Cmbd_GS_Env %>%
 
 ### Genome Size data and Phylo tree
 # Create a named vector from the dataframe of genome size
-plotTree.barplot(Mia_tree_GS, x = setNames(Cmbd_GS_Env$Genome_Size_gbp,
+plotTree.barplot(Mia_tree_GS, x = setNames(log(Cmbd_GS_Env$Genome_Size_gbp),
                                         rownames(Cmbd_GS_Env)), 
                  tip.labels = TRUE, 
-                 args.barplot = list(col = "salmon", xlab="Genome Size (gbp)"))
+                 args.barplot = list(col = "salmon", xlab="log(Genome Size (gbp))"))
 par(mfrow=c(1,1))
 
 ## Phylogenetic signal test
 # To see if genome size variation is related to phylogenetic relationship
-phylo_signal <- phylosig(Mia_tree_GS, x = setNames(Cmbd_GS_Env$Genome_Size_gbp, 
+phylo_signal <- phylosig(Mia_tree_GS, x = setNames(log(Cmbd_GS_Env$Genome_Size_gbp), 
                                                 rownames(Cmbd_GS_Env)), 
                          method="lambda", test = TRUE)
 phylo_signal
 plot(phylo_signal)
 
-# Just a phylo signal test using random numbers of gs 
-phylo_signal_randmGS <- phylosig(Mia_tree_GS, x = setNames(runif(13, min = 2, max = 10), 
-                                                           rownames(Cmbd_GS_Env)), 
-                                 method="lambda", test = TRUE)
-phylo_signal_randmGS
-plot(phylo_signal_randmGS)
+
+### PGLS analysis between genome size and 6 environmental variables
+## Create the comparative data object
+Cmbd_GS_Env$Species <- rownames(Cmbd_GS_Env)
+Cmbd_GS_Env$logGS <- log(Cmbd_GS_Env$Genome_Size_gbp)
+Cmbd_GS_Env <- Cmbd_GS_Env[,-1]
+
+GS_Env_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_Env, names.col = "Species",vcv=TRUE)
+GS_Env_comp
+
+GS_Env_lambda <- pgls(logGS ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = GS_Env_comp, lambda = "ML") 
+summary(GS_Env_lambda)
+
+GS_Env_lambda1 <- update(GS_Env_lambda, ~ . -bio3, lambda = "ML") 
+summary(GS_Env_lambda1)
+
+GS_Env_lambda2 <- update(GS_Env_lambda1, ~ . -mi, lambda = "ML") 
+summary(GS_Env_lambda2)
+
+GS_Env_lambda3 <- update(GS_Env_lambda2, ~ . -bio18, lambda = "ML") 
+summary(GS_Env_lambda3)
+
+GS_Env_lambda4 <- update(GS_Env_lambda3, ~ . -bio15, lambda = "ML") 
+summary(GS_Env_lambda4)
+
+GS_Env_lambda5 <- update(GS_Env_lambda4, ~ . -bio5, lambda = "ML") 
+summary(GS_Env_lambda5)
+
+AICc(GS_Env_lambda, GS_Env_lambda1, GS_Env_lambda2, GS_Env_lambda3, GS_Env_lambda4, GS_Env_lambda5)
+
+## Basic scatter plot with fitted line
+# Extract observed and fitted values
+observed_GS_Env <- GS_Env_comp$data$logGS
+fitted_GS_Env <- fitted(GS_Env_lambda5)
+
+par(mar = c(5, 4, 4, 2) + 0.1) 
+plot(observed_GS_Env, fitted_GS_Env, main = "PGLS Model Fit between Genome Size and Bio19",
+     xlab = "log(GenomeSize)", ylab = "Fitted Values")
+
+## Residual plot
+# Calculating residuals
+residuals_GS_Env <- residuals(GS_Env_lambda5)
+
+# Plotting residuals
+plot(fitted_GS_Env, residuals_GS_Env, main = "Residuals vs. Fitted",
+     xlab = "Fitted Values", ylab = "Residuals")
+abline(h = 0, col = "blue")
+
+##### PGLS - Repeat Profiles and GS #####
+#################################################
+#### Reduce the number of repeat types as predictors
+# Prepare the GenomeSize-RepeatTypes df
+Cmbd_GS_RP <- Diploid_Eggplant_Repeat_ag_pct[,-c(35,36,37)] # remove columns we don't need
+Cmbd_GS_RP$logGS <- log(Cmbd_GS_RP$Genome_Size_gbp) # transform the GS
+Cmbd_GS_RP <- Cmbd_GS_RP[-3,-35] # remove original GS column and S.cerasiferum
+
+# Calculate the mean of each repeat types proportion in the whole genome by species
+mean_RP <- Cmbd_GS_RP[,-35] %>%
+  summarise(across(where(is.numeric), mean, na.rm = TRUE)) %>%
+  pivot_longer(cols = everything(), names_to = "Repeat_Type", values_to = "Mean_GenomicProportion")
+
+# Remove the repeat types that are not specific enough
+mean_RP <- mean_RP[-c(1,2,3,5,6,15,16,29,34),]
+
+# Sort repeat types by proportion and calculate cumulative sum
+mean_RP <- mean_RP %>%
+  dplyr::arrange(desc(Mean_GenomicProportion)) %>%
+  dplyr::mutate(cumulative_proportion = cumsum(Mean_GenomicProportion))
+
+# Retain repeat types making up the 99% of the highest cumulative proportion
+threshold_RP <- 0.95 * as.numeric(mean_RP[which.max(mean_RP$cumulative_proportion),3])
+mean_RP <- mean_RP %>%
+  dplyr::filter(cumulative_proportion <= threshold_RP)
+
+#### Select variables to keep in the GenomeSize-RepeatTypes df
+Cmbd_GS_RP_slct <- Cmbd_GS_RP %>%
+  dplyr::select(mean_RP$Repeat_Type, "logGS")
+
+# Check the dimension
+print(dim(Cmbd_GS_RP_slct))
+
+#### Perform PCA with selected repeat types
+# Extract the last part of each column name
+new_colnames <- sapply(strsplit(colnames(Cmbd_GS_RP_slct), "/"), tail, n = 1)
+Cmbd_GS_RP_slct_PCA <- Cmbd_GS_RP_slct
+# Set the new column names back to the dataframe
+colnames(Cmbd_GS_RP_slct_PCA) <- new_colnames
+
+PCA_GS_RP_slct <- PCA(Cmbd_GS_RP_slct_PCA[,-14], graph = FALSE)
+
+## Summary of PCA results
+summary(PCA_GS_RP_slct)
+
+## Scree plot
+fviz_eig(PCA_GS_RP_slct, addlabels = TRUE) + 
+  ggtitle("Scree plot for selected repeat types of Solanum from all countries")
+
+## cos2 plot
+fviz_cos2(PCA_GS_RP_slct, choice = "var", axes = 1:2)
+fviz_cos2(PCA_GS_RP_slct, choice = "var", axes = 2:3)
+
+## Plot a PCA biplot with each individual species dot
+fviz_pca_biplot(PCA_GS_RP_slct, 
+                col.ind = "darkblue",
+                col.var = "cos2",
+                gradient.cols = c("black", "orange", "green"),
+                geom = "point",  
+                addEllipses = TRUE)
+
+fviz_pca_biplot(PCA_GS_RP_slct, axes = 2:3,
+                col.ind = "darkblue",
+                col.var = "cos2",
+                gradient.cols = c("black", "orange", "green"),
+                geom = "point",  
+                addEllipses = TRUE) 
+
+
+## Select only variables that have >= 0.75 quality of representation in Dim1-2 and Dim2-3
+Cmbd_GS_RP_slct2 <- Cmbd_GS_RP_slct %>%
+  dplyr::select(matches("Tork|Galadriel|CRM|Athila|Ale|LINE|satellite"),
+                "logGS")
+
+#### Test with simple lm
+lm_GS_RP <- lm(logGS ~., data=Cmbd_GS_RP_slct2)
+summary(lm_GS_RP)
+# Check the multicollinearity between variables
+vif(lm_GS_RP)
+
+# Remove the variable with highest vif and test with simple lm again
+lm_GS_RP1 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila`, data=Cmbd_GS_RP_slct2)
+summary(lm_GS_RP1)
+vif(lm_GS_RP1)
+
+# Choose a simple linear regression model by AIC in a stepwise algorithm
+lm_GS_RP2 <- step(lm_GS_RP1)
+summary(lm_GS_RP2)
+
+
+#### PGLS of Genome Size and Repeat Types
+Cmbd_GS_RP_slct2$Species <- rownames(Cmbd_GS_RP_slct2)
+Cmbd_GS_RP_slct3 <- Cmbd_GS_RP_slct2 %>%
+  dplyr::select(-"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila")
+GS_RP_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_RP_slct3, names.col = "Species",vcv=TRUE)
+GS_RP_comp
+
+GS_RP_lambda <- pgls(logGS ~ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`+ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale` + `All/repeat/mobile_element/Class_I/LINE` + `All/repeat/satellite` + `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`, data = GS_RP_comp, lambda = "ML")
+
+GS_RP_lambda1 <- update(GS_RP_lambda, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia`, lambda = "ML") 
+summary(GS_RP_lambda1)
+
+GS_RP_lambda2 <- update(GS_RP_lambda1, ~ . -`All/repeat/satellite`, lambda = "ML")
+summary(GS_RP_lambda2)
+
+GS_RP_lambda3 <- update(GS_RP_lambda2, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`, lambda = "ML")
+summary(GS_RP_lambda3)
+
+GS_RP_lambda4 <- update(GS_RP_lambda3, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale`, lambda = "ML") 
+summary(GS_RP_lambda4)
+
+GS_RP_lambda5 <- update(GS_RP_lambda4, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`, lambda = "ML") 
+summary(GS_RP_lambda5)
+
+GS_RP_lambda6 <- update(GS_RP_lambda5, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel`, lambda = "ML") 
+summary(GS_RP_lambda6)
+
+# Check the AIC of each model
+AICc(GS_RP_lambda, GS_RP_lambda1, GS_RP_lambda2, GS_RP_lambda3, GS_RP_lambda4, GS_RP_lambda5, GS_RP_lambda6)
+summary(GS_RP_lambda5)
+plot(GS_RP_lambda5)
+
+## Basic scatter plot with fitted line
+# Extract observed and fitted values
+observed_GS_RP <- GS_RP_comp$data$logGS
+fitted_GS_RP <- fitted(GS_RP_lambda5)
+
+par(mar = c(5, 4, 4, 2) + 0.1) 
+plot(observed_GS_RP, fitted_GS_RP,
+     main = "PGLS Model Fit between Genome Size and Repeat Types",
+     xlab = "Observed Values", ylab = "Fitted Values")
+
+
+## Residual plot
+# Calculating residuals
+residuals_GS_Env <- residuals(GS_Env_lambda5)
+
+# Plotting residuals
+plot(fitted_GS_Env, residuals_GS_Env, 
+     main = "Residuals vs. Fitted (Genome Size and Repeat Types)",
+     xlab = "Fitted Values", 
+     ylab = "Residuals")
+abline(h = 0, col = "blue")
+
+### Check the Genome size without transformation with Repeat Types
+### Calculate the standard variation of each repeat types and rank them from high to low to check 
+### Check where LINE and Galadriel is in the Genome (literature review)
+### Phylogeny and the two repeat types abundance as bar chart beside
+### one pgls model scatter plot and fitted line
