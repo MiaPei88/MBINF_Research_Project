@@ -29,6 +29,22 @@ library(phangorn) #version 2.11.1
 library(RColorBrewer)
 library(paletteer)
 library(grid)
+library(readxl)
+library(rgbif)
+library(countrycode)
+library(CoordinateCleaner)
+library(rnaturalearth)
+library(maps)
+library(ggmap)
+library(raster)
+library(sf)
+library(sp)
+library(factoextra)
+library("FactoMineR")
+library(corrplot)
+library(phytools)
+library(glmnet)
+library(MuMIn)
 
 ############# Repeat Quantification #############
 #################################################
@@ -61,6 +77,10 @@ N_reads_analyzed_GS <- N_reads_analyzed_GS %>%
 # we don't need to minus the number of reads of contamination here.)
 N_reads_analyzed_GS$Number_of_reads_nuclear <- N_reads_analyzed_GS[,3] - N_reads_analyzed_GS[,5]
 
+## Calculate the genome coverage of the sequencing data (Change the unit of Number of Reads Analyzed and Genome Size to Mbp)
+N_reads_analyzed_GS$Genome_Coverage <- (N_reads_analyzed_GS[,3] * 235 / 1000000) / (N_reads_analyzed_GS[,4] * 97.8)
+# When the genome coverage is 0.1-0.5, the repeat analysis is more reliable
+
 # Delete rows that are annotated as organelle
 All_Eggplant_Repeat <- All_Eggplant_Repeat[-which(str_detect(All_Eggplant_Repeat$Final_annotation,"organelle")),]
 
@@ -80,7 +100,7 @@ All_Eggplant_Repeat_ag <- left_join(All_Eggplant_Repeat_ag, N_reads_analyzed_GS 
                                       dplyr::select(Species_Name, Genome_Size.mean2C.,
                                                     Number_of_reads_nuclear), 
                                     by = "Species_Name") %>%
-  mutate(Genomic_proportion = (Size_adjusted/Number_of_reads_nuclear) * 100) %>%
+  mutate(Genomic_proportion = (Size_adjusted/Number_of_reads_nuclear)) %>%
   mutate(Final_annotation = case_when(
     Final_annotation == "All"  ~ "Other",
     TRUE ~ Final_annotation))
@@ -137,25 +157,6 @@ All_Eggplant_Repeat_ag_pct %>%
   scale_fill_viridis_c("Genomic Proportion (%)")
 
 ##### A stacked bar chart for each species and the abundances of different repeats
-### Repeat % of all repeat types
-ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Species_Name, x=Size_adjusted)) + 
-  theme(axis.text.x = element_text(size= 10, hjust = 1)) + 
-  theme(legend.text = element_text(size=6)) + 
-  xlab("Percentage of all repeats") + 
-  ylab("Species Name") +
-  geom_bar(position="fill", stat="identity")
-
-
-### Absolute repeat number
-ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, y=Species_Name, x=Size_adjusted)) + 
-  theme(axis.text.x = element_text(size= 10)) + 
-  theme(legend.text = element_text(size=6)) + 
-  xlab("Number of repeat reads") + 
-  ylab("Species Name") +
-  geom_bar(stat="identity")
-
-
-### Repeat % of whole genome with Genome Size data as a line (proportion goes from low to high)
 ## Plot with custom colors
 # Custom the colors of the repeat types
 custom_palette <- c(
@@ -167,10 +168,36 @@ custom_palette <- c(
   "#486078FF"
 )
 
+### Repeat % of all repeat types
+ggplot(All_Eggplant_Repeat_ag, aes(fill=Final_annotation, 
+                                   y=Species_Name, 
+                                   x=Size_adjusted)) + 
+  scale_fill_manual(values = custom_palette) +
+  theme(axis.text.x = element_text(size= 10, hjust = 1)) + 
+  theme(legend.text = element_text(size=6)) + 
+  xlab("Percentage of all repeats") + 
+  ylab("Species Name") +
+  geom_bar(position="fill", stat="identity")
+
+
+### Absolute repeat number
+ggplot(All_Eggplant_Repeat_ag, aes(fill = Final_annotation, 
+                                   y = Species_Name, 
+                                   x = Size_adjusted)) + 
+  scale_fill_manual(values = custom_palette) +
+  theme(axis.text.x = element_text(size= 10)) + 
+  theme(legend.text = element_text(size=6)) + 
+  xlab("Number of repeat reads") + 
+  ylab("Species Name") +
+  geom_bar(stat="identity")
+
+
+### Repeat % of whole genome with Genome Size data as a line (proportion goes from low to high)
+
 RptProp_GS_bySpecies_custm <- ggplot(sum_All_Eggplant_Repeat_ag, aes(x = reorder(Species_Name, Genome_Size_gbp))) +
   geom_bar(aes(y = Genomic_proportion, fill = Final_annotation), stat = "identity", 
            position = "stack") +
-    labs(x = "Species name", y = "Total genomic proportion of repeats(%)") +
+    labs(x = "Species name", y = "Total genomic proportion of repeats") +
   scale_fill_manual(values = custom_palette) +
   theme(axis.title.x = element_text(size = 20), 
         axis.title.y = element_text(size = 20, 
@@ -211,9 +238,14 @@ ggsave("../R_Plots/RptProp_GS_bySpecies_horizontal.pdf", RptProp_GS_bySpecies_ho
 
 ##### Total Genome Proportion and Diversity #####
 #################################################
+colnames(All_Eggplant_Repeat_ag_reads)
+
+# Exclude repeat types that are not specific enough 
+Specific_Eggplant_Repeat_ag_reads <- All_Eggplant_Repeat_ag_reads[, -c(1, 2, 3, 6, 15, 16, 29)]
+colnames(Specific_Eggplant_Repeat_ag_reads)
 
 ### Calculate the Shannon's diversity index
-Shannon_Eggplant_Repeat <- vegan::diversity(All_Eggplant_Repeat_ag_reads, index = "shannon")
+Shannon_Eggplant_Repeat <- vegan::diversity(Specific_Eggplant_Repeat_ag_reads, index = "shannon")
 # Compare Shannon indices
 Shannon_df <- Shannon_Eggplant_Repeat %>%
   as.data.frame() %>%
@@ -223,8 +255,8 @@ Shannon_df <- Shannon_df %>%
   rename(`.`="Shannon_Index") # Change the 2nd column name to what we want
 
 ### Richness (Mehinick's Index) - Closer to 1 = higher richness
-n <- apply(All_Eggplant_Repeat_ag_reads > 0, 1, sum) # number of repeat types for each species
-N <- apply(All_Eggplant_Repeat_ag_reads, 1, sum) # total number of reads for each species
+n <- apply(Specific_Eggplant_Repeat_ag_reads > 0, 1, sum) # number of repeat types for each species
+N <- apply(Specific_Eggplant_Repeat_ag_reads, 1, sum) # total number of reads for each species
 # Calculate the Mehinick's Index
 MI_df <- n/sqrt(N)
 MI_df <- MI_df %>%
@@ -247,14 +279,15 @@ Cmbd_All_Eggplant_Repeat_ag_pct <- subset(Cmbd_All_Eggplant_Repeat_ag_pct, selec
 # Remove the polyploid Solanum_campylacanthum
 Diploid_Eggplant_Repeat_ag_pct <- Cmbd_All_Eggplant_Repeat_ag_pct[-3,]
 
-##~~~~~~~~~~Exploratory plotting~~~~~~~~~~## 
+##### Exploratory plotting
 
 # Richness and genome size
 plot(Cmbd_All_Eggplant_Repeat_ag_pct$Mehinicks_index ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat type richness (Mehinicks Index)", xlab = "Genome size (Gbp/2C)")
 
 # All samples
-All_Richness_GS <- ggplot(Cmbd_All_Eggplant_Repeat_ag_pct, aes(x = as.numeric(Genome_Size_gbp), 
-                                            y = Mehinicks_index)) + 
+All_Richness_GS <- ggplot(Cmbd_All_Eggplant_Repeat_ag_pct, 
+                          aes(x = as.numeric(Genome_Size_gbp), 
+                              y = Mehinicks_index)) + 
   geom_point() +
   geom_smooth(method="loess", span = 1, formula = y ~ x) +
   labs(title = "Genome Size vs. Repeat Type Richness", 
@@ -294,7 +327,7 @@ All_GP_GS <- ggplot(Cmbd_All_Eggplant_Repeat_ag_pct, aes(x = as.numeric(Genome_S
   geom_point() +
   geom_smooth(method = "loess", span = 1, formula = y ~ x) +
   labs(title = "Genome Size vs. Genomic Proportion of Repeats", 
-       y = "Genomic proportion of repeats (%)", x = "Genome size (Gbp/2C)") + 
+       y = "Genomic proportion of repeats", x = "Genome size (Gbp/2C)") + 
   theme(text = element_text(size = 14), axis.text = element_text(size = 15),
         axis.title.x = element_text(size = 20), 
         axis.title.y = element_text(size = 20),
@@ -311,7 +344,7 @@ Diploid_GP_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct,
   geom_point() +
   geom_smooth(method = "loess", span = 1, formula = y ~ x) +
   labs(title = "Genome Size vs. Genomic Proportion of Repeats", 
-       y = "Genomic proportion of repeats (%)", x = "Genome size (Gbp/2C)") + 
+       y = "Genomic proportion of repeats", x = "Genome size (Gbp/2C)") + 
   theme(text = element_text(size = 14), axis.text = element_text(size = 15),
         axis.title.x = element_text(size = 20), 
         axis.title.y = element_text(size = 20),
@@ -358,38 +391,1016 @@ print(Diploid_Diversity_GS)
 
 ggsave("../R_Plots/Diploid_Diversity_GS.pdf", Diploid_Diversity_GS, width = 10, height = 8)
 
-
+# Linear Regression Modeling between Genome size and Total Repeat Proportion
 lm_GS_TGP <- lm(Genome_Size_gbp ~ Total_Genomic_Proportion, 
                data = Diploid_Eggplant_Repeat_ag_pct)
-
 summary(lm_GS_TGP)
 
+# Linear Regression Modeling between Genome size and Repeat Richness
+lm_GS_Richness <- lm(Genome_Size_gbp ~ Mehinicks_index, 
+                     data = Diploid_Eggplant_Repeat_ag_pct)
+summary(lm_GS_Richness)
+
+lm_GS_Richness_log <- lm(log(Genome_Size_gbp) ~ Mehinicks_index, 
+                data = Diploid_Eggplant_Repeat_ag_pct)
+summary(lm_GS_Richness_log)
+
+# Linear Regression Modeling between Genome size and Repeat Diversity
+lm_GS_Diversity <- lm(Genome_Size_gbp ~ Shannon_Index, 
+                     data = Diploid_Eggplant_Repeat_ag_pct)
+summary(lm_GS_Diversity)
+
+
+## Ploting the linear correlation between Genome size and Total Repeat Proportion
 # Extract coefficients
 intercept <- coef(lm_GS_TGP)[1]
 slope <- coef(lm_GS_TGP)[2]
 
 # Create equation text
-equation <- paste("y = ", round(intercept, 4), " + ", round(slope, 4), "x", sep = "")
+equation <- paste("y = ", round(slope, 4), "x", " + ", round(intercept, 4), sep = "")
 
 # Create the plot with the linear model line
-lm_GS_TGP_Plot <- ggplot(Diploid_Eggplant_Repeat_ag_pct, aes(x = Total_Genomic_Proportion, 
-                                           y = Genome_Size_gbp)) +
-  labs(y = "Total genomic proportion of repeats (%)", x = "Genome size (Gbp/2C)") + 
+lm_GS_TGP_Plot <- ggplot(Diploid_Eggplant_Repeat_ag_pct, 
+                         aes(x = Total_Genomic_Proportion, 
+                             y = Genome_Size_gbp)) +
+  labs(y = "Genome size (Gbp/2C)", x = "Total genomic proportion of repeats") + 
   geom_point(cex = 2) +
   geom_smooth(method = lm, formula = y ~ x) +
   theme(text = element_text(size = 14), axis.text = element_text(size = 15),
         axis.title.x = element_text(size = 20), 
         axis.title.y = element_text(size = 20, margin = margin(r = 10, unit = "pt"))) +
   # Add the equation to the plot
-  annotate("text", x = 44, y = 2.71, label = equation, hjust = 0, size = 7, color = "blue")
+  annotate("text", x = 0.44, y = 2.71, label = equation, hjust = 0, size = 7, color = "blue")
 
 print(lm_GS_TGP_Plot)
 
 ggsave("../R_Plots/lm_GS_TGP_Plot.pdf", lm_GS_TGP_Plot, width = 12, height = 8)
 
+
+################# Occurrence Data ###############
+#################################################
+### Read in the Occurrence data from Edeline's previous study
+Edeline_Occ <- read.csv("/Users/miapei/Desktop/MBinf/Research_Project/Data/Occurence.csv")
+
+### Add the original country of each species we have for this project
+NextGen <- read_excel("/Users/miapei/Desktop/MBinf/Research_Project/Data/Melongena_NextGen.xlsx")
+names(NextGen)[1] <- "Sample_ID" # Change column name
+NextGen <- NextGen %>%
+  dplyr::select(Sample_ID, country) # Select columns we need
+
+# Join the two dataframe to add the country column
+Species_Country <- N_reads_analyzed_GS %>%
+  inner_join(NextGen, by = "Sample_ID") %>%
+  dplyr::select(Species_Name, country) %>%
+  dplyr::rename(genus.sp = Species_Name) %>%
+  dplyr::rename(COUNTRY = country)
+
+Species_Country[11,1] <- "Solanum_incanum"
+Species_Country[13,1] <- "Solanum_incanum"
+
+####### Species from one country in this project
+# Filter only the species and its original country we have for this project
+Mia_Occ_onectry <- inner_join(Edeline_Occ, Species_Country, by = c("genus.sp", "COUNTRY"))
+Mia_Occ_allctry <- Edeline_Occ %>%
+  filter(genus.sp == Species_Country$genus.sp)
+
+# Check the number of occurrence data points of each species
+table(Mia_Occ_onectry$genus.sp)
+unique(Mia_Occ_onectry$genus.sp)
+unique(Species_Country$genus.sp)
+
+table(Mia_Occ_allctry$genus.sp)
+unique(Mia_Occ_allctry$genus.sp)
+unique(Species_Country$genus.sp)
+
+# Check which species do not have occurence data
+setdiff(Species_Country$genus.sp, Mia_Occ_onectry$genus.sp) 
+setdiff(Species_Country$genus.sp, Mia_Occ_allctry$genus.sp) 
+## The three species without occurence data are cultivated crops and hard to observe their natural distribution
+
+# Check the number of occurrence data points of Solanum incanum from the two different countries
+nrow(Edeline_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Burkina Faso",])
+nrow(Edeline_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Kenya",])
+
+#### Add occurrence data points of Solanum incanum in Burkina Faso from GBIF
+S_incanum_BFaso <- read.csv("/Users/miapei/Desktop/MBinf/Research_Project/Data/Solanum_incanum_BFaso.csv", sep = "\t")
+
+# Remove data points that are observed by human or the uncertainty in meters is too high
+S_incanum_BFaso_cl <- S_incanum_BFaso %>%
+  filter(basisOfRecord != "HUMAN_OBSERVATION") %>%
+  filter(coordinateUncertaintyInMeters / 1000 <= 100 | 
+           is.na (coordinateUncertaintyInMeters)) 
+
+### Wrangle the columns we want and combine them with the data points from Edeline's occurrence data
+S_incanum_BFaso_sub <- S_incanum_BFaso_cl %>%
+  dplyr::rename(LATDEC = decimalLatitude, 
+                LONGDEC = decimalLongitude, 
+                COUNTRY = countryCode) %>%
+  mutate(COUNTRY = "Burkina Faso") %>%
+  mutate(SP1 = word(species, 2)) %>%
+  mutate(genus.sp = str_c(word(species, 1), word(species, 2), sep = "_")) %>%
+  dplyr::select(LATDEC, LONGDEC, COUNTRY, SP1, genus.sp)
+
+Mia_BFaso <- Mia_Occ_onectry %>% 
+  dplyr::filter(genus.sp == "Solanum_incanum" & COUNTRY == "Burkina Faso")
+
+S_incanum_BFaso_cmbd <- bind_rows(Mia_BFaso, S_incanum_BFaso_sub)
+
+
+# Change the countryCode into the format CoordinateCleaner accepts
+S_incanum_BFaso_cmbd$COUNTRY <-  countrycode(S_incanum_BFaso_cmbd$COUNTRY, 
+                                            origin =  'country.name',
+                                            destination = 'iso3c')
+
+# Flag the problematic coordinates using CoordinateCleaner
+S_incanum_BFaso_flags <- clean_coordinates(x = S_incanum_BFaso_cmbd, 
+                                           lon = "LONGDEC", 
+                                           lat = "LATDEC",
+                                           countries = "COUNTRY",
+                                           species = "SP1",
+                                           tests = c("capitals", "centroids",
+                                                     "equal", "zeros", "countries",
+                                                     "gbif", "institutions", 
+                                                     "outliers", "seas", "duplicates"),
+                                           inst_rad = 1000)
+
+# Check and plot the flags
+summary(S_incanum_BFaso_flags)
+plot(S_incanum_BFaso_flags, lon = "LONGDEC", lat = "LATDEC")
+
+# Clean the occurrence data to exclude the coordinates with flags
+S_incanum_BFaso_cl <- S_incanum_BFaso_cmbd[S_incanum_BFaso_flags$.summary,]
+
+### Remove coordinates that are spatially autocorrelated
+## A function to find coordinates that are spatially autocorrelated - based on script from Edeline Gagnon: https://github.com/edgagnon/Geophytes_Solanum-/blob/main/00_Data/02_Occurrence_Data/003_Spatial_filtering_scripts_SOLANUM.R
+filterByProximity <- function(xy, dist, mapUnits = FALSE) {
+  require(sp)
+  if (!mapUnits) {
+    d <- spDists(xy, longlat = TRUE)
+  } else {
+    d <- spDists(xy, longlat = FALSE)
+  }
+  diag(d) <- NA
+  close <- (d <= dist)
+  diag(close) <- NA
+  close_indices <- which(close, arr.ind = TRUE)
+  
+  if (length(close_indices) > 0) {
+    # Get unique indices to remove (any row participating in a close pair)
+    to_remove <- unique(as.vector(close_indices))
+    to_keep <- setdiff(1:nrow(xy), to_remove)
+  } else {
+    to_keep <- 1:nrow(xy)
+  }
+  
+  return(to_keep)  # Return indices of the rows to keep
+}
+
+# Set the distance for spatial filtering (e.g., 10 km)
+distance_threshold <- 10  # distance in kilometers if mapUnits = FALSE
+
+# Convert DataFrame coordinates to a matrix
+S_incanum_BFaso_coordmatrix <- cbind(S_incanum_BFaso_cl$LONGDEC,
+                                     S_incanum_BFaso_cl$LATDEC)
+
+# Get indices of the data points to keep
+S_incanum_BFaso_indices_keep <- filterByProximity(S_incanum_BFaso_coordmatrix, distance_threshold, mapUnits = FALSE)
+S_incanum_BFaso_indices_keep
+
+# Now extract those rows from the original DataFrame
+S_incanum_BFaso_filtered <- S_incanum_BFaso_cl[S_incanum_BFaso_indices_keep, ]
+
+# Change the country code back to country name
+S_incanum_BFaso_filtered$COUNTRY <- countrycode(S_incanum_BFaso_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
+
+### Mapping the coordinates of S.incanum in Burkina Faso from GBIF
+# Get map data of Burkina Faso
+BFaso_map <- map_data("world", region = "Burkina Faso")
+
+# Plot the distribution of S.incanum in the map of Burkina Faso
+ggplot() +
+  geom_polygon(data = BFaso_map, aes(x = long, y = lat, group = group), fill = "lightblue", color = "black") +
+  geom_point(data = S_incanum_BFaso_filtered, aes(x = LONGDEC, y = LATDEC), color = "red", size = 2) +
+  labs(title = "Distribution of Solanum incanum in Burkina Faso (GBIF)") +
+  theme_minimal()
+
+
+#### Add occurrence data points of Solanum incanum in Kenya from GBIF(already exclude data points without coordinates)
+S_incanum_Kenya <- read.csv("/Users/miapei/Desktop/MBinf/Research_Project/Data/Solanum_incanum_Kenya.csv", sep = "\t")
+
+# Remove data points that are observed by human or the uncertainty in meters is too high
+S_incanum_Kenya <- S_incanum_Kenya %>%
+  filter(basisOfRecord != "HUMAN_OBSERVATION") %>%
+  filter(coordinateUncertaintyInMeters / 1000 <= 100 | 
+           is.na (coordinateUncertaintyInMeters))
+
+### Wrangle the columns we want to combine with the major occurrence df
+S_incanum_Kenya_sub <- S_incanum_Kenya %>%
+  dplyr::rename(LATDEC = decimalLatitude, 
+                LONGDEC = decimalLongitude, 
+                COUNTRY = countryCode) %>%
+  mutate(COUNTRY = "Kenya") %>%
+  mutate(SP1 = word(species, 2)) %>%
+  mutate(genus.sp = str_c(word(species, 1), word(species, 2), sep = "_")) %>%
+  dplyr::select(LATDEC, LONGDEC, COUNTRY, SP1, genus.sp)
+
+Mia_Kenya <- Mia_Occ_onectry %>% 
+  dplyr::filter(genus.sp == "Solanum_incanum" & COUNTRY == "Kenya")
+
+S_incanum_Kenya_cmbd <- bind_rows(Mia_Kenya, S_incanum_Kenya_sub)
+
+# Change the countryCode into the format CoordinateCleaner accepts
+S_incanum_Kenya_cmbd$COUNTRY <-  countrycode(S_incanum_Kenya_cmbd$COUNTRY, 
+                                            origin =  'country.name',
+                                            destination = 'iso3c')
+
+# Flag the problematic coordinates using CoordinateCleaner
+S_incanum_Kenya_flags <- clean_coordinates(x = S_incanum_Kenya_cmbd, 
+                                           lon = "LONGDEC", 
+                                           lat = "LATDEC",
+                                           countries = "COUNTRY",
+                                           species = "SP1",
+                                           tests = c("capitals", "centroids",
+                                                     "equal", "zeros", "countries",
+                                                     "gbif", "institutions", 
+                                                     "outliers", "seas", "duplicates"),
+                                           inst_rad = 1000)
+
+# Check and plot the flags
+summary(S_incanum_Kenya_flags)
+plot(S_incanum_Kenya_flags, lon = "LONGDEC", lat = "LATDEC")
+
+# Clean the occurrence data to exclude the coordinates with flags
+S_incanum_Kenya_cl <- S_incanum_Kenya_cmbd[S_incanum_Kenya_flags$.summary,]
+
+### Remove coordinates that are spatially autocorrelated
+# Convert DataFrame coordinates to a matrix
+S_incanum_Kenya_coordmatrix <- cbind(S_incanum_Kenya_cl$LONGDEC,
+                                     S_incanum_Kenya_cl$LATDEC)
+
+# Get indices of the data points to keep
+S_incanum_Kenya_indices_keep <- filterByProximity(S_incanum_Kenya_coordmatrix, distance_threshold, mapUnits = FALSE)
+
+# Now extract those rows from the original DataFrame
+S_incanum_Kenya_filtered <- S_incanum_Kenya_cl[S_incanum_Kenya_indices_keep, ]
+nrow(S_incanum_Kenya_filtered)
+
+# Change the country code back to country name
+S_incanum_Kenya_filtered$COUNTRY <- countrycode(S_incanum_Kenya_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
+unique(S_incanum_Kenya_filtered$COUNTRY)
+
+### Mapping the coordinates of S.incanum in Kenya from GBIF
+# Get map data of Kenya
+Kenya_map <- map_data("world", region = "Kenya")
+
+# Plot the distribution of S.incanum in the map of Kenya
+ggplot() +
+  geom_polygon(data = Kenya_map, aes(x = long, y = lat, group = group), fill = "lightblue", color = "black") +
+  geom_point(data = S_incanum_Kenya_filtered, aes(x = LONGDEC, y = LATDEC), color = "red", size = 2) +
+  labs(title = "Distribution of Solanum incanum in Kenya (GBIF)") +
+  theme_minimal()
+
+
+#### Check the distribution of the 3 cultivated crops
+Origin_Occ <- read_excel("/Users/miapei/Desktop/MBinf/Research_Project/Data/Solanum_all_COLLEXTRACT_21-04-2021_at_08-39-16_v2.xlsx")
+
+## Filtering
+# Filter only the 3 cultivated species we need
+Cultiv_Species_Occ <- Origin_Occ %>%
+  filter(SP1 %in% c("melongena", "macrocarpon", "aethiopicum"))
+
+rm(Origin_Occ) #Clear out some space
+
+Cultiv_Species_Occ_cl_onectry <- Cultiv_Species_Occ %>%
+  filter(SP1 == "melongena" & COUNTRY == "Thailand"|
+           SP1 == "macrocarpon" & COUNTRY == "Tanzania"|
+           SP1 == "aethiopicum" & COUNTRY == "Tanzania") %>%
+  filter(CULTIVATED == "No") %>% # keep only the non-cultivated specimens
+  filter(!grepl("Cultivated|cultivated|cultivation", HABITATTXT)) %>%
+  filter(!grepl("cultivated|Planted", HABITATTXT))# keep only the non-cultivated specimens
+
+Cultiv_Species_Occ_cl_allctry <- Cultiv_Species_Occ %>%
+  filter(SP1 == "melongena"|
+           SP1 == "macrocarpon"|
+           SP1 == "aethiopicum" ) %>%
+  filter(CULTIVATED == "No") %>% # keep only the non-cultivated specimens
+  filter(!grepl("Cultivated|cultivated|cultivation", HABITATTXT)) %>%
+  filter(!grepl("cultivated|Planted", HABITATTXT))# keep only the non-cultivated specimens
+
+# Change the countryCode into the format CoordinateCleaner accepts
+Cultiv_Species_Occ_cl_onectry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_onectry$COUNTRY, origin =  'country.name', destination = 'iso3c')
+
+Cultiv_Species_Occ_cl_allctry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_allctry$COUNTRY, origin =  'country.name', destination = 'iso3c')
+
+# Flag the problematic coordinates using CoordinateCleaner
+Cultiv_Species_flags_onectry <- clean_coordinates(x = Cultiv_Species_Occ_cl_onectry, 
+                                           lon = "LONGDEC", 
+                                           lat = "LATDEC",
+                                           countries = "COUNTRY",
+                                           species = "SPECIES",
+                                           tests = c("capitals", "centroids",
+                                                     "equal", "zeros", "countries",
+                                                     "gbif", "institutions", 
+                                                     "outliers", "seas", "duplicates"),
+                                           inst_rad = 1000)
+
+Cultiv_Species_flags_allctry <- clean_coordinates(x = Cultiv_Species_Occ_cl_allctry, 
+                                                  lon = "LONGDEC", 
+                                                  lat = "LATDEC",
+                                                  countries = "COUNTRY",
+                                                  species = "SPECIES",
+                                                  tests = c("capitals", "centroids",
+                                                            "equal", "zeros", "countries",
+                                                            "gbif", "institutions", 
+                                                            "outliers", "seas", "duplicates"),
+                                                  inst_rad = 1000)
+
+# Check and plot the flags
+summary(Cultiv_Species_flags_onectry)
+plot(Cultiv_Species_flags_onectry, lon = "LONGDEC", lat = "LATDEC")
+
+summary(Cultiv_Species_flags_allctry)
+plot(Cultiv_Species_flags_allctry, lon = "LONGDEC", lat = "LATDEC")
+
+
+# Clean the occurrence data to exclude the coordinates with flags and select columns we need
+Cultiv_Species_cl_onectry <- Cultiv_Species_Occ_cl_onectry[Cultiv_Species_flags_onectry$.summary,] %>%
+  mutate(genus.sp = str_c(word(SPECIES, 1), word(SPECIES, 2), sep = "_"))
+Cultiv_Species_cl_onectry <- Cultiv_Species_cl_onectry %>%
+  dplyr::select(intersect(colnames(Cultiv_Species_cl_onectry),colnames(Mia_Occ_onectry)))
+
+Cultiv_Species_cl_allctry <- Cultiv_Species_Occ_cl_allctry[Cultiv_Species_flags_allctry$.summary,] %>%
+  mutate(genus.sp = str_c(word(SPECIES, 1), word(SPECIES, 2), sep = "_")) 
+Cultiv_Species_cl_allctry <- Cultiv_Species_cl_allctry %>%
+  dplyr::select(intersect(colnames(Cultiv_Species_cl_allctry),colnames(Mia_Occ_allctry)))
+
+
+# Check the number of each species left after filtering
+table(Cultiv_Species_cl_onectry$SP1)
+table(Cultiv_Species_cl_allctry$SP1)
+
+### Remove coordinates that are spatially autocorrelated
+# Convert DataFrame coordinates to a matrix
+Cultiv_Species_onectry_coordmatrix <- cbind(Cultiv_Species_cl_onectry$LONGDEC,
+                                     Cultiv_Species_cl_onectry$LATDEC)
+Cultiv_Species_allctry_coordmatrix <- cbind(Cultiv_Species_cl_allctry$LONGDEC,
+                                            Cultiv_Species_cl_allctry$LATDEC)
+
+# Get indices of the data points to keep
+Cultiv_Species_onectry_indices_keep <- filterByProximity(Cultiv_Species_onectry_coordmatrix, distance_threshold, mapUnits = FALSE)
+Cultiv_Species_allctry_indices_keep <- filterByProximity(Cultiv_Species_allctry_coordmatrix, distance_threshold, mapUnits = FALSE)
+
+# Now extract those rows from the original DataFrame
+Cultiv_Species_onectry_filtered <- Cultiv_Species_cl_onectry[Cultiv_Species_onectry_indices_keep, ]
+nrow(Cultiv_Species_onectry_filtered)
+# change the country code back to country name
+Cultiv_Species_onectry_filtered$COUNTRY <- countrycode(Cultiv_Species_onectry_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
+
+Cultiv_Species_allctry_filtered <- Cultiv_Species_cl_allctry[Cultiv_Species_allctry_indices_keep, ]
+nrow(Cultiv_Species_allctry_filtered)
+# change the country code back to country name
+Cultiv_Species_allctry_filtered$COUNTRY <- countrycode(Cultiv_Species_allctry_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
+
+# Check if the columns are the same between Cultivated species data frame and the data frame for the rest of the species
+ncol(Cultiv_Species_onectry_filtered)
+ncol(Mia_Occ_onectry)
+setdiff(colnames(Mia_Occ_onectry), colnames(Cultiv_Species_onectry_filtered))
+
+ncol(Cultiv_Species_allctry_filtered)
+ncol(Mia_Occ_allctry)
+setdiff(colnames(Mia_Occ_allctry), colnames(Cultiv_Species_allctry_filtered))
+
+
+#### Combine the occurrence data of S.incanum from GBIF and cultivated species to the major occurrence df (one country)
+# Exclude S.cerasferum (only one occurrence) and S.incanum (already moved to the two data frames of this species from two different countries)
+Mia_Occ_onectry <- Mia_Occ_onectry %>%
+  filter(genus.sp %in% Species_Country$genus.sp) %>%
+  filter(genus.sp != "Solanum_cerasiferum" & genus.sp != "Solanum_incanum")
+
+Mia_Occ_onectry_cmbd <- rbind(Mia_Occ_onectry, S_incanum_BFaso_filtered, S_incanum_Kenya_filtered, Cultiv_Species_onectry_filtered)
+
+# Check the number of occurrence data points of each species after combination
+table(Mia_Occ_onectry_cmbd$genus.sp)
+
+####### Species from all country in this project
+# Filter the species we have for this project
+Mia_Occ_allctry <- Edeline_Occ %>%
+  filter(genus.sp %in% Species_Country$genus.sp) %>%
+  filter(genus.sp != "Solanum_cerasiferum" & genus.sp != "Solanum_incanum")
+
+# Check the number of occurrence data points of each species
+table(Mia_Occ_allctry$genus.sp)
+unique(Mia_Occ_allctry$genus.sp)
+
+# Check which species do not have occurence data
+setdiff(Species_Country$genus.sp, Mia_Occ_allctry$genus.sp) 
+
+# Combine the data points of S.incanum to the occurrence data frame
+Mia_Occ_allctry_cmbd <- rbind(Mia_Occ_allctry, S_incanum_BFaso_filtered, S_incanum_Kenya_filtered, Cultiv_Species_allctry_filtered)
+
+# Check the number of occurrence data points of each species after combination
+table(Mia_Occ_allctry_cmbd$genus.sp)
+
+
+################## Climate Data #################
+#################################################
+
+###### List the climate data files 
+
+data_path <- "/Users/miapei/Desktop/MBinf/Research_Project/Data/Env_Data/"
+files <- list.files(path = data_path, pattern = '.tif', full.names=TRUE)
+list(files)
+
+###### Chelsa Bio 1-19
+
+extract_env <- function(filenumber, occurrence_df) {
+  predictors <- stack(files[[filenumber]])
+
+  # Extract raw values which you'll need for running SDMs (12 equals long, 11 equal lat)
+  bio_values <- extract(predictors, occurrence_df[,12:11])
+  bio_values1 <- as.data.frame(bio_values)
+  
+  return(bio_values1)
+}
+
+# Find the column numbers of lat and long
+dim(Mia_Occ_allctry_cmbd)
+names(Mia_Occ_allctry_cmbd) #11-12 are Lat and Long
+
+dim(Mia_Occ_onectry_cmbd)
+names(Mia_Occ_onectry_cmbd) #11-12 are Lat and Long
+
+
+Mia_Env_allctry <- Mia_Occ_allctry_cmbd %>%
+  dplyr::select(COUNTRY, LONGDEC, LATDEC, genus.sp, SP1)
+
+Mia_Env_onectry <- Mia_Occ_onectry_cmbd %>%
+  dplyr::select(COUNTRY, LONGDEC, LATDEC, genus.sp, SP1)
+
+# Iterate through all tif files exclude the annual MI one for occurrence data from all countries
+print("Iterate through df of all country")
+for (i in 2:20) {
+  # Extract the variable name from the filename, e.g. bio1
+  variable_name <- str_extract(files[[i]], "bio\\d+")
+  
+  # Print the variable name
+  print(variable_name)
+  
+  # Use the function extract_env
+  biox <- extract_env(i, Mia_Occ_allctry_cmbd)
+  
+  # Print the column name of the extracted environmental data
+  print(colnames(biox))
+  
+  # Adding extracted values to the data frame
+  Mia_Env_allctry[[variable_name]] <- biox[,1]
+  
+  # Check and print NA values count
+  print(table(is.na(Mia_Env_allctry[[variable_name]]))) 
+  
+  print("------------------------")
+}
+
+# Iterate through all tif files exclude the annual MI one for occurrence data from one countries
+print("Iterate through df of one country")
+for (i in 2:20) {
+  # Extract the variable name from the filename, e.g. bio1
+  variable_name <- str_extract(files[[i]], "bio\\d+")
+  
+  # Print the variable name
+  print(variable_name)
+  
+  # Use the function extract_env
+  biox <- extract_env(i, Mia_Occ_onectry_cmbd)
+  
+  # Print the column name of the extracted environmental data
+  print(colnames(biox))
+  
+  # Adding extracted values to the data frame
+  Mia_Env_onectry[[variable_name]] <- biox[,1]
+  
+  # Check and print NA values count
+  print(table(is.na(Mia_Env_onectry[[variable_name]]))) 
+  
+  print("------------------------")
+}
+
+
+###### Annual Moisture Index (MI)
+
+predictors <- stack(files[[1]]) #MI
+predictors
+
+## All countries
+# extract raw values which you'll need for running SDMs (12 equals long, 11 equal lat)
+AMI_values <- raster::extract(predictors, Mia_Occ_allctry_cmbd[,12:11])
+AMI_values1 <- as.data.frame(AMI_values)
+colnames(AMI_values1)
+
+Mia_Env_allctry$mi<-AMI_values1$X04_AnnualMI_world
+table(is.na(Mia_Env_allctry$mi))# 8 occurrence records don't have GDD values
+Mia_Env_allctry[which(is.na(Mia_Env_allctry$mi)),] # Check the rows when mi have NA value
+
+## One country
+# extract raw values which you'll need for running SDMs (12 equals long, 11 equal lat)
+AMI_values_1 <- raster::extract(predictors, Mia_Occ_onectry_cmbd[,12:11])
+AMI_values2 <- as.data.frame(AMI_values_1)
+colnames(AMI_values2)
+
+Mia_Env_onectry$mi<-AMI_values2$X04_AnnualMI_world
+table(is.na(Mia_Env_onectry$mi)) # 2 occurrence records don't have GDD values
+Mia_Env_onectry[which(is.na(Mia_Env_onectry$mi)),] # Check the rows when mi have NA value
+
+
+####### Climate Variable Correlation and PCA
+#### Histograms on distribution of all traits
+# data from all country have distribution of the species
+env_hist_allctry <- Mia_Env_allctry[,c(6:25)]%>%
+  keep(is.numeric) %>% 
+  gather() %>% 
+  ggplot(aes(value)) +
+  facet_wrap(~ key, scales = "free") +
+  geom_histogram() + ggtitle("Histograms of all environmental data solanum from all country")
+
+env_hist_allctry
+
+# data from the original countries of our species samples
+env_hist_onectry <- Mia_Env_onectry[,c(6:25)]%>%
+  keep(is.numeric) %>% 
+  gather() %>% 
+  ggplot(aes(value)) +
+  facet_wrap(~ key, scales = "free") +
+  geom_histogram() + ggtitle("Histograms of all environmental data solanum from original country")
+
+env_hist_onectry
+
+#### Clean the data
+Mia_Env_allctry_cl <- na.omit(Mia_Env_allctry)
+Mia_Env_onectry_cl <- na.omit(Mia_Env_onectry)
+
+
+#### Change the species name of Solanum_incanum with the two countries
+Mia_Env_allctry_cl1 <- Mia_Env_allctry_cl %>%
+  mutate(genus.sp = case_when(
+    genus.sp == "Solanum_incanum" & COUNTRY == "Burkina Faso" ~ paste(genus.sp, "BFaso", sep = "_"),
+    genus.sp == "Solanum_incanum" & COUNTRY == "Kenya"        ~ paste(genus.sp, "Kenya", sep = "_"),
+    TRUE                      ~ genus.sp
+    ))
+
+unique(Mia_Env_allctry_cl1$genus.sp)
+  
+
+Mia_Env_onectry_cl1 <- Mia_Env_onectry_cl %>%
+  mutate(genus.sp = case_when(
+    genus.sp == "Solanum_incanum" & COUNTRY == "Burkina Faso" ~ paste(genus.sp, "BFaso", sep = "_"),
+    genus.sp == "Solanum_incanum" & COUNTRY == "Kenya"        ~ paste(genus.sp, "Kenya", sep = "_"),
+    TRUE                      ~ genus.sp
+  ))
+
+unique(Mia_Env_onectry_cl1$genus.sp)
+
+#### Perform PCA
+pca_allctry <- PCA(Mia_Env_allctry_cl[,c(6:25)], graph = FALSE)
+
+## Summary of PCA results
+summary(pca_allctry)
+
+## Scree plot
+fviz_eig(pca_allctry, addlabels = TRUE) + 
+  ggtitle("Scree plot for environmental variables of Solanum from all countries")
+
+## cos2 plot
+fviz_cos2(pca_allctry, choice = "var", axes = 1:2)
+
+## Biplot combined with cos2
+fviz_pca_var(pca_allctry, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Environmental variables of Solanum from all countries - 1:2")
+
+
+## Contributions of variables
+# PC1
+fviz_contrib(pca_allctry, choice = "var", axes = 1, top = 15) +
+  ggtitle("Contribution of variables to Dim1 - All country")
+
+# PC2
+fviz_contrib(pca_allctry, choice = "var", axes = 2, top = 15) +
+  ggtitle("Contribution of variables to Dim2 - All country")
+
+
+#### Correlation Plot
+### Species from all country
+# Calculate the correlation matrix
+cor_matrix_allctry <- cor(Mia_Env_allctry_cl[,c(6:25)])
+
+# Plot the correlation matrix
+corrplot(cor_matrix_allctry, method = "circle", type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, 
+         title = "Correlation Plot of Climate Variables", 
+         cl.cex = 0.75, addCoef.col = "black")
+
+# Save the correlation matrix to select representative variables in excel
+write.table(cor_matrix_allctry, "./cor_matrix_allctry.csv", sep = ",")
+
+# Select variables to keep
+Mia_Env_allctry_slct <- Mia_Env_allctry_cl1 %>%
+  dplyr::select(genus.sp, bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
+
+Mia_Env_onectry_slct <- Mia_Env_onectry_cl1 %>%
+  dplyr::select(genus.sp, bio3, bio5, bio6, bio7, bio14, bio15, bio18, bio19, mi)
+
+#### Perform PCA with selected variables
+pca_allctry_slct <- PCA(Mia_Env_allctry_slct[,-1], graph = FALSE)
+
+## Summary of PCA results
+summary(pca_allctry_slct)
+
+## Scree plot
+fviz_eig(pca_allctry_slct, addlabels = TRUE) + 
+  ggtitle("Scree plot for selected environmental variables of Solanum from all countries")
+
+## cos2 plot
+fviz_cos2(pca_allctry_slct, choice = "var", axes = 1:2)
+
+## Biplot combined with cos2
+# All countries
+fviz_pca_var(pca_allctry_slct, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"),
+             repel = TRUE) +
+  ggtitle("PCA - Selected Environmental variables of Solanum from all countries - 1:2")
+
+
+## Contributions of variables
+# PC1 - all country
+fviz_contrib(pca_allctry_slct, choice = "var", axes = 1, top = 15) +
+  ggtitle("Contribution of variables to Dim1 - All country")
+
+# PC2 - all country
+fviz_contrib(pca_allctry_slct, choice = "var", axes = 2, top = 15) +
+  ggtitle("Contribution of variables to Dim2 - All country")
+
+
+### Calculate the correlation matrix after selecting some variables
+cor_matrix_slct <- cor(Mia_Env_allctry_slct[,-1])
+
+# Plot the correlation matrix
+corrplot(cor_matrix_slct, method = "circle", type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, 
+         title = "Correlation Plot of Climate Variables", 
+         cl.cex = 0.75, addCoef.col = "black")
+
+
+### Create boxplots to show the variation of each variable among all species
+data_long <- pivot_longer(Mia_Env_allctry_slct, cols = -genus.sp, names_to = "Environmental_Variable", values_to = "Value")
+
+boxplot_palette <- paletteer::paletteer_d("ggthemes::Tableau_20")
+
+ggplot(data_long, aes(x = genus.sp, y = Value, fill = genus.sp)) +
+  geom_boxplot() +
+  scale_x_discrete(breaks = NULL) + 
+  facet_wrap(~ Environmental_Variable, scales = "free") + # Separate plots for each environmental variable
+  scale_fill_manual(values = boxplot_palette) +
+  labs(title = "Boxplot of Each Environmental Variable Across Species", x = NULL, y = "Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_blank(),  # This ensures no text is shown on the x-axis
+        axis.ticks.x = element_blank())
+
+
+# Histogram of each environemntal variables after PCA for samples from all countryes
+Mia_Env_allctry_slct[,-1]%>%
+  keep(is.numeric) %>% 
+  gather() %>% 
+  ggplot(aes(value)) +
+  facet_wrap(~ key, scales = "free") +
+  geom_histogram() + ggtitle("Histograms of selected environmental data solanum afte PCA from all country")
+
+Mia_Env_allctry_median <- Mia_Env_allctry_slct %>%
+  group_by(genus.sp) %>%
+  summarise(across(everything(), median, na.rm = TRUE))
+
+Mia_Env_onectry_median <- Mia_Env_onectry_slct %>%
+  group_by(genus.sp) %>%
+  summarise(across(everything(), median, na.rm = TRUE))
+
 ############### Phylogenetic Tree ###############
 #################################################
+# Read in phylo tree from Xavier
+Xavier_Tree <- read.nexus("/Users/miapei/Desktop/MBinf/Research_Project/Data/Xavier_phylo/FINALConsensus_MAFFT.tre")
+plot(Xavier_Tree)
 
+# Names of tips to be dropped
+tips_to_drop <- setdiff(Xavier_Tree$tip.label, N_reads_analyzed_GS$Sample_ID) 
+# Drop the tips
+Mia_tree <- drop.tip(Xavier_Tree, tips_to_drop)
+plot(Mia_tree)
 
-######### Repeat Types and Genome Size ##########
+# Make a name map to correspond the species name to each sample id
+name_map <- setNames(N_reads_analyzed_GS$Species_Name, N_reads_analyzed_GS$Sample_ID)
+
+# Change the tip labels using the name map
+Mia_tree$tip.label <- name_map[Mia_tree$tip.label]
+Mia_tree
+plot(Mia_tree)
+
+Mia_tree_GS <- drop.tip(Mia_tree, c("Solanum_cerasiferum", "Solanum_campylacanthum"))
+plot(Mia_tree_GS)
+
+Mia_tree_RP <- drop.tip(Mia_tree, c("Solanum_cerasiferum"))
+plot(Mia_tree_RP)
+
+##### PGLS - Environmental Variables and GS #####
 #################################################
+
+##### Combine the median of environmental data with the genome size df
+Cmbd_GS_Env <- GS_df %>%
+  filter(Species_Name != "Solanum_cerasiferum") %>%
+  filter(Species_Name != "Solanum_campylacanthum") %>%
+  dplyr::rename(genus.sp = Species_Name) %>%
+  left_join(Mia_Env_allctry_median, by = "genus.sp")
+  
+# Change the column genus.sp into row names
+row.names(Cmbd_GS_Env) <- Cmbd_GS_Env$genus.sp 
+Cmbd_GS_Env <- subset(Cmbd_GS_Env, select = -genus.sp)
+
+### Transformation of Genome Size data
+# Check the distribution of genome size
+hist(Cmbd_GS_Env$Genome_Size_gbp)
+qqPlot(Cmbd_GS_Env$Genome_Size_gbp)
+# Check the distribution after log transformation
+hist(log(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(log(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after log2 transformation
+hist(log2(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(log2(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after log10 transformation
+hist(log10(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(log10(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after square root transformation
+hist(sqrt(Cmbd_GS_Env$Genome_Size_gbp))
+qqPlot(sqrt(Cmbd_GS_Env$Genome_Size_gbp))
+# Check the distribution after square transformation
+hist((Cmbd_GS_Env$Genome_Size_gbp)^2)
+qqPlot((Cmbd_GS_Env$Genome_Size_gbp)^2)
+
+## Normality test for the data transformation of GS
+shapiro.test(log(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test(log2(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test(log10(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test(sqrt(Cmbd_GS_Env$Genome_Size_gbp))
+shapiro.test((Cmbd_GS_Env$Genome_Size_gbp)^2)
+
+
+### Check the multicollinearity of all environmental variables using simple linear regression model
+lm_GS_env<-lm(log(Genome_Size_gbp) ~., data=Cmbd_GS_Env)
+summary(lm_GS_env)
+vif(lm_GS_env)
+
+# Let's remove bio6 (mean daily minimum air temperature of the coldest month)
+# to see if the multicollinearity will change
+lm_GS_env_1<-lm(log(Genome_Size_gbp) ~. -bio6, data=Cmbd_GS_Env)
+summary(lm_GS_env_1)
+vif(lm_GS_env_1)
+
+# Remove bio7 (annual range of air temperature)
+lm_GS_env_2<-lm(log(Genome_Size_gbp) ~. -bio7, data=Cmbd_GS_Env)
+summary(lm_GS_env_2)
+vif(lm_GS_env_2)
+
+# Remove both bio6 and bio7
+lm_GS_env_3<-lm(log(Genome_Size_gbp) ~. -bio6 -bio7, data=Cmbd_GS_Env)
+summary(lm_GS_env_3)
+vif(lm_GS_env_3) # Now only bio14 and bio15 are higher than 10
+
+# Remove bio6, bio7 and bio14
+lm_GS_env_4<-lm(log(Genome_Size_gbp) ~. -bio6 -bio7 -bio14, data=Cmbd_GS_Env)
+summary(lm_GS_env_4)
+vif(lm_GS_env_4) # Now all variables are under 10
+
+lm_GS_env_5 <- step(lm_GS_env_4)
+summary(lm_GS_env_5)
+
+Cmbd_GS_Env <- Cmbd_GS_Env %>%
+  dplyr::select(-c("bio6", "bio7","bio14"))
+
+## Now the rest of the environmental varibles are 
+#bio3 - ratio of diurnal variation to annual variation in temperatures
+#bio5 - mean daily maximum air temperature of the warmest month
+#bio15 - precipitation seasonality
+#bio18 - mean monthly precipitation amount of the warmest quarter
+#bio19 - mean monthly precipitation amount of the coldest quarter
+#mi - the ratio of annual precipitation to annual potential evapotranspiration
+
+### Genome Size data and Phylo tree
+# Create a named vector from the dataframe of genome size
+plotTree.barplot(Mia_tree_GS, x = setNames(log(Cmbd_GS_Env$Genome_Size_gbp),
+                                        rownames(Cmbd_GS_Env)), 
+                 tip.labels = TRUE, 
+                 args.barplot = list(col = "salmon", xlab="log(Genome Size (gbp))"))
+par(mfrow=c(1,1))
+
+## Phylogenetic signal test
+# To see if genome size variation is related to phylogenetic relationship
+phylo_signal <- phylosig(Mia_tree_GS, x = setNames(log(Cmbd_GS_Env$Genome_Size_gbp), 
+                                                rownames(Cmbd_GS_Env)), 
+                         method="lambda", test = TRUE)
+phylo_signal
+plot(phylo_signal)
+
+
+### PGLS analysis between genome size and 6 environmental variables
+## Create the comparative data object
+Cmbd_GS_Env$Species <- rownames(Cmbd_GS_Env)
+Cmbd_GS_Env$logGS <- log(Cmbd_GS_Env$Genome_Size_gbp)
+Cmbd_GS_Env <- Cmbd_GS_Env[,-1]
+
+GS_Env_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_Env, names.col = "Species",vcv=TRUE)
+GS_Env_comp
+
+GS_Env_lambda <- pgls(logGS ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = GS_Env_comp, lambda = "ML") 
+summary(GS_Env_lambda)
+
+GS_Env_lambda1 <- update(GS_Env_lambda, ~ . -bio3, lambda = "ML") 
+summary(GS_Env_lambda1)
+
+GS_Env_lambda2 <- update(GS_Env_lambda1, ~ . -mi, lambda = "ML") 
+summary(GS_Env_lambda2)
+
+GS_Env_lambda3 <- update(GS_Env_lambda2, ~ . -bio18, lambda = "ML") 
+summary(GS_Env_lambda3)
+
+GS_Env_lambda4 <- update(GS_Env_lambda3, ~ . -bio15, lambda = "ML") 
+summary(GS_Env_lambda4)
+
+GS_Env_lambda5 <- update(GS_Env_lambda4, ~ . -bio5, lambda = "ML") 
+summary(GS_Env_lambda5)
+
+AICc(GS_Env_lambda, GS_Env_lambda1, GS_Env_lambda2, GS_Env_lambda3, GS_Env_lambda4, GS_Env_lambda5)
+
+## Basic scatter plot with fitted line
+# Extract observed and fitted values
+observed_GS_Env <- GS_Env_comp$data$logGS
+fitted_GS_Env <- fitted(GS_Env_lambda5)
+
+par(mar = c(5, 4, 4, 2) + 0.1) 
+plot(observed_GS_Env, fitted_GS_Env, main = "PGLS Model Fit between Genome Size and Bio19",
+     xlab = "log(GenomeSize)", ylab = "Fitted Values")
+
+## Residual plot
+# Calculating residuals
+residuals_GS_Env <- residuals(GS_Env_lambda5)
+
+# Plotting residuals
+plot(fitted_GS_Env, residuals_GS_Env, main = "Residuals vs. Fitted",
+     xlab = "Fitted Values", ylab = "Residuals")
+abline(h = 0, col = "blue")
+
+##### PGLS - Repeat Profiles and GS #####
+#################################################
+#### Reduce the number of repeat types as predictors
+# Prepare the GenomeSize-RepeatTypes df
+Cmbd_GS_RP <- Diploid_Eggplant_Repeat_ag_pct[,-c(35,36,37)] # remove columns we don't need
+Cmbd_GS_RP$logGS <- log(Cmbd_GS_RP$Genome_Size_gbp) # transform the GS
+Cmbd_GS_RP <- Cmbd_GS_RP[-3,-35] # remove original GS column and S.cerasiferum
+
+# Calculate the mean of each repeat types proportion in the whole genome by species
+mean_RP <- Cmbd_GS_RP[,-35] %>%
+  summarise(across(where(is.numeric), mean, na.rm = TRUE)) %>%
+  pivot_longer(cols = everything(), names_to = "Repeat_Type", values_to = "Mean_GenomicProportion")
+
+# Remove the repeat types that are not specific enough
+mean_RP <- mean_RP[-c(1,2,3,5,6,15,16,29,34),]
+
+# Sort repeat types by proportion and calculate cumulative sum
+mean_RP <- mean_RP %>%
+  dplyr::arrange(desc(Mean_GenomicProportion)) %>%
+  dplyr::mutate(cumulative_proportion = cumsum(Mean_GenomicProportion))
+
+# Retain repeat types making up the 99% of the highest cumulative proportion
+threshold_RP <- 0.95 * as.numeric(mean_RP[which.max(mean_RP$cumulative_proportion),3])
+mean_RP <- mean_RP %>%
+  dplyr::filter(cumulative_proportion <= threshold_RP)
+
+#### Select variables to keep in the GenomeSize-RepeatTypes df
+Cmbd_GS_RP_slct <- Cmbd_GS_RP %>%
+  dplyr::select(mean_RP$Repeat_Type, "logGS")
+
+# Check the dimension
+print(dim(Cmbd_GS_RP_slct))
+
+#### Perform PCA with selected repeat types
+# Extract the last part of each column name
+new_colnames <- sapply(strsplit(colnames(Cmbd_GS_RP_slct), "/"), tail, n = 1)
+Cmbd_GS_RP_slct_PCA <- Cmbd_GS_RP_slct
+# Set the new column names back to the dataframe
+colnames(Cmbd_GS_RP_slct_PCA) <- new_colnames
+
+PCA_GS_RP_slct <- PCA(Cmbd_GS_RP_slct_PCA[,-14], graph = FALSE)
+
+## Summary of PCA results
+summary(PCA_GS_RP_slct)
+
+## Scree plot
+fviz_eig(PCA_GS_RP_slct, addlabels = TRUE) + 
+  ggtitle("Scree plot for selected repeat types of Solanum from all countries")
+
+## cos2 plot
+fviz_cos2(PCA_GS_RP_slct, choice = "var", axes = 1:2)
+fviz_cos2(PCA_GS_RP_slct, choice = "var", axes = 2:3)
+
+## Plot a PCA biplot with each individual species dot
+fviz_pca_biplot(PCA_GS_RP_slct, 
+                col.ind = "darkblue",
+                col.var = "cos2",
+                gradient.cols = c("black", "orange", "green"),
+                geom = "point",  
+                addEllipses = TRUE)
+
+fviz_pca_biplot(PCA_GS_RP_slct, axes = 2:3,
+                col.ind = "darkblue",
+                col.var = "cos2",
+                gradient.cols = c("black", "orange", "green"),
+                geom = "point",  
+                addEllipses = TRUE) 
+
+
+## Select only variables that have >= 0.75 quality of representation in Dim1-2 and Dim2-3
+Cmbd_GS_RP_slct2 <- Cmbd_GS_RP_slct %>%
+  dplyr::select(matches("Tork|Galadriel|CRM|Athila|Ale|LINE|satellite"),
+                "logGS")
+
+#### Test with simple lm
+lm_GS_RP <- lm(logGS ~., data=Cmbd_GS_RP_slct2)
+summary(lm_GS_RP)
+# Check the multicollinearity between variables
+vif(lm_GS_RP)
+
+# Remove the variable with highest vif and test with simple lm again
+lm_GS_RP1 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila`, data=Cmbd_GS_RP_slct2)
+summary(lm_GS_RP1)
+vif(lm_GS_RP1)
+
+# Choose a simple linear regression model by AIC in a stepwise algorithm
+lm_GS_RP2 <- step(lm_GS_RP1)
+summary(lm_GS_RP2)
+
+
+#### PGLS of Genome Size and Repeat Types
+Cmbd_GS_RP_slct2$Species <- rownames(Cmbd_GS_RP_slct2)
+Cmbd_GS_RP_slct3 <- Cmbd_GS_RP_slct2 %>%
+  dplyr::select(-"All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Athila")
+GS_RP_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_RP_slct3, names.col = "Species",vcv=TRUE)
+GS_RP_comp
+
+GS_RP_lambda <- pgls(logGS ~ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`+ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale` + `All/repeat/mobile_element/Class_I/LINE` + `All/repeat/satellite` + `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`, data = GS_RP_comp, lambda = "ML")
+
+GS_RP_lambda1 <- update(GS_RP_lambda, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia`, lambda = "ML") 
+summary(GS_RP_lambda1)
+
+GS_RP_lambda2 <- update(GS_RP_lambda1, ~ . -`All/repeat/satellite`, lambda = "ML")
+summary(GS_RP_lambda2)
+
+GS_RP_lambda3 <- update(GS_RP_lambda2, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`, lambda = "ML")
+summary(GS_RP_lambda3)
+
+GS_RP_lambda4 <- update(GS_RP_lambda3, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale`, lambda = "ML") 
+summary(GS_RP_lambda4)
+
+GS_RP_lambda5 <- update(GS_RP_lambda4, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`, lambda = "ML") 
+summary(GS_RP_lambda5)
+
+GS_RP_lambda6 <- update(GS_RP_lambda5, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel`, lambda = "ML") 
+summary(GS_RP_lambda6)
+
+# Check the AIC of each model
+AICc(GS_RP_lambda, GS_RP_lambda1, GS_RP_lambda2, GS_RP_lambda3, GS_RP_lambda4, GS_RP_lambda5, GS_RP_lambda6)
+summary(GS_RP_lambda5)
+plot(GS_RP_lambda5)
+
+## Basic scatter plot with fitted line
+# Extract observed and fitted values
+observed_GS_RP <- GS_RP_comp$data$logGS
+fitted_GS_RP <- fitted(GS_RP_lambda5)
+
+par(mar = c(5, 4, 4, 2) + 0.1) 
+plot(observed_GS_RP, fitted_GS_RP,
+     main = "PGLS Model Fit between Genome Size and Repeat Types",
+     xlab = "Observed Values", ylab = "Fitted Values")
+
+
+## Residual plot
+# Calculating residuals
+residuals_GS_Env <- residuals(GS_Env_lambda5)
+
+# Plotting residuals
+plot(fitted_GS_Env, residuals_GS_Env, 
+     main = "Residuals vs. Fitted (Genome Size and Repeat Types)",
+     xlab = "Fitted Values", 
+     ylab = "Residuals")
+abline(h = 0, col = "blue")
+
+### Check the Genome size without transformation with Repeat Types
+### Calculate the standard variation of each repeat types and rank them from high to low to check 
+### Check where LINE and Galadriel is in the Genome (literature review)
+### Phylogeny and the two repeat types abundance as bar chart beside
+### one pgls model scatter plot and fitted line

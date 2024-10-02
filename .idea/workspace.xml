@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e250381e-9350-424b-b190-1611077a45fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/2_Analysing_RE2_output.R" beforeDir="false" afterPath="$PROJECT_DIR$/2_Analysing_RE2_output.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RE2_output/.RData" beforeDir="false" afterPath="$PROJECT_DIR$/RE2_output/.RData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RE2_output/.Rhistory" beforeDir="false" afterPath="$PROJECT_DIR$/RE2_output/.Rhistory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/All_Diversity_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/All_Diversity_GS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/All_GP_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/All_GP_GS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/All_Richness_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/All_Richness_GS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/Diploid_Diversity_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/Diploid_Diversity_GS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/Diploid_GP_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/Diploid_GP_GS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/Diploid_Richness_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/Diploid_Richness_GS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies_horizontal.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies_horizontal.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R_Plots/lm_GS_TGP_Plot.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/lm_GS_TGP_Plot.pdf" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2kJ7S5dJQCxWgEp6GvJRx4OgHpn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e250381e-9350-424b-b190-1611077a45fc" name="Changes" comment="" />
+      <created>1722989822941</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722989822941</updated>
+      <workItem from="1722989825184" duration="15000" />
+      <workItem from="1723669450652" duration="1792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
