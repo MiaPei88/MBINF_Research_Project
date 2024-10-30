@@ -1339,6 +1339,7 @@ long_logGS_RP <- Cmbd_logGS_RP_slct %>%
     values_to = "Genomic_Proportion"         # Column to store the repeat values
   )
 
+long_logGS_RP$Repeat_Type <- basename(long_logGS_RP$Repeat_Type)
 # View the reshaped data (optional)
 head(long_logGS_RP)
 
@@ -1349,10 +1350,17 @@ xyplot(
   layout = c(4, 4),  # Adjust layout based on the number of repeat types
   scales = list(relation = "free"),  # Allow scales to be free for each panel
   xlab = "Genome Size", 
-  ylab = "Genomic Proportion", 
-  main = "Relationship between Genome Size and Repeat Types",
+  ylab = "Log (Genomic Proportion)", 
+  main = "Relationship between log(GenomeSize) and Repeat Types",
   pch = 16, col = "darkgreen"  # Customize points
 )
+
+#### Test linear relationship between Genome Size and Alesia/Bianca
+lm_Alesia_GS <- lm(logGS ~ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia`,data = Cmbd_logGS_RP_slct)
+summary(lm_Alesia_GS)
+
+lm_Bianca_GS <- lm(logGS ~ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca`,data = Cmbd_logGS_RP_slct)
+summary(lm_Bianca_GS)
 
 
 #### PGLS of log(GenomeSize) and Repeat Types
@@ -1481,7 +1489,6 @@ Cmbd_RP_Env <- left_join(Identified_RP,Mia_Env_allctry_median, by = "genus.sp") 
   dplyr::select(-c("bio6", "bio7","bio14"))
 names(Cmbd_RP_Env)[names(Cmbd_RP_Env) == "genus.sp"] <- "Species"
 
-
 #### Phylogenetic signal test on all 13 repeat types
 # To see if these repeats' variation are related to phylogenetic relationship
 for (RP in colnames(Cmbd_RP_Env[,c(1:13)])) {
@@ -1519,7 +1526,7 @@ for (RP in colnames(RP_Env_comp$data[, c(1:4,6:13)])) {
   best_model <- RP_Env_lambda
   
   print(paste("Initial AICc:", best_aicc))
-  
+
   # Extract p-values (excluding intercept)
   p_values <- model_summary$coefficients[-1, "Pr(>|t|)"]
   
@@ -1572,3 +1579,9 @@ for (RP in colnames(RP_Env_comp$data[, c(1:4,6:13)])) {
 Ale_Env_lambda <- pgls(`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale` ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = RP_Env_comp, lambda = "ML")
 summary(Ale_Env_lambda)
 
+#### Scatter plot between each significant environmental variables and each repeat types
+## Tekay - bio5/bio18/bio19
+
+## Ale - bio3/bio15/mi
+## Bianca - bio3/bio15/bio18
+## CRM - bio3
