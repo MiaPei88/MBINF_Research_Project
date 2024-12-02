@@ -220,11 +220,10 @@ print(RptProp_GS_bySpecies_custm)
 # Save the figure as a pdf file
 ggsave("../R_Plots/RptProp_GS_bySpecies.pdf", RptProp_GS_bySpecies_custm, width = 20, height = 10)
 
-RptProp_GS_bySpecies_horizontal <- ggplot(sum_All_Eggplant_Repeat_ag, aes(y = Species_Name)) +
+RptProp_GS_bySpecies_horizontal <- ggplot(sum_All_Eggplant_Repeat_ag, aes(y = reorder(Species_Name, Genome_Size_gbp))) +
   geom_bar(aes(x = Genomic_proportion, fill = Final_annotation), stat = "identity", 
            position = "stack") +
-  labs(title = "Figure. 1", 
-       x = "Genomic proportion of total repeat", y = "Species Name") +
+  labs(x = "Genomic proportion of total repeat", y = "Species Name") +
   scale_fill_manual(values = custom_palette) +
   theme(axis.title.y = element_text(size = 20), 
         axis.title.x = element_text(size = 20, 
@@ -282,6 +281,8 @@ Cmbd_All_Eggplant_Repeat_ag_pct <- subset(Cmbd_All_Eggplant_Repeat_ag_pct, selec
 
 # Remove the polyploid Solanum_campylacanthum
 Diploid_Eggplant_Repeat_ag_pct <- Cmbd_All_Eggplant_Repeat_ag_pct[-3,]
+# Remove the polyploid Solanum_campylacanthum and Solanum_cerasiferum
+NoOutlier_Repeat_ag_pct <- Diploid_Eggplant_Repeat_ag_pct[-3,]
 
 ##### Exploratory plotting
 
@@ -305,12 +306,12 @@ print(All_Richness_GS)
 
 ggsave("../R_Plots/All_Richness_GS.pdf", All_Richness_GS, width = 10, height = 8)        
 
-# Only diploid samples
-Diploid_Richness_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct, 
+# Only diploid samplesm without outlier sample
+NoOutlier_Richness_GS <- ggplot(NoOutlier_Repeat_ag_pct, 
                               aes(x = as.numeric(Genome_Size_gbp), 
                                   y = Mehinicks_index)) + 
   geom_point() +
-  geom_smooth(method = "loess", span = 1, formula = y ~ x) +
+  geom_smooth(method = "lm", span = 1, formula = y ~ x) +
   labs(title = "Genome Size vs. Repeat Type Richness", 
        y = "Repeat type richness (Mehinicks Index)", x = "Genome size (Gbp/2C)") + 
   theme(text = element_text(size = 14), axis.text = element_text(size = 15),
@@ -318,9 +319,9 @@ Diploid_Richness_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct,
         axis.title.y = element_text(size = 20),
         plot.title = element_text(size = 25, face = "bold"))
 
-print(Diploid_Richness_GS)
+print(NoOutlier_Richness_GS)
 
-ggsave("../R_Plots/Diploid_Richness_GS.pdf", Diploid_Richness_GS, width = 10, height = 8)
+ggsave("../R_Plots/NoOutlier_Richness_GS.pdf", NoOutlier_Richness_GS, width = 10, height = 8)
 
 ### Genomic proportion of repeats and genome size
 plot(Cmbd_All_Eggplant_Repeat_ag_pct$Total_Genomic_Proportion ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Genomic proportion of repeats (%)", xlab="Genome size (Gbp/2C)")
@@ -342,11 +343,11 @@ print(All_GP_GS)
 ggsave("../R_Plots/All_GP_GS.pdf", All_GP_GS, width = 10, height = 8)        
 
 # Only diploid samples
-Diploid_GP_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct, 
+NoOutlier_GP_GS <- ggplot(NoOutlier_Repeat_ag_pct, 
                         aes(x = as.numeric(Genome_Size_gbp), 
                             y = Total_Genomic_Proportion)) + 
   geom_point() +
-  geom_smooth(method = "loess", span = 1, formula = y ~ x) +
+  geom_smooth(method = "lm", span = 1, formula = y ~ x) +
   labs(title = "Genome Size vs. Genomic Proportion of Repeats", 
        y = "Genomic proportion of repeats", x = "Genome size (Gbp/2C)") + 
   theme(text = element_text(size = 14), axis.text = element_text(size = 15),
@@ -354,9 +355,9 @@ Diploid_GP_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct,
         axis.title.y = element_text(size = 20),
         plot.title = element_text(size = 25, face = "bold"))
 
-print(Diploid_GP_GS)
+print(NoOutlier_GP_GS)
 
-ggsave("../R_Plots/Diploid_GP_GS.pdf", Diploid_GP_GS, width = 10, height = 8)
+ggsave("../R_Plots/NoOutlier_GP_GS.pdf", NoOutlier_GP_GS, width = 10, height = 8)
 
 ### Diversity and genome size
 plot(Cmbd_All_Eggplant_Repeat_ag_pct$Shannon_Index ~ Cmbd_All_Eggplant_Repeat_ag_pct$Genome_Size_gbp, ylab = "Repeat diversity (Shannon Index)", xlab = "Genome size (Gbp/2C)")
@@ -379,11 +380,11 @@ print(All_Diversity_GS)
 ggsave("../R_Plots/All_Diversity_GS.pdf", All_Diversity_GS, width = 10, height = 8)
 
 # Only diploid samples
-Diploid_Diversity_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct, 
+NoOutlier_Diversity_GS <- ggplot(NoOutlier_Repeat_ag_pct, 
                                aes(x = as.numeric(Genome_Size_gbp), 
                                    y = Shannon_Index)) + 
   geom_point() +
-  geom_smooth(method = "loess", span = 1, formula = y ~ x) +
+  geom_smooth(method = "lm", span = 1, formula = y ~ x) +
   labs(title = "Genome Size vs. Repeat Type Diversity", 
        y = "Repeat type diversity (Shannon Index)", x = "Genome size (Gbp/2C)") + 
   theme(text = element_text(size = 14), axis.text = element_text(size = 15),
@@ -391,55 +392,28 @@ Diploid_Diversity_GS <- ggplot(Diploid_Eggplant_Repeat_ag_pct,
         axis.title.y = element_text(size = 20),
         plot.title = element_text(size = 25, face = "bold"))
 
-print(Diploid_Diversity_GS)
+print(NoOutlier_Diversity_GS)
 
-ggsave("../R_Plots/Diploid_Diversity_GS.pdf", Diploid_Diversity_GS, width = 10, height = 8)
+ggsave("../R_Plots/NoOutlier_Diversity_GS.pdf", NoOutlier_Diversity_GS, width = 10, height = 8)
 
 # Linear Regression Modeling between Genome size and Total Repeat Proportion
 lm_GS_TGP <- lm(Genome_Size_gbp ~ Total_Genomic_Proportion, 
-               data = Diploid_Eggplant_Repeat_ag_pct)
+               data = NoOutlier_Repeat_ag_pct)
 summary(lm_GS_TGP)
 
 # Linear Regression Modeling between Genome size and Repeat Richness
 lm_GS_Richness <- lm(Genome_Size_gbp ~ Mehinicks_index, 
-                     data = Diploid_Eggplant_Repeat_ag_pct)
+                     data = NoOutlier_Repeat_ag_pct)
 summary(lm_GS_Richness)
 
 lm_GS_Richness_log <- lm(log(Genome_Size_gbp) ~ Mehinicks_index, 
-                data = Diploid_Eggplant_Repeat_ag_pct)
+                data = NoOutlier_Repeat_ag_pct)
 summary(lm_GS_Richness_log)
 
 # Linear Regression Modeling between Genome size and Repeat Diversity
 lm_GS_Diversity <- lm(Genome_Size_gbp ~ Shannon_Index, 
-                     data = Diploid_Eggplant_Repeat_ag_pct)
+                     data = NoOutlier_Repeat_ag_pct)
 summary(lm_GS_Diversity)
-
-
-## Ploting the linear correlation between Genome size and Total Repeat Proportion
-# Extract coefficients
-intercept <- coef(lm_GS_TGP)[1]
-slope <- coef(lm_GS_TGP)[2]
-
-# Create equation text
-equation <- paste("y = ", round(slope, 4), "x", " + ", round(intercept, 4), sep = "")
-
-# Create the plot with the linear model line
-lm_GS_TGP_Plot <- ggplot(Diploid_Eggplant_Repeat_ag_pct, 
-                         aes(x = Total_Genomic_Proportion, 
-                             y = Genome_Size_gbp)) +
-  labs(y = "Genome size (Gbp/2C)", x = "Total genomic proportion of repeats") + 
-  geom_point(cex = 2) +
-  geom_smooth(method = lm, formula = y ~ x) +
-  theme(text = element_text(size = 14), axis.text = element_text(size = 15),
-        axis.title.x = element_text(size = 20), 
-        axis.title.y = element_text(size = 20, margin = margin(r = 10, unit = "pt"))) +
-  # Add the equation to the plot
-  annotate("text", x = 0.44, y = 2.71, label = equation, hjust = 0, size = 7, color = "blue")
-
-print(lm_GS_TGP_Plot)
-
-ggsave("../R_Plots/lm_GS_TGP_Plot.pdf", lm_GS_TGP_Plot, width = 12, height = 8)
-
 
 ################# Occurrence Data ###############
 #################################################
@@ -466,7 +440,7 @@ Species_Country[13,1] <- "Solanum_incanum"
 # Filter only the species and its original country we have for this project
 Mia_Occ_onectry <- inner_join(Edeline_Occ, Species_Country, by = c("genus.sp", "COUNTRY"))
 Mia_Occ_allctry <- Edeline_Occ %>%
-  filter(genus.sp == Species_Country$genus.sp)
+  filter(genus.sp %in% Species_Country$genus.sp)
 
 # Check the number of occurrence data points of each species
 table(Mia_Occ_onectry$genus.sp)
@@ -483,17 +457,20 @@ setdiff(Species_Country$genus.sp, Mia_Occ_allctry$genus.sp)
 ## The three species without occurence data are cultivated crops and hard to observe their natural distribution
 
 # Check the number of occurrence data points of Solanum incanum from the two different countries
-nrow(Edeline_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Burkina Faso",])
-nrow(Edeline_Occ[Mia_Occ_onectry$genus.sp == "Solanum_incanum" & Mia_Occ_onectry$COUNTRY == "Kenya",])
+nrow(Edeline_Occ[Edeline_Occ$genus.sp == "Solanum_incanum" & Edeline_Occ$COUNTRY == "Burkina Faso",])
+nrow(Edeline_Occ[Edeline_Occ$genus.sp == "Solanum_incanum" & Edeline_Occ$COUNTRY == "Kenya",])
 
 #### Add occurrence data points of Solanum incanum in Burkina Faso from GBIF
 S_incanum_BFaso <- read.csv("/Users/miapei/Desktop/MBinf/Research_Project/Data/Solanum_incanum_BFaso.csv", sep = "\t")
+nrow(S_incanum_BFaso)
 
 # Remove data points that are observed by human or the uncertainty in meters is too high
 S_incanum_BFaso_cl <- S_incanum_BFaso %>%
   filter(basisOfRecord != "HUMAN_OBSERVATION") %>%
   filter(coordinateUncertaintyInMeters / 1000 <= 100 | 
            is.na (coordinateUncertaintyInMeters)) 
+
+nrow(S_incanum_BFaso_cl)
 
 ### Wrangle the columns we want and combine them with the data points from Edeline's occurrence data
 S_incanum_BFaso_sub <- S_incanum_BFaso_cl %>%
@@ -509,7 +486,7 @@ Mia_BFaso <- Mia_Occ_onectry %>%
   dplyr::filter(genus.sp == "Solanum_incanum" & COUNTRY == "Burkina Faso")
 
 S_incanum_BFaso_cmbd <- bind_rows(Mia_BFaso, S_incanum_BFaso_sub)
-
+nrow(S_incanum_BFaso_cmbd)
 
 # Change the countryCode into the format CoordinateCleaner accepts
 S_incanum_BFaso_cmbd$COUNTRY <-  countrycode(S_incanum_BFaso_cmbd$COUNTRY, 
@@ -577,6 +554,8 @@ S_incanum_BFaso_filtered <- S_incanum_BFaso_cl[S_incanum_BFaso_indices_keep, ]
 # Change the country code back to country name
 S_incanum_BFaso_filtered$COUNTRY <- countrycode(S_incanum_BFaso_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
 
+nrow(S_incanum_BFaso_filtered)
+
 ### Mapping the coordinates of S.incanum in Burkina Faso from GBIF
 # Get map data of Burkina Faso
 BFaso_map <- map_data("world", region = "Burkina Faso")
@@ -591,15 +570,16 @@ ggplot() +
 
 #### Add occurrence data points of Solanum incanum in Kenya from GBIF(already exclude data points without coordinates)
 S_incanum_Kenya <- read.csv("/Users/miapei/Desktop/MBinf/Research_Project/Data/Solanum_incanum_Kenya.csv", sep = "\t")
+nrow(S_incanum_Kenya)
 
 # Remove data points that are observed by human or the uncertainty in meters is too high
-S_incanum_Kenya <- S_incanum_Kenya %>%
+S_incanum_Kenya_cl <- S_incanum_Kenya %>%
   filter(basisOfRecord != "HUMAN_OBSERVATION") %>%
   filter(coordinateUncertaintyInMeters / 1000 <= 100 | 
            is.na (coordinateUncertaintyInMeters))
 
 ### Wrangle the columns we want to combine with the major occurrence df
-S_incanum_Kenya_sub <- S_incanum_Kenya %>%
+S_incanum_Kenya_sub <- S_incanum_Kenya_cl %>%
   dplyr::rename(LATDEC = decimalLatitude, 
                 LONGDEC = decimalLongitude, 
                 COUNTRY = countryCode) %>%
@@ -653,6 +633,8 @@ nrow(S_incanum_Kenya_filtered)
 S_incanum_Kenya_filtered$COUNTRY <- countrycode(S_incanum_Kenya_filtered$COUNTRY, origin =  'iso3c', destination = 'country.name')
 unique(S_incanum_Kenya_filtered$COUNTRY)
 
+nrow(S_incanum_Kenya_filtered)
+
 ### Mapping the coordinates of S.incanum in Kenya from GBIF
 # Get map data of Kenya
 Kenya_map <- map_data("world", region = "Kenya")
@@ -690,6 +672,8 @@ Cultiv_Species_Occ_cl_allctry <- Cultiv_Species_Occ %>%
   filter(CULTIVATED == "No") %>% # keep only the non-cultivated specimens
   filter(!grepl("Cultivated|cultivated|cultivation", HABITATTXT)) %>%
   filter(!grepl("cultivated|Planted", HABITATTXT))# keep only the non-cultivated specimens
+
+table(Cultiv_Species_Occ_cl_allctry$SPECIES)
 
 # Change the countryCode into the format CoordinateCleaner accepts
 Cultiv_Species_Occ_cl_onectry$COUNTRY <-  countrycode(Cultiv_Species_Occ_cl_onectry$COUNTRY, origin =  'country.name', destination = 'iso3c')
@@ -977,11 +961,21 @@ fviz_eig(pca_allctry, addlabels = TRUE) +
 fviz_cos2(pca_allctry, choice = "var", axes = 1:2)
 
 ## Biplot combined with cos2
-fviz_pca_var(pca_allctry, col.var = "cos2",
-             gradient.cols = c("black", "orange", "green"),
+Biplot_cos2_env_Allctry <- fviz_pca_var(pca_allctry, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"), 
+             labelsize = 7,
              repel = TRUE) +
-  ggtitle("PCA - Environmental variables of Solanum from all countries - 1:2")
+  theme(axis.title.x = element_text(size = 20), 
+        axis.title.y = element_text(size = 20), 
+        axis.text.x = element_text(size = 15), 
+        axis.text.y = element_text(size = 15),
+        text = element_text(size = 15),
+        legend.text = element_text(size = 13)) +
+  ggtitle(NULL)
 
+print(Biplot_cos2_env_Allctry)
+
+ggsave("../R_Plots/Biplot_cos2_env_Allctry.pdf", Biplot_cos2_env_Allctry, width = 10, height = 8)        
 
 ## Contributions of variables
 # PC1
@@ -999,10 +993,12 @@ fviz_contrib(pca_allctry, choice = "var", axes = 2, top = 15) +
 cor_matrix_allctry <- cor(Mia_Env_allctry_cl[,c(6:25)])
 
 # Plot the correlation matrix
+pdf("../R_Plots/cor_matrix_allctry.pdf", width = 10, height = 8)
 corrplot(cor_matrix_allctry, method = "circle", type = "upper", order = "hclust", 
          tl.col = "black", tl.srt = 45, 
-         title = "Correlation Plot of Climate Variables", 
-         cl.cex = 0.75, addCoef.col = "black")
+         cl.cex = 0.75, addCoef.col = "black", 
+         number.cex = 0.75)
+dev.off()
 
 # Save the correlation matrix to select representative variables in excel
 write.table(cor_matrix_allctry, "./cor_matrix_allctry.csv", sep = ",")
@@ -1029,10 +1025,21 @@ fviz_cos2(pca_allctry_slct, choice = "var", axes = 1:2)
 
 ## Biplot combined with cos2
 # All countries
-fviz_pca_var(pca_allctry_slct, col.var = "cos2",
-             gradient.cols = c("black", "orange", "green"),
-             repel = TRUE) +
-  ggtitle("PCA - Selected Environmental variables of Solanum from all countries - 1:2")
+Biplot_cos2_slct_env_Allctry <- fviz_pca_var(pca_allctry_slct, col.var = "cos2",
+             gradient.cols = c("black", "orange", "green"), 
+             labelsize = 7        # Adjust label size
+             ) +         # Avoid label overlap for better visibility)
+  theme(axis.title.x = element_text(size = 20), 
+        axis.title.y = element_text(size = 20), 
+        axis.text.x = element_text(size = 15), 
+        axis.text.y = element_text(size = 15),
+        text = element_text(size = 15),
+        legend.text = element_text(size = 13)) +
+  ggtitle(NULL)
+
+print(Biplot_cos2_slct_env_Allctry)
+
+ggsave("../R_Plots/Biplot_cos2_slct_env_Allctry.pdf", Biplot_cos2_slct_env_Allctry, width = 10, height = 8)        
 
 
 ## Contributions of variables
@@ -1049,29 +1056,34 @@ fviz_contrib(pca_allctry_slct, choice = "var", axes = 2, top = 15) +
 cor_matrix_slct <- cor(Mia_Env_allctry_slct[,-1])
 
 # Plot the correlation matrix
+pdf("../R_Plots/cor_matrix_slct.pdf", width = 10, height = 8)
 corrplot(cor_matrix_slct, method = "circle", type = "upper", order = "hclust", 
          tl.col = "black", tl.srt = 45, 
-         title = "Correlation Plot of Climate Variables", 
          cl.cex = 0.75, addCoef.col = "black")
-
+dev.off()
 
 ### Create boxplots to show the variation of each variable among all species
 data_long <- pivot_longer(Mia_Env_allctry_slct, cols = -genus.sp, names_to = "Environmental_Variable", values_to = "Value")
 
 boxplot_palette <- paletteer::paletteer_d("ggthemes::Tableau_20")
 
-ggplot(data_long, aes(x = genus.sp, y = Value, fill = genus.sp)) +
+Boxplot_Env_Var <- ggplot(data_long, aes(x = genus.sp, y = Value, fill = genus.sp)) +
   geom_boxplot() +
   scale_x_discrete(breaks = NULL) + 
   facet_wrap(~ Environmental_Variable, scales = "free") + # Separate plots for each environmental variable
-  scale_fill_manual(values = boxplot_palette) +
-  labs(title = "Boxplot of Each Environmental Variable Across Species", x = NULL, y = "Value") +
+  scale_fill_manual(values = boxplot_palette, name = "Species") +
+  labs(x = NULL, y = NULL) +
   theme_minimal() +
-  theme(axis.text.x = element_blank(),  # This ensures no text is shown on the x-axis
-        axis.ticks.x = element_blank())
+  theme(strip.text = element_text(size = 20),
+        text = element_text(size = 15),
+        axis.text.y = element_text(size = 15), 
+        legend.text = element_text(size = 13))
 
+print(Boxplot_Env_Var)
 
-# Histogram of each environemntal variables after PCA for samples from all countryes
+ggsave("../R_Plots/Boxplot_Env_Var.pdf", Boxplot_Env_Var, width = 12, height = 8)   
+
+# Histogram of each environemntal variables after PCA for samples from all countries
 Mia_Env_allctry_slct[,-1]%>%
   keep(is.numeric) %>% 
   gather() %>% 
@@ -1148,6 +1160,7 @@ hist((Cmbd_GS_Env$Genome_Size_gbp)^2)
 qqPlot((Cmbd_GS_Env$Genome_Size_gbp)^2)
 
 ## Normality test for the data transformation of GS
+shapiro.test(Cmbd_GS_Env$Genome_Size_gbp)
 shapiro.test(log(Cmbd_GS_Env$Genome_Size_gbp))
 shapiro.test(log2(Cmbd_GS_Env$Genome_Size_gbp))
 shapiro.test(log10(Cmbd_GS_Env$Genome_Size_gbp))
@@ -1216,12 +1229,36 @@ plot(phylo_signal)
 ## Create the comparative data object
 Cmbd_GS_Env$Species <- rownames(Cmbd_GS_Env)
 Cmbd_GS_Env$logGS <- log(Cmbd_GS_Env$Genome_Size_gbp)
-Cmbd_GS_Env <- Cmbd_GS_Env[,-1]
 
-GS_Env_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_Env, names.col = "Species",vcv=TRUE)
+logGS_Env_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_Env[,-1], names.col = "Species",vcv=TRUE)
+logGS_Env_comp
+
+logGS_Env_lambda <- pgls(logGS ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = GS_Env_comp, lambda = "ML") 
+summary(logGS_Env_lambda)
+
+logGS_Env_lambda1 <- update(logGS_Env_lambda, ~ . -bio3, lambda = "ML") 
+summary(logGS_Env_lambda1)
+
+logGS_Env_lambda2 <- update(logGS_Env_lambda1, ~ . -mi, lambda = "ML") 
+summary(logGS_Env_lambda2)
+
+logGS_Env_lambda3 <- update(logGS_Env_lambda2, ~ . -bio18, lambda = "ML") 
+summary(logGS_Env_lambda3)
+
+logGS_Env_lambda4 <- update(logGS_Env_lambda3, ~ . -bio15, lambda = "ML") 
+summary(logGS_Env_lambda4)
+
+logGS_Env_lambda5 <- update(logGS_Env_lambda4, ~ . -bio5, lambda = "ML") 
+summary(logGS_Env_lambda5)
+
+AICc(logGS_Env_lambda, logGS_Env_lambda1, logGS_Env_lambda2, logGS_Env_lambda3, 
+     logGS_Env_lambda4, logGS_Env_lambda5)
+
+### non-tranformed Genome Size
+GS_Env_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_Env[,-12], names.col = "Species",vcv=TRUE)
 GS_Env_comp
 
-GS_Env_lambda <- pgls(logGS ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = GS_Env_comp, lambda = "ML") 
+GS_Env_lambda <- pgls(Genome_Size_gbp ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = GS_Env_comp, lambda = "ML") 
 summary(GS_Env_lambda)
 
 GS_Env_lambda1 <- update(GS_Env_lambda, ~ . -bio3, lambda = "ML") 
@@ -1241,6 +1278,9 @@ summary(GS_Env_lambda5)
 
 AICc(GS_Env_lambda, GS_Env_lambda1, GS_Env_lambda2, GS_Env_lambda3, GS_Env_lambda4, GS_Env_lambda5)
 
+AICc(logGS_Env_lambda4, logGS_Env_lambda5, GS_Env_lambda4, GS_Env_lambda5)
+
+summary(logGS_Env_lambda5)
 ## Basic scatter plot with fitted line
 # Extract observed and fitted values
 observed_GS_Env <- GS_Env_comp$data$logGS
@@ -1259,7 +1299,7 @@ plot(fitted_GS_Env, residuals_GS_Env, main = "Residuals vs. Fitted",
      xlab = "Fitted Values", ylab = "Residuals")
 abline(h = 0, col = "blue")
 
-##### PGLS - Repeat Profiles and GS #####
+######### PGLS - Repeat Profiles and GS #########
 #################################################
 #### Reduce the number of repeat types as predictors
 # Prepare the GenomeSize-RepeatTypes df
@@ -1292,31 +1332,33 @@ Cmbd_GS_RP_slct <- Cmbd_GS_RP %>%
 # Check the dimension
 print(dim(Cmbd_GS_RP_slct))
 
+#### Calculate standard deviation of each repeat type after the selection
+slctRP_std_devs <- sapply(Cmbd_GS_RP_slct[,-c(14,15)], sd)
+sort(slctRP_std_devs, decreasing = TRUE)
 
 # Remove the repeat types that have high correlation with others
 GS_RP_correlationMatrix <- cor(Cmbd_GS_RP_slct[,-c(14,15)])
-GS_RP_correlationMatrix
 highCorrelation <- findCorrelation(GS_RP_correlationMatrix, cutoff = 0.75)
 names(Cmbd_GS_RP_slct[,highCorrelation])
 Cmbd_GS_RP_slct1 <- Cmbd_GS_RP_slct[,-highCorrelation]
 
 #### Test with simple lm
-Cmbd_logGS_RP_slct2 <- Cmbd_GS_RP_slct1[,-12]
-lm_logGS_RP <- lm(logGS ~., data=Cmbd_logGS_RP_slct2)
+Cmbd_logGS_RP_slct <- Cmbd_GS_RP_slct1[,-12]
+lm_logGS_RP <- lm(logGS ~., data=Cmbd_logGS_RP_slct)
 summary(lm_logGS_RP)
 # Check the multicollinearity between variables
 vif(lm_logGS_RP)
 
 # Remove the variable with highest vif and test with simple lm again
-lm_logGS_RP1 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca`, data=Cmbd_logGS_RP_slct2)
+lm_logGS_RP1 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca`, data=Cmbd_logGS_RP_slct)
 summary(lm_logGS_RP1)
 vif(lm_logGS_RP1)
 
-lm_logGS_RP2 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca` -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`, data=Cmbd_logGS_RP_slct2)
+lm_logGS_RP2 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca` -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`, data=Cmbd_logGS_RP_slct)
 summary(lm_logGS_RP2)
 vif(lm_logGS_RP2)
 
-lm_logGS_RP3 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca` -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork` -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR`, data=Cmbd_logGS_RP_slct2)
+lm_logGS_RP3 <- lm(logGS ~. -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca` -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork` -`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR`, data=Cmbd_logGS_RP_slct)
 summary(lm_logGS_RP3)
 vif(lm_logGS_RP3)
 
@@ -1332,28 +1374,38 @@ vif(lm_GS_RP)
 
 #### A lattice plot to visualize selected repeat types vs genome size
 # Reshape the data from wide to long format
-long_logGS_RP <- Cmbd_logGS_RP_slct %>%
+long_GS_RP <- Cmbd_GS_RP_slct[,-15]%>%
   pivot_longer(
-    cols = -c(Species, logGS),  # Keep Species and Genome_Size as they are
+    cols = -Genome_Size_gbp,  # Keep Species and Genome_Size as they are
     names_to = "Repeat_Type",         # Column to store repeat type names
     values_to = "Genomic_Proportion"         # Column to store the repeat values
   )
 
-long_logGS_RP$Repeat_Type <- basename(long_logGS_RP$Repeat_Type)
+long_GS_RP$Repeat_Type <- basename(long_GS_RP$Repeat_Type)
 # View the reshaped data (optional)
-head(long_logGS_RP)
+head(long_GS_RP)
 
 # Create the lattice plot
-xyplot(
-  Genomic_Proportion ~ logGS | Repeat_Type,  # Formula for lattice plot
-  data = long_logGS_RP, 
+Lattice_Plot_GS_RP <- xyplot(
+  Genomic_Proportion ~ Genome_Size_gbp | Repeat_Type,  # Formula for lattice plot
+  data = long_GS_RP, 
   layout = c(4, 4),  # Adjust layout based on the number of repeat types
   scales = list(relation = "free"),  # Allow scales to be free for each panel
   xlab = "Genome Size", 
-  ylab = "Log (Genomic Proportion)", 
-  main = "Relationship between log(GenomeSize) and Repeat Types",
+  ylab = "Genomic Proportion",
+  par.strip.text = list(cex = 1.4),
+  par.settings = list(
+    par.xlab.text = list(cex = 1.8),  # X-axis title size
+    par.ylab.text = list(cex = 1.8),  # Y-axis title size
+    axis.text = list(cex = 1)),    # Axis label sizes
   pch = 16, col = "darkgreen"  # Customize points
 )
+
+print(Lattice_Plot_GS_RP)
+
+pdf("../R_Plots/Lattice_Plot_GS_RP.pdf", width = 10, height = 8)   
+print(Lattice_Plot_GS_RP)
+dev.off()
 
 #### Test linear relationship between Genome Size and Alesia/Bianca
 lm_Alesia_GS <- lm(logGS ~ `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia`,data = Cmbd_logGS_RP_slct)
@@ -1364,10 +1416,10 @@ summary(lm_Bianca_GS)
 
 
 #### PGLS of log(GenomeSize) and Repeat Types
-Cmbd_logGS_RP_slct2$Species <- rownames(Cmbd_logGS_RP_slct2)
-Cmbd_logGS_RP_slct2 <- Cmbd_logGS_RP_slct2 %>%
+Cmbd_logGS_RP_slct1 <- Cmbd_logGS_RP_slct %>%
   dplyr::select(-c(`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca`, `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`, `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR`))
-logGS_RP_comp <- comparative.data(Mia_tree_GS, Cmbd_logGS_RP_slct2, names.col = "Species",vcv=TRUE)
+Cmbd_logGS_RP_slct1$Species <- rownames(Cmbd_logGS_RP_slct1)
+logGS_RP_comp <- comparative.data(Mia_tree_GS, Cmbd_logGS_RP_slct1, names.col = "Species",vcv=TRUE)
 logGS_RP_comp
 
 logGS_RP_lambda <- pgls(logGS ~ `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre` + `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale` + `All/repeat/mobile_element/Class_I/LINE` + `All/repeat/satellite` + `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`, data = logGS_RP_comp, lambda = "ML")
@@ -1391,11 +1443,8 @@ summary(logGS_RP_lambda5)
 logGS_RP_lambda6 <- update(logGS_RP_lambda5, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay`, lambda = "ML") 
 summary(logGS_RP_lambda6)
 
-logGS_RP_lambda7 <- update(logGS_RP_lambda6, ~ . -`All/repeat/mobile_element/Class_I/LINE`, lambda = "ML") 
+logGS_RP_lambda7 <- update(logGS_RP_lambda6, ~ . -`All/repeat/mobile_element/Class_I/LINE`, lambda = "ML")
 summary(logGS_RP_lambda7)
-
-logGS_RP_lambda8 <- update(logGS_RP_lambda6, ~ . -`All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel`, lambda = "ML") 
-summary(logGS_RP_lambda8)
 
 # Check the AIC of each model
 AICc(logGS_RP_lambda, logGS_RP_lambda1, logGS_RP_lambda2, logGS_RP_lambda3, logGS_RP_lambda4, logGS_RP_lambda5, logGS_RP_lambda6, logGS_RP_lambda7)
@@ -1404,10 +1453,10 @@ AICc(logGS_RP_lambda, logGS_RP_lambda1, logGS_RP_lambda2, logGS_RP_lambda3, logG
 plot(logGS_RP_lambda6)
 
 #### PGLS of Genome Size and Repeat Types
-Cmbd_GS_RP_slct3$Species <- rownames(Cmbd_GS_RP_slct3)
-Cmbd_GS_RP_slct3 <- Cmbd_GS_RP_slct3 %>%
+Cmbd_GS_RP_slct2 <- Cmbd_GS_RP_slct %>%
   dplyr::select(-c(`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca`, `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Tork`, `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/TAR`))
-GS_RP_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_RP_slct3, names.col = "Species",vcv=TRUE)
+Cmbd_GS_RP_slct2$Species <- rownames(Cmbd_GS_RP_slct2)
+GS_RP_comp <- comparative.data(Mia_tree_GS, Cmbd_GS_RP_slct2, names.col = "Species",vcv=TRUE)
 GS_RP_comp
 
 GS_RP_lambda <- pgls(Genome_Size_gbp ~ `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre` + `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale` + `All/repeat/mobile_element/Class_I/LINE` + `All/repeat/satellite` + `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Alesia` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Galadriel` + `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`, data = GS_RP_comp, lambda = "ML")
@@ -1439,9 +1488,6 @@ AICc(GS_RP_lambda, GS_RP_lambda1, GS_RP_lambda2, GS_RP_lambda3, GS_RP_lambda4, G
 
 plot(GS_RP_lambda6)
 
-#### Calculate standard deviation of each repeat type after all selection
-slctRP_std_devs <- sapply(Cmbd_GS_RP_slct[,-c(14,15)], sd)
-sort(slctRP_std_devs, decreasing = TRUE)
 
 #### Visualizing the identified repeat types that are correlated with Genome Size
 ### Phylogeny and the two repeat types abundance as bar chart beside
@@ -1456,37 +1502,65 @@ Identified_RP$Species <- rownames(Identified_RP)
 Identified_RP_long <- tidyr::pivot_longer(Identified_RP, cols = c("LINE", "Galadriel"), names_to = "RepeatType", values_to = "GenomicProportion")
 Identified_RP_long <- as.data.frame(Identified_RP_long)
 str(Identified_RP_long)
-Identified_RP_long$Species <- Mia_tree_GS[,tip.label]
+Identified_RP_long$Species <- Mia_tree_GS$tip.label
 
 # Change the original tree into ggtree format
-Mia_ggtree_GS <- ggtree(Mia_tree_GS) 
+Mia_ggtree_GS <- ggtree(Mia_tree_GS) +
+  theme_tree2() + 
+  theme(axis.text.x = element_text(size = 15))
+
 class(Mia_ggtree_GS)
 
 # Plot the bar chart of the two identified repeat types
 RP_bar <- ggplot(Identified_RP_long, aes(x=Species, y=GenomicProportion, fill=RepeatType)) +
   geom_bar(stat="identity", position="stack", width=0.7) + # Stacking bars
   scale_fill_manual(values=c("cadetblue3", "bisque3")) + # Assign colors to each repeat type
-  labs(title="Stacked Proportion of Repeat Types by Species",
-       x=NULL,
+  labs(x=NULL,
        y="Genomic Proportion",
        fill="Repeat Type") +
   theme_minimal() + # Using a minimal theme for clarity
   coord_flip() +
-  theme(axis.text.x = element_text(angle=45, hjust=1)) # Rotate x labels for better visibility
-  
-# Combine the phylo tree and bar chart together
-RP_bar %>% insert_left(Mia_ggtree_GS, width=1) 
+  theme(text = element_text(size = 15), 
+        axis.text.x = element_text(angle=45, hjust=1, size = 15),# Rotate x labels for better visibility
+        axis.text.y = element_text(size = 15),
+        axis.title.x = element_text(size = 20), 
+        legend.text = element_text(size = 13)) 
 
-##### PGLS - Environmental Variables and Identified Repeat Types #####
-######################################################################
+# Plot the circles of genome size for different species
+GS_df1 <- GS_df[-c(3,12),] %>%
+  dplyr::rename("Species" = Species_Name) 
+GS_df1$Species <- Mia_tree_GS$tip.label # 
+circle_plot <- ggplot(GS_df1, aes(x = Species, y = 1, size = Genome_Size_gbp)) +
+  geom_point(color = "orange", alpha = 0.6) +
+  scale_size_continuous(range = c(1, 10)) +  # Adjust circle size range as needed
+  coord_flip() +
+  labs(size = "Genome Size") +
+  theme_void() +  # Use theme_void() for a completely blank background
+  theme(
+    legend.position = "right",
+    plot.margin = unit(c(1, -1, 1, 1), "cm"),
+    text = element_text(size = 15), 
+    legend.text = element_text(size = 13)
+  )
+
+
+# Combine the phylo tree, bar chart and circle plot together
+Phylo_GS_RP <- RP_bar %>% insert_left(circle_plot,width=0.2) %>% insert_left(Mia_ggtree_GS, width=1) 
+print(Phylo_GS_RP)
+
+pdf("../R_Plots/Phylo_GS_RP.pdf", width = 10, height = 8)   
+print(Phylo_GS_RP)
+dev.off()
+
+##### PGLS - Env Var and Identified Repeat Types #####
+######################################################
 #### Combine the selected environmental variables and identified repeat types
 Identified_RP <- All_Eggplant_Repeat_ag_pct %>%
   filter(rownames(All_Eggplant_Repeat_ag_pct) != "Solanum_cerasiferum") %>%
-  dplyr::select(colnames(Cmbd_logGS_RP_slct[,-c(14,15)]))
+  dplyr::select(colnames(Cmbd_GS_RP_slct[,-c(14,15)]))
   
 Identified_RP$genus.sp <- rownames(Identified_RP)
-Cmbd_RP_Env <- left_join(Identified_RP,Mia_Env_allctry_median, by = "genus.sp") %>%
-  dplyr::select(-c("bio6", "bio7","bio14"))
+Cmbd_RP_Env <- left_join(Identified_RP,Mia_Env_allctry_median, by = "genus.sp") 
 names(Cmbd_RP_Env)[names(Cmbd_RP_Env) == "genus.sp"] <- "Species"
 
 #### Phylogenetic signal test on all 13 repeat types
@@ -1506,18 +1580,53 @@ for (RP in colnames(Cmbd_RP_Env[,c(1:13)])) {
 RP_Env_comp <- comparative.data(Mia_tree_RP, Cmbd_RP_Env, names.col = "Species",vcv=TRUE)
 RP_Env_comp 
 
-#### Build pgls model between LINE and the selected environmental variables
+#### Build pgls model between each selected repeat types and the selected environmental variables
 optimal_model_summary <- list()
-for (RP in colnames(RP_Env_comp$data[, c(1:4,6:13)])) {
+
+# Loop through repeat types
+for (RP in colnames(RP_Env_comp$data[, c(1:13)])) { # Tork is removed from this loop because of an unexpected error
   print(paste("Exploring PGLS models of", RP))
   
-  # Initialize an empty vector to store removed variables
-  remove_var <- c()
+  # Initialize the list of environmental variables
+  env_vars <- c("bio3", "bio5", "bio6", "bio7", "bio14", "bio15", "bio18", "bio19", "mi")
   
-  # Build the formula dynamically (with backticks to handle special characters)
-  model_formula <- as.formula(paste0("`", RP, "` ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi"))
+  # Prepare the initial formula for multicollinearity check
+  initial_formula <- as.formula(paste0("`", RP, "` ~ ", paste(env_vars, collapse = " + ")))
   
-  # Fit the initial PGLS model
+  
+  # Iteratively check and remove variables with high VIF
+  repeat {
+    # Fit a linear model to calculate VIF
+    vif_model <- lm(initial_formula, data = Cmbd_RP_Env)
+    vif_values <- vif(vif_model)
+    
+    print("Current VIF values:")
+    print(vif_values)
+    
+    # Identify the variable with the highest VIF
+    max_vif <- max(vif_values)
+    if (max_vif > 10) {
+      max_vif_var <- names(which.max(vif_values))
+      print(paste("Removing variable due to high VIF:", max_vif_var))
+      
+      # Remove the variable from the list and update the formula
+      env_vars <- env_vars[env_vars != max_vif_var]
+      initial_formula <- as.formula(paste0("`", RP, "` ~ ", paste(env_vars, collapse = " + ")))
+    } else {
+      # Stop if all VIF values are below the threshold
+      break
+    }
+  }
+  
+  # Print the remaining variables after VIF filtering
+  print("Remaining environmental variables after VIF filtering:")
+  print(env_vars)
+  
+  # Build the PGLS formula with filtered variables
+  model_formula <- as.formula(paste0("`", RP, "` ~ ", paste(env_vars, collapse = " + ")))
+  
+  
+  # Fit the PGLS model with filtered variables
   RP_Env_lambda <- pgls(model_formula, data = RP_Env_comp, lambda = "ML", bounds = list(lambda = c(0.05, 1)))
   
   # Store summary and AICc of the initial model
@@ -1525,63 +1634,148 @@ for (RP in colnames(RP_Env_comp$data[, c(1:4,6:13)])) {
   best_aicc <- AICc(RP_Env_lambda)
   best_model <- RP_Env_lambda
   
-  print(paste("Initial AICc:", best_aicc))
-
+  print(paste("Initial AICc after VIF filtering:", best_aicc))
+  
   # Extract p-values (excluding intercept)
   p_values <- model_summary$coefficients[-1, "Pr(>|t|)"]
   
-  for (j in 1:5) {
-    # Check if there are any remaining variables to remove
-    if (length(p_values) == 0) break
+  # Iteratively remove non-significant variables based on p-values
+  for (j in 1:8) {
+    if (length(p_values) == 1) break
     
     # Find the variable with the highest p-value
     max_p_var <- names(p_values)[which.max(p_values)]
     
-    # Append the removed variable to 'remove_var'
-    remove_var <- c(remove_var, max_p_var)
-    
-    print(paste("Removing", max_p_var))
-    
-    # Build the updated formula
-    updated_formula <- as.formula(
-      paste0("`", RP, "` ~ . - ", paste(remove_var, collapse = " - "))
-    )
-    
-    # Update the model with the new formula
-    updated_model <- update(RP_Env_lambda, formula = updated_formula, lambda = "ML")
-    
-    # Get the new summary and AICc
-    model_summary <- summary(updated_model)
-    aicc <- AICc(updated_model)
-    
-    print(paste("AICc after removing", max_p_var, ":", aicc))
-    
-    # Check if this model is better
-    if (aicc < best_aicc) {
-      best_aicc <- aicc
-      best_model <- updated_model
+    # Check if the highest p-value is above 0.05
+    if (max(p_values) > 0.05) {
+      print(paste("Removing variable due to high p-value:", max_p_var))
+      env_vars <- env_vars[env_vars != max_p_var]
+      
+      # Update the formula
+      updated_formula <- as.formula(paste0("`", RP, "` ~ ", paste(env_vars, collapse = " + ")))
+      model_formula <- as.formula(paste0("`", RP, "` ~ ", paste(env_vars, collapse = " + ")))
+      
+      # Fit the updated PGLS model
+      updated_model <- update(RP_Env_lambda, formula = updated_formula, lambda = "ML")
+      
+      # Get the new summary and AICc
+      model_summary <- summary(updated_model)
+      aicc <- AICc(updated_model)
+      
+      print(paste("AICc after removing", max_p_var, ":", aicc))
+      
+      # Update best model if AICc improves
+      if (aicc < best_aicc) {
+        best_aicc <- aicc
+        best_model <- updated_model
+      }
+      
+      # Update p-values for the next iteration
+      p_values <- model_summary$coefficients[-1, "Pr(>|t|)"]
+    } else {
+      # Break if all remaining variables are significant
+      break
     }
-    
-    # Update p-values for the next iteration
-    p_values <- model_summary$coefficients[-1, "Pr(>|t|)"]
-    
-    # Break if all remaining variables are significant (p < 0.05)
-    if (all(p_values < 0.05)) break
   }
   
   print(paste("Summary of the optimal model for", RP, ":"))
   print(summary(best_model))
-  optimal_model_summary[[RP]] <-  model_summary
+  optimal_model_summary[[RP]] <- summary(best_model)
   print(paste("AICc of the optimal model:", best_aicc))
   print("--------------------------------------------------")
 }
 
-Ale_Env_lambda <- pgls(`All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Ale` ~ bio3 + bio5 + bio15 + bio18 + bio19 + mi, data = RP_Env_comp, lambda = "ML")
-summary(Ale_Env_lambda)
+optimal_model_summary
 
 #### Scatter plot between each significant environmental variables and each repeat types
-## Tekay - bio5/bio18/bio19
+par(mfrow = c(1, 1))
 
-## Ale - bio3/bio15/mi
-## Bianca - bio3/bio15/bio18
+## Tekay - bio5/bio18/bio19
+# List of dependent variables
+Tekay_dependent_vars <- c("bio5", "bio18", "bio19")
+
+# Loop through each variable and create scatter plots
+# Loop through Tekay_dependent_vars to generate and save plots
+for (var in Tekay_dependent_vars) {
+  # Generate the plot
+  plot <- ggplot(Cmbd_RP_Env, aes(x = .data[[var]], y = `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/Tekay`)) +
+    geom_point() +
+    labs(x = var, y = "Genomic Proportion of Tekay", title = paste("Scatter Plot of", var, "vs Genomic Proportion of Tekay")) +
+    theme_minimal()
+  
+  # Define the file name for the plot
+  file_name <- paste0("../R_Plots/Scatter_Plot_Tekay_", var, ".pdf")
+  
+  # Save the plot as a PDF
+  ggsave(file_name, plot = plot, device = "pdf", width = 10, height = 8)
+}
+
+
+## Ogre - bio3/bio7/mi
+# List of dependent variables
+Ogre_dependent_vars <- c("bio7", "bio14")
+
+# Loop through each variable and create scatter plots
+for (var in Ogre_dependent_vars) {
+  plot <- ggplot(Cmbd_RP_Env, aes(x = .data[[var]], y = `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/non-chromovirus/OTA/Tat/Ogre`)) +
+    geom_point() +
+    labs(x = var, y = "Genomic Proportion of Ogre", title = paste("Scatter Plot of", var, "vs Genomic Proportion of Ogre")) +
+    theme_minimal()
+  
+  # Define the file name for the plot
+  file_name <- paste0("../R_Plots/Scatter_Plot_Ogre_", var, ".pdf")
+  
+  # Save the plot as a PDF
+  ggsave(file_name, plot = plot, device = "pdf", width = 10, height = 8)
+}
+
+## LINE - bio3/bio7/bio14
+# List of dependent variables
+LINE_dependent_vars <- c("bio3", "bio7", "bio14")
+
+# Loop through each variable and create scatter plots
+for (var in LINE_dependent_vars) {
+  plot <- ggplot(Cmbd_RP_Env, aes(x = .data[[var]], y = `All/repeat/mobile_element/Class_I/LINE`)) +
+    geom_point() +
+    labs(x = var, y = "Genomic Proportion of LINE", title = paste("Scatter Plot of", var, "vs Genomic Proportion of LINE")) +
+    theme_minimal()
+  print(plot)
+  
+  # Define the file name for the plot
+  file_name <- paste0("../R_Plots/Scatter_Plot_LINE_", var, ".pdf")
+  
+  # Save the plot as a PDF
+  ggsave(file_name, plot = plot, device = "pdf", width = 10, height = 8)
+}
+
+
+## Bianca - bio3/bio5/bio18
+# List of dependent variables
+Bianca_dependent_vars <- c("bio3", "bio5", "bio18")
+
+# Loop through each variable and create scatter plots
+for (var in Bianca_dependent_vars) {
+  plot <- ggplot(Cmbd_RP_Env, aes(x = .data[[var]], y = `All/repeat/mobile_element/Class_I/LTR/Ty1_copia/Bianca`)) +
+    geom_point() +
+    labs(x = var, y = "Genomic Proportion of Bianca", title = paste("Scatter Plot of", var, "vs Genomic Proportion of Bianca")) +
+    theme_minimal()
+  print(plot)
+  
+  # Define the file name for the plot
+  file_name <- paste0("../R_Plots/Scatter_Plot_Bianca_", var, ".pdf")
+  
+  # Save the plot as a PDF
+  ggsave(file_name, plot = plot, device = "pdf", width = 10, height = 8)
+}
+
+
+
 ## CRM - bio3
+CRM_bio3 <- ggplot(Cmbd_RP_Env, aes(x = bio3, y = `All/repeat/mobile_element/Class_I/LTR/Ty3_gypsy/chromovirus/CRM`)) +
+  geom_point() +
+  labs(x = var, y = "Genomic Proportion of CRM", title = paste("Scatter Plot of", var, "vs Genomic Proportion of CRM")) +
+  theme_minimal() 
+
+print(CRM_bio3)
+
+ggsave("../R_Plots/Scatter_Plot_CRM_bio3.pdf", plot = CRM_bio3, device = "pdf", width = 10, height = 8)

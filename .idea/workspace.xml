@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e250381e-9350-424b-b190-1611077a45fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/2_Analysing_RE2_output.R" beforeDir="false" afterPath="$PROJECT_DIR$/2_Analysing_RE2_output.R" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RE2_output/.RData" beforeDir="false" afterPath="$PROJECT_DIR$/RE2_output/.RData" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RE2_output/.Rhistory" beforeDir="false" afterPath="$PROJECT_DIR$/RE2_output/.Rhistory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/All_Diversity_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/All_Diversity_GS.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/All_GP_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/All_GP_GS.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/All_Richness_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/All_Richness_GS.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/Diploid_Diversity_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/Diploid_Diversity_GS.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/Diploid_GP_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/Diploid_GP_GS.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/Diploid_Richness_GS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/Diploid_Richness_GS.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies_horizontal.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/RptProp_GS_bySpecies_horizontal.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/R_Plots/lm_GS_TGP_Plot.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/R_Plots/lm_GS_TGP_Plot.pdf" afterDir="false" />
-    </list>
+    <list default="true" id="e250381e-9350-424b-b190-1611077a45fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,18 +22,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,6 +52,7 @@
       <updated>1722989822941</updated>
       <workItem from="1722989825184" duration="15000" />
       <workItem from="1723669450652" duration="1792000" />
+      <workItem from="1730487889326" duration="19000" />
     </task>
     <servers />
   </component>
